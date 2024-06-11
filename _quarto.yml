@@ -1,6 +1,5 @@
 project:
   type: book
-  output-dir: book
 
 book:
   title: "w-python-numpy-grundlagen"
