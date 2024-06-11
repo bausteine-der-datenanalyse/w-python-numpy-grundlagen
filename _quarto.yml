@@ -1,0 +1,33 @@
+project:
+  type: book
+
+book:
+  title: "w-python-numpy-grundlagen"
+  author: "Marc Fehr"
+  date: today
+  language: de-DE
+  chapters: 
+    - index.qmd
+    - content/script/einleitung.qmd
+    - content/script/array_creation.qmd
+    - content/script/array_info.qmd
+    - content/script/array_calculation.qmd
+    - content/script/array_slicing.qmd
+    - content/script/array_manipulation.qmd
+    - content/script/array_read_n_write.qmd
+    - content/script/array_images.qmd
+    - content/uebungen/uebung.qmd
+
+bibliography: content/script/references.bib
+
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    lang: de
+  pdf:
+    documentclass: scrreprt
+    lang: de
+
+execute:
+  freeze: auto
+

@@ -1,0 +1,2 @@
+- Grundlagen Python
+- Einbinden von zusätzlichen Paketen

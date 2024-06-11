@@ -1,0 +1,88 @@
+# Lesen und Schreiben von Dateien
+
+```{python}
+#| echo: false
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+Das Modul numpy stellt Funktionen zum Lesen und Schreiben von strukturierten 
+Textdateien bereit.
+
+## Lesen von Dateien
+
+Zum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated 
+values), kann die `np.loadtxt()`-Funktion verwendet werden. Diese bekommt als 
+Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der 
+Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.
+
+Im folgenden Beispiel wird die Datei [TC01.csv](https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv) eingelesen und deren Inhalt 
+graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie 
+als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.
+
+```{python}
+dateiname = 'TC01.csv'
+daten = np.loadtxt(dateiname)
+```
+
+```{python}
+print("Daten:", daten)
+print("Form:", daten.shape)
+```
+
+```{python}
+plt.plot(daten)
+plt.xlabel('Datenindex')
+plt.ylabel('Temperatur in °C');
+```
+
+## Schreiben von Dateien
+
+Zum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion 
+`np.savetxt()` verwendet werden. Dieser müssen mindestens die zu schreibenden 
+Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche 
+Formatierungs- bzw. Strukturierungsoptionen möglich.
+
+Folgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden 
+zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (`header`-Argument) 
+am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem 
+`fmt`-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, 
+welche bei den formatierten Zeichenketten vorgestellt wurde.
+
+```{python}
+wertebereich = np.max(daten) - np.min(daten)
+daten_skaliert = ( daten - np.min(daten) ) / wertebereich
+daten_skaliert = daten_skaliert[::10]
+```
+
+```{python}
+plt.xlabel('Datenindex')
+plt.ylabel('Skalierte Temperatur');
+```
+
+Beim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des 
+Zeilenumbruchzeichens `\n` definiert. Die Ausgabe der Gleitkommazahlen wird 
+mit `%5.2f` formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen 
+entspricht.
+
+```{python}
+# Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der 
+# schmalen Darstellung im Skript
+kommentar = f'Daten aus {dateiname} skaliert auf den Beriech' + \
+             '0 bis 1\noriginales Min / Max:' + \
+            f'{np.min(daten)}/{np.max(daten)}'
+neu_dateiname = 'TC01_skaliert.csv'
+
+np.savetxt(neu_dateiname, daten_skaliert, 
+           header=kommentar, fmt='%5.2f')
+```
+
+Zum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.
+
+```{python}
+# Einlesen der ersten Zeilen der neu erstellten Datei
+datei = open(neu_dateiname, 'r')
+for i in range(10):
+    print( datei.readline() , end='')
+datei.close()
+```

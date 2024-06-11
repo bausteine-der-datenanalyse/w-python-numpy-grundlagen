@@ -1,0 +1,63 @@
+## Arbeiten mit Bildern
+
+```{python}
+#| echo: false
+import numpy as np
+```
+
+Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei 
+Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) 
+werden dann alle gewünschten Farben zusammengestellt. 
+
+![Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.](/content/script/fig/pixel_mona_lisa_split.svg){#fig-pixel_colors fig-alt="Schaubild, was zeigt, dass ein hochaufgelöstes Bild der Mona Lisa aus einzelnen Pixeln besteht, welche wiederum aus den drei Farben blau, rot und grün zusammengesetzt sind"}
+
+Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den 
+Werkzeugen von NumPy leicht bearbeiten. 
+Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem [Link](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg) zu finden.
+
+
+Importieren wir dieses Bild nun mit der Funktion `imread()`aus dem 
+matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array 
+handelt. 
+```{python}
+import matplotlib.pyplot as plt
+
+data = plt.imread("fig/mona_lisa.jpg")
+print("Form:", data.shape)
+```
+
+Schauen wir uns einmal mit der `print()`-Funktion einen Ausschnitt dieser Daten an.
+```{python}
+print(data)
+```
+
+Mit der Funktion `plt.imshow` kann das Bild in Echtfarben dargestellt werden. 
+Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, 
+des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre 
+noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert 
+verwendet worden.
+
+```{python}
+plt.imshow(data)
+```
+
+Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. 
+Dazu wird der letzte Index festgehalten.
+
+```{python}
+# Als Farbskale wird die Rotskala 
+# verwendet 'Reds'
+plt.imshow( data[:,:,0], cmap='Reds' )
+plt.colorbar()
+plt.show()
+```
+
+Da die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, 
+z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt 
+einen Ausschnitt im Rotkanal des Bildes.
+
+```{python}
+bereich = np.array(data[450:500, 550:600,0], dtype=float)
+plt.imshow( bereich, cmap="Greys" )
+plt.colorbar()
+```

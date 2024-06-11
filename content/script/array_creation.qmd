@@ -1,0 +1,172 @@
+# Erstellen von numpy arrays
+
+```{python}
+#| echo: false
+import numpy as np
+```
+
+Typischerweise werden in Python Vektoren durch Listen und Matrizen durch 
+geschachtelte Listen ausgedrückt. Beispielsweise würde man den Vektor
+
+:::: {layout-ncol=3 layout-valign="center" layout-halign="center"}
+$$
+(1, 2, 3, 4, 5, 6) 
+$$
+
+::: {.justify}
+und die Matrix
+:::
+
+$$
+\begin{pmatrix}
+1 & 2 & 3\\
+4 & 5 & 6
+\end{pmatrix}
+$$
+::::
+
+nativ in Python so erstellen:
+
+```{python}
+liste = [1, 2, 3, 4, 5, 6]
+
+matrix = [[1, 2, 3], [4, 5, 6]]
+
+print(liste)
+print(matrix)
+```
+
+Möchte man jetzt NumPy Arrays verwenden benutzt man den Befehl `np.array()`. 
+
+```{python}
+
+liste = np.array([1, 2, 3, 4, 5, 6])
+
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+print(liste)
+print(matrix)
+```
+
+Betrachtet man die Ausgaben der `print()` Befehle fallen zwei Sachen auf.
+Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend
+ausgegeben.
+
+Es gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei 
+wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird 
+eine drei-dimensionale Matrix erstellt.
+
+```{python}
+matrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
+```
+
+Manchmal werden Arrays auch nach und nach befüllt. Auch hierfür bietet NumPy 
+passende Funktionen. 
+
+Mit `np.empty()` erzeugt man ein leeres Array, wobei die Dateneintrage ungesetzt 
+bleiben. Der Funktion wird die Form im Format `[Reihen,Spalten]` übergeben. Man 
+beachte die zufälligen Werte, die an diesen Stellen im Speicher liegen können.
+```{python}
+np.empty([2,3])
+```
+
+::: {.callout-warning #wrn-test}
+Benutzt man die Funktion empty werden die Einträge im Array nicht initialisiert. 
+Es können damit zufällige Werte im Array vorkommen. Daher empfiehlt es sich eher 
+Arrays mit festen Werten zu initialisieren.
+:::
+
+Alternativ können Arrays auch mit festgesetzten Werten initialisiert werden. 
+Dafür kann entweder die Funktion `np.zeros()`verwendet werden die alle Werte 
+auf 0 setzt, oder aber `np.ones()`welche alle Werte mit 1 initialisiert. Möchte 
+man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl 
+`np.full()` benutzen.
+
+```{python}
+np.zeros([2,3])
+```
+
+```{python}
+np.ones([2,3])
+```
+
+```{python}
+np.full([2,3],7)
+```
+
+::: {.callout-tip collapse="true"}
+
+## Wie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?
+
+Der Trick beseht hierbei ein Array mit `np.ones()` zu initialisiere und dieses 
+Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist `x = 5`
+
+```{python}
+np.ones([2,3]) * 5
+```
+:::
+
+Möchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit 
+gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei 
+Möglichkeiten. Mit den Befehlen `np.linspace(Start,Stop,#Anzahl Werte)` und 
+`np.arrange(Start,Stop,Abstand zwischen Werten)` können solche Arrays erstellt 
+werden.
+
+```{python}
+np.linspace(0,1,11)
+```
+
+```{python}
+np.arange(0,10,2)
+```
+
+::: {.callout-tip collapse="true"}
+
+## Übung: Array Erstellung
+
+Erstellen Sie jeweils ein NumPy-Array, mit dem folgenden Inhalt:
+
+1. mit den Werten 1, 7, 42, 99
+2. zehn mal die Zahl 5
+3. mit den Zahlen von 35 **bis einschließlich** 50
+4. mit allen geraden Zahlen von 20 **bis einschließlich** 40
+5. eine Matrix mit 5 Spalten und 4 Reihen mit dem Wert 4 an jeder Stelle
+6. mit 10 Werten die gleichmäßig zwischen 22 und einschlieslich 40 verteilt sind
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+```{python}
+# 1. 
+print(np.array([1, 7, 42, 99]))
+```
+
+```{python}
+# 2. 
+print(np.full(10,5))
+```
+
+```{python}
+# 3. 
+print(np.arange(35, 51))
+```
+
+```{python}
+# 4. 
+print(np.arange(20, 41, 2))
+```
+
+```{python}
+# 5. 
+print(np.full([4,5],4))
+```
+
+```{python}
+# 6. 
+print(np.linspace(22, 40, 10))
+```
+
+:::
+
+:::

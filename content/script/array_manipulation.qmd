@@ -1,0 +1,137 @@
+# Array Manipulation
+
+```{python}
+#| echo: false
+import numpy as np
+```
+
+## Ändern der Form
+
+Durch verschiedene Funktionen lassen sich die Form und die Einträge der Arrays 
+verändern. 
+
+Eine der wichtigsten Array Operationen ist das Transponieren. Dabei werden 
+Reihen in Spalten und Spalten in Reihe umgewandelt.
+
+```{python}
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+print(matrix)
+```
+
+Transponieren wir dieses Array nun erhalten wir:
+
+```{python}
+print(np.transpose(matrix))
+```
+
+Haben wir ein nun diese Matrix und wollen daraus einen Vektor erstellen so 
+können wir die Funktion `np.ravel()` benutzen:
+
+```{python}
+vector = np.ravel(matrix)
+print(vector)
+```
+
+Um wieder eine zweidimensionale Datenstruktur zu erhalten, benutzen wir die 
+Funktion `np.reshape(Ziel, Form)`
+
+```{python}
+print(np.reshape(matrix, [3, 2]))
+```
+
+Möchten wir den Inhalt eines bereits bestehenden Arrays erweitern, verkleinern 
+oder ändern bietet NumPy ebenfalls die passenden Funktionen.
+
+Haben wir ein leeres Array oder wollen wir ein schon volles Array erweitern 
+benutzen wir die Funktion `np.append()`. Dabei hängen wir einen Wert an das 
+bereits bestehende Array an.
+
+```{python}
+liste = np.array([1, 2, 3, 4, 5, 6])
+
+neue_liste = np.append(liste, 7)
+print(neue_liste)
+```
+
+Gegebenenfalls ist es nötig einen Wert nicht am Ende, sondern an einer beliebigen 
+Position im Array einzufügen. Das passende Werkzeug ist hier die Funktion 
+`np.insert(Array, Position, Einschub)`. Im folgenden Beispiel wird an der 
+dritten Stelle die Zahl 7 eingesetzt.
+
+```{python}
+liste = np.array([1, 2, 3, 4, 5, 6])
+
+neue_liste = np.insert(liste, 3, 7)
+print(neue_liste)
+```
+
+Wenn sich neue Elemente einfügen lassen, können natürlich auch Elemente 
+gelöscht werden. Hierfür wird die Funktion `np.delete(Array , Position)` 
+benutzt, die ein Array und die Position der zu löschenden Funktion übergeben 
+bekommt.
+
+```{python}
+liste = np.array([1, 2, 3, 4, 5, 6])
+
+neue_liste = np.delete(liste, 3)
+print(neue_liste)
+```
+
+
+Zuletzt wollen wir uns noch die Verbindung zweier Arrays anschauen. Im 
+folgenden Beispiel wird dabei das Array `b` an das Array `a` mithilfe der 
+Funktion `np.concatenate((Array a, Array b))`angehängt.
+
+```{python}
+a = np.array([1, 2, 3, 4, 5, 6])
+b = np.array([7, 8, 9, 10])
+
+neue_liste = np.concatenate((a, b))
+print(neue_liste)
+```
+
+## Sortieren von Arrays
+
+NumPy bietet auch die Möglichkeit, Arrays zu sortieren. Im folgenden Beispiel 
+starten wir mit einem unsortierten Array. Mit der Funktion `np.sort()` erhalten 
+wir ein sortiertes Array.
+
+```{python}
+import numpy as np
+unsortiert = np.array([4, 2, 1, 6, 3, 5])
+
+sortiert = np.sort(unsortiert)
+
+print(sortiert)
+```
+
+## Unterlisten mit einzigartigen Werten
+
+Arbeitet man mit Daten bei denen zum Beispiel Projekte Personalnummern 
+zugeordnet werden hat man Daten mit einer endlichen Anzahl an Personalnummern, 
+die jedoch mehrfach vorkommen können wenn diese an mehr als einem Projekt 
+gleichzeitig arbeiten.
+
+Möchte man nun eine Liste die jede Nummer nur einmal enthält, kann die Funtkion 
+`np.unique` verwendet werden. 
+
+```{python}
+import numpy as np
+liste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])
+
+einzigartige_werte = np.unique(liste_mit_dopplungen)
+
+print(einzigartige_werte)
+```
+
+Setzt man dann noch die Option `return_counts=True` kann in einer zweiten Variable 
+gespeichert werden, wie oft jeder Wert vorkommt.
+
+```{python}
+import numpy as np
+liste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])
+
+einzigartige_werte, anzahl = np.unique(liste_mit_dopplungen, return_counts=True)
+
+print(anzahl)
+```
