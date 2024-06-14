@@ -3,7 +3,14 @@ project:
 
 book:
   title: "w-python-numpy-grundlagen"
-  author: "Marc Fehr"
+  author:
+    - Marc Fehr
+    - Lukas Arnold
+    - Simone Arnold
+    - Florian Bagemihl
+    - Matthias Baitsch
+    - Maik Poetzsch
+    - Sebastian Seipel
   date: today
   language: de-DE
   chapters: 
