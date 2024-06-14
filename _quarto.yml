@@ -4,11 +4,11 @@ project:
 book:
   title: "w-python-numpy-grundlagen"
   author:
-    - Marc Fehr
     - Lukas Arnold
     - Simone Arnold
     - Florian Bagemihl
     - Matthias Baitsch
+    - Marc Fehr
     - Maik Poetzsch
     - Sebastian Seipel
   date: today
