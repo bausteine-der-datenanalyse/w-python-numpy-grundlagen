@@ -1,0 +1,12 @@
+{
+  "hash": "8d02f0df7993ff84df6c68b4b2e76352",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "# Größe und Struktur\n\n\n\nWenn man sich nicht mehr sicher ist, welche Struktur oder Form ein Array hat oder \noder diese Größen zum Beispiel für Schleifen nutzen möchte, bietet NumPy \nfolgende Funktionen für das Auslesen dieser Größen an.\n\n::: {#26be743e .cell execution_count=2}\n``` {.python .cell-code}\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n```\n:::\n\n\n`np.shape()` gibt die Längen der einzelnen Dimension in Form einer Liste zurück. \n\n::: {#adf70d10 .cell execution_count=3}\n``` {.python .cell-code}\nnp.shape(matrix)\n```\n\n::: {.cell-output .cell-output-display execution_count=3}\n```\n(2, 3)\n```\n:::\n:::\n\n\nDie native Python Funktion `len()` gibt dagegen nur die Länge der ersten \nDimension, also die Anzahl der Elemente in den äußeren Klammern wieder. \n\n::: {#e7c040cd .cell execution_count=4}\n``` {.python .cell-code}\nlen(matrix)\n```\n\n::: {.cell-output .cell-output-display execution_count=4}\n```\n2\n```\n:::\n:::\n\n\nDie Funktion `np.ndym()`gibt im Gegensatz zu `np.shape()` nur die Anzahl der \nDimensionen zurück. \n\n::: {#f0b4c44b .cell execution_count=5}\n``` {.python .cell-code}\nnp.ndim(matrix)\n```\n\n::: {.cell-output .cell-output-display execution_count=5}\n```\n2\n```\n:::\n:::\n\n\n::: {.callout-tip collapse=\"true\"}\n## Die Ausgabe von `np.ndim()` kann mit `np.size()`und einer nativen Python Funktion erreicht werden. Wie?\n\n`np.ndim()` gibt die Länge der Liste von `np.shape()` aus\n\n::: {#2527f25d .cell execution_count=6}\n``` {.python .cell-code}\nlen(np.shape(matrix))\n```\n\n::: {.cell-output .cell-output-display execution_count=6}\n```\n2\n```\n:::\n:::\n\n\n:::\n\nMöchte man die Anzahl aller Elemente in einem Array ausgeben kann man die \nFunktion `np.size()` benutzen.\n\n::: {#ff1ce182 .cell execution_count=7}\n``` {.python .cell-code}\nnp.size(matrix)\n```\n\n::: {.cell-output .cell-output-display execution_count=7}\n```\n6\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "array_info_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

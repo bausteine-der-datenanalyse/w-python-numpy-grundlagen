@@ -8,17 +8,17 @@ book:
   language: de-DE
   chapters: 
     - index.qmd
-    - content/script/einleitung.qmd
-    - content/script/array_creation.qmd
-    - content/script/array_info.qmd
-    - content/script/array_calculation.qmd
-    - content/script/array_slicing.qmd
-    - content/script/array_manipulation.qmd
-    - content/script/array_read_n_write.qmd
-    - content/script/array_images.qmd
-    - content/uebungen/uebung.qmd
+    - skript/einleitung.qmd
+    - skript/array_creation.qmd
+    - skript/array_info.qmd
+    - skript/array_calculation.qmd
+    - skript/array_slicing.qmd
+    - skript/array_manipulation.qmd
+    - skript/array_read_n_write.qmd
+    - skript/array_images.qmd
+    - uebungen/uebung.qmd
 
-bibliography: content/script/references.bib
+bibliography: skript/references.bib
 
 format:
   html:

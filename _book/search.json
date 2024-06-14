@@ -50,8 +50,8 @@
     ]
   },
   {
-    "objectID": "content/script/einleitung.html",
-    "href": "content/script/einleitung.html",
+    "objectID": "skript/einleitung.html",
+    "href": "skript/einleitung.html",
     "title": "1  Einführung NumPy",
     "section": "",
     "text": "1.1 Vorteile & Nachteile\nFast immer sind Operationen mit Numpy Datenstrukturen schneller. Im Gegensatz zu nativen Python Listen kann man dort aber nur einen Datentyp pro Liste speichern.",
@@ -60,18 +60,18 @@
     ]
   },
   {
-    "objectID": "content/script/einleitung.html#vorteile-nachteile",
-    "href": "content/script/einleitung.html#vorteile-nachteile",
+    "objectID": "skript/einleitung.html#vorteile-nachteile",
+    "href": "skript/einleitung.html#vorteile-nachteile",
     "title": "1  Einführung NumPy",
     "section": "",
-    "text": "Warum ist numpy oftmals schneller?\n\n\n\n\n\nNumPy implementiert eine effizientere Speicherung von Listen im Speicher. Nativ speichert Python Listeninhalte aufgeteilt, wo gerade Platz ist.\n\n\n\n\n\n\nAbbildung 1.1: Speicherung von Daten in nativem Python\n\n\n\nDagegen werden NumPy Arrays und Matritzen zusammenhängend gespeichert, was einen effizienteren Datenaufruf ermöglicht.\n\n\n\n\n\n\nAbbildung 1.2: Speicherung von Datein bei Numpy\n\n\n\nDies bedeutet aber auch, dass es eine Erweiterung der Liste deutlich schneller ist als eine Erweiterung von Arrays oder Matrizen. Bei Listen kann jeder freie Platz genutzt werden, während Arrays und Matrizen an einen neuen Ort im Speicher kopiert werden müssen.",
+    "text": "Warum ist numpy oftmals schneller?\n\n\n\n\n\nNumPy implementiert eine effizientere Speicherung von Listen im Speicher. Nativ speichert Python Listeninhalte aufgeteilt, wo gerade Platz ist.\n\n\n\n\n\n\nAbbildung 1.1: Speicherung von Daten in nativem Python\n\n\n\nDagegen werden NumPy Arrays und Matritzen zusammenhängend gespeichert, was einen effizienteren Datenaufruf ermöglicht.\n\n\n\n\n\n\nAbbildung 1.2: Speicherung von Daten bei Numpy\n\n\n\nDies bedeutet aber auch, dass es eine Erweiterung der Liste deutlich schneller ist als eine Erweiterung von Arrays oder Matrizen. Bei Listen kann jeder freie Platz genutzt werden, während Arrays und Matrizen an einen neuen Ort im Speicher kopiert werden müssen.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung NumPy</span>"
     ]
   },
   {
-    "objectID": "content/script/einleitung.html#einbinden-des-pakets",
-    "href": "content/script/einleitung.html#einbinden-des-pakets",
+    "objectID": "skript/einleitung.html#einbinden-des-pakets",
+    "href": "skript/einleitung.html#einbinden-des-pakets",
     "title": "1  Einführung NumPy",
     "section": "1.2 Einbinden des Pakets",
     "text": "1.2 Einbinden des Pakets\nNumPy wird über folgende Zeile eingebunden. Dabei hat sich global der Standard entwickelt, als Alias np zu verwenden.\n\nimport numpy as np",
@@ -80,8 +80,8 @@
     ]
   },
   {
-    "objectID": "content/script/einleitung.html#referenzen",
-    "href": "content/script/einleitung.html#referenzen",
+    "objectID": "skript/einleitung.html#referenzen",
+    "href": "skript/einleitung.html#referenzen",
     "title": "1  Einführung NumPy",
     "section": "1.3 Referenzen",
     "text": "1.3 Referenzen\nSämtliche hier vorgestellten Funktionen lassen sich in der (englischen) NumPy-Dokumentation nachschlagen: Dokumentation",
@@ -90,8 +90,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_creation.html",
-    "href": "content/script/array_creation.html",
+    "objectID": "skript/array_creation.html",
+    "href": "skript/array_creation.html",
     "title": "2  Erstellen von numpy arrays",
     "section": "",
     "text": "Typischerweise werden in Python Vektoren durch Listen und Matrizen durch geschachtelte Listen ausgedrückt. Beispielsweise würde man den Vektor\n\n\n\n\n\n\n\\[\n(1, 2, 3, 4, 5, 6)\n\\]\n\n\nund die Matrix\n\n\n\\[\n\\begin{pmatrix}\n1 & 2 & 3\\\\\n4 & 5 & 6\n\\end{pmatrix}\n\\]\n\n\n\nnativ in Python so erstellen:\n\nliste = [1, 2, 3, 4, 5, 6]\n\nmatrix = [[1, 2, 3], [4, 5, 6]]\n\nprint(liste)\nprint(matrix)\n\n[1, 2, 3, 4, 5, 6]\n[[1, 2, 3], [4, 5, 6]]\n\n\nMöchte man jetzt NumPy Arrays verwenden benutzt man den Befehl np.array().\n\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n\nprint(liste)\nprint(matrix)\n\n[1 2 3 4 5 6]\n[[1 2 3]\n [4 5 6]]\n\n\nBetrachtet man die Ausgaben der print() Befehle fallen zwei Sachen auf. Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend ausgegeben.\nEs gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird eine drei-dimensionale Matrix erstellt.\n\nmatrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])\n\nManchmal werden Arrays auch nach und nach befüllt. Auch hierfür bietet NumPy passende Funktionen.\nMit np.empty() erzeugt man ein leeres Array, wobei die Dateneintrage ungesetzt bleiben. Der Funktion wird die Form im Format [Reihen,Spalten] übergeben. Man beachte die zufälligen Werte, die an diesen Stellen im Speicher liegen können.\n\nnp.empty([2,3])\n\narray([[0., 0., 0.],\n       [0., 0., 0.]])\n\n\n\n\n\n\n\n\nWarning 2.1\n\n\n\nBenutzt man die Funktion empty werden die Einträge im Array nicht initialisiert. Es können damit zufällige Werte im Array vorkommen. Daher empfiehlt es sich eher Arrays mit festen Werten zu initialisieren.\n\n\nAlternativ können Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder die Funktion np.zeros()verwendet werden die alle Werte auf 0 setzt, oder aber np.ones()welche alle Werte mit 1 initialisiert. Möchte man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl np.full() benutzen.\n\nnp.zeros([2,3])\n\narray([[0., 0., 0.],\n       [0., 0., 0.]])\n\n\n\nnp.ones([2,3])\n\narray([[1., 1., 1.],\n       [1., 1., 1.]])\n\n\n\nnp.full([2,3],7)\n\narray([[7, 7, 7],\n       [7, 7, 7]])\n\n\n\n\n\n\n\n\nWie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?\n\n\n\n\n\nDer Trick beseht hierbei ein Array mit np.ones() zu initialisiere und dieses Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist x = 5\n\nnp.ones([2,3]) * 5\n\narray([[5., 5., 5.],\n       [5., 5., 5.]])\n\n\n\n\n\nMöchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei Möglichkeiten. Mit den Befehlen np.linspace(Start,Stop,#Anzahl Werte) und np.arrange(Start,Stop,Abstand zwischen Werten) können solche Arrays erstellt werden.\n\nnp.linspace(0,1,11)\n\narray([0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ])\n\n\n\nnp.arange(0,10,2)\n\narray([0, 2, 4, 6, 8])\n\n\n\n\n\n\n\n\nÜbung: Array Erstellung\n\n\n\n\n\nErstellen Sie jeweils ein NumPy-Array, mit dem folgenden Inhalt:\n\nmit den Werten 1, 7, 42, 99\nzehn mal die Zahl 5\nmit den Zahlen von 35 bis einschließlich 50\nmit allen geraden Zahlen von 20 bis einschließlich 40\neine Matrix mit 5 Spalten und 4 Reihen mit dem Wert 4 an jeder Stelle\nmit 10 Werten die gleichmäßig zwischen 22 und einschlieslich 40 verteilt sind\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\n# 1. \nprint(np.array([1, 7, 42, 99]))\n\n[ 1  7 42 99]\n\n\n\n# 2. \nprint(np.full(10,5))\n\n[5 5 5 5 5 5 5 5 5 5]\n\n\n\n# 3. \nprint(np.arange(35, 51))\n\n[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50]\n\n\n\n# 4. \nprint(np.arange(20, 41, 2))\n\n[20 22 24 26 28 30 32 34 36 38 40]\n\n\n\n# 5. \nprint(np.full([4,5],4))\n\n[[4 4 4 4 4]\n [4 4 4 4 4]\n [4 4 4 4 4]\n [4 4 4 4 4]]\n\n\n\n# 6. \nprint(np.linspace(22, 40, 10))\n\n[22. 24. 26. 28. 30. 32. 34. 36. 38. 40.]",
@@ -100,8 +100,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_info.html",
-    "href": "content/script/array_info.html",
+    "objectID": "skript/array_info.html",
+    "href": "skript/array_info.html",
     "title": "3  Größe und Struktur",
     "section": "",
     "text": "Wenn man sich nicht mehr sicher ist, welche Struktur oder Form ein Array hat oder oder diese Größen zum Beispiel für Schleifen nutzen möchte, bietet NumPy folgende Funktionen für das Auslesen dieser Größen an.\n\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n\nnp.shape() gibt die Längen der einzelnen Dimension in Form einer Liste zurück.\n\nnp.shape(matrix)\n\n(2, 3)\n\n\nDie native Python Funktion len() gibt dagegen nur die Länge der ersten Dimension, also die Anzahl der Elemente in den äußeren Klammern wieder.\n\nlen(matrix)\n\n2\n\n\nDie Funktion np.ndym()gibt im Gegensatz zu np.shape() nur die Anzahl der Dimensionen zurück.\n\nnp.ndim(matrix)\n\n2\n\n\n\n\n\n\n\n\nDie Ausgabe von np.ndim() kann mit np.size()und einer nativen Python Funktion erreicht werden. Wie?\n\n\n\n\n\nnp.ndim() gibt die Länge der Liste von np.shape() aus\n\nlen(np.shape(matrix))\n\n2\n\n\n\n\n\nMöchte man die Anzahl aller Elemente in einem Array ausgeben kann man die Funktion np.size() benutzen.\n\nnp.size(matrix)\n\n6",
@@ -110,18 +110,18 @@
     ]
   },
   {
-    "objectID": "content/script/array_calculation.html",
-    "href": "content/script/array_calculation.html",
+    "objectID": "skript/array_calculation.html",
+    "href": "skript/array_calculation.html",
     "title": "4  Rechnen mit Arrays",
     "section": "",
-    "text": "4.1 Arithemtische Funktionen\nEin großer Vorteil an NumPy ist das Rechnen mit Arrays. Ohne NumPy müsste man entweder eine Schleife oder aber List comprehension benutzen, um mit sämtlichen Werten in der Liste zu rechnen. In NumPy fällt diese Unannehmlichkeit weg.\na = np.array([1, 2, 3, 4, 5])\n\nb = np.array([9, 8, 7, 6, 5])\nNormale mathematische Operationen, wie die Addition, lassen sich auf zwei Arten ausdrücken. Entweder über die np.add() Funktion oder aber simpel über das + Zeichen.\nnp.add(a,b)\n\narray([10, 10, 10, 10, 10])\na + b\n\narray([10, 10, 10, 10, 10])\nFür die anderen Rechenarten existieren auch Funktionen: np.subtract(), np.multiply() und np.divide().\nAuch für die anderen höheren Rechenoperationen gibt es ebenfalls Funktionen:",
+    "text": "4.1 Arithmetische Funktionen\nEin großer Vorteil an NumPy ist das Rechnen mit Arrays. Ohne NumPy müsste man entweder eine Schleife oder aber List comprehension benutzen, um mit sämtlichen Werten in der Liste zu rechnen. In NumPy fällt diese Unannehmlichkeit weg.\na = np.array([1, 2, 3, 4, 5])\n\nb = np.array([9, 8, 7, 6, 5])\nNormale mathematische Operationen, wie die Addition, lassen sich auf zwei Arten ausdrücken. Entweder über die np.add() Funktion oder aber simpel über das + Zeichen.\nnp.add(a,b)\n\narray([10, 10, 10, 10, 10])\na + b\n\narray([10, 10, 10, 10, 10])\nFür die anderen Rechenarten existieren auch Funktionen: np.subtract(), np.multiply() und np.divide().\nAuch für die anderen höheren Rechenoperationen gibt es ebenfalls Funktionen:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
     ]
   },
   {
-    "objectID": "content/script/array_calculation.html#arithemtische-funktionen",
-    "href": "content/script/array_calculation.html#arithemtische-funktionen",
+    "objectID": "skript/array_calculation.html#arithmetische-funktionen",
+    "href": "skript/array_calculation.html#arithmetische-funktionen",
     "title": "4  Rechnen mit Arrays",
     "section": "",
     "text": "np.exp(a)\nnp.sqrt(a)\nnp.power(a, 3)\nnp.sin(a)\nnp.cos(a)\nnp.tan(a)\nnp.log(a)\na.dot(b)\n\n\n\n\n\n\n\nArbeiten mit Winkelfunktionen\n\n\n\nWie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen (sin, cos, …) die Fehlerquelle, dass man nicht mit Radian-Werten, sondern mit Grad-Werten arbeitet. Die Winkelfunktionen in numpy erwarten jedoch Radian-Werte.\nFür eine einfache Umrechnung bietet NumPy die Funktionen np.grad2rad()und np.rad2grad().",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_calculation.html#vergleiche",
-    "href": "content/script/array_calculation.html#vergleiche",
+    "objectID": "skript/array_calculation.html#vergleiche",
+    "href": "skript/array_calculation.html#vergleiche",
     "title": "4  Rechnen mit Arrays",
     "section": "4.2 Vergleiche",
     "text": "4.2 Vergleiche\nNumPy-Arrays lassen sich auch miteinander vergleichen. Betrachten wir die folgenden zwei Arrays:\n\na = np.array([1, 2, 3, 4, 5])\n\nb = np.array([9, 2, 7, 4, 5])\n\nMöchten wir feststellen, ob diese zwei Arrays identisch sind, können wir den ==-Komparator benutzen. Dieser vergleicht die Arrays elementweise.\n\na == b\n\narray([False,  True, False,  True,  True])\n\n\nEs ist außerdem möglich Arrays mit den &gt;- und &lt;-Operatoren zu vergleichen:\n\na &lt; b\n\narray([ True, False,  True, False, False])\n\n\nMöchte man Arrays mit Gleitkommazahlen vergleichen, ist es oftmals nötig, eine gewisse Toleranz zu benutzen, da bei Rechenoperationen minimale Rundungsfehler entstehen können.\n\na = np.array(0.1 + 0.2)\nb = np.array(0.3)\na == b\n\nFalse\n\n\nFür diesen Fall gibt es eine Vergleichsfunktion np.isclose(a,b,atol), wobei atol für die absolute Toleranz steht. Im folgenden Beispiel wird eine absolute Toleranz von 0,001 verwendet.\n\na = np.array(0.1 + 0.2)\nb = np.array(0.3)\nprint(np.isclose(a, b, atol=0.001))\n\nTrue\n\n\n\n\n\n\n\n\nWarum ist 0.1 + 0.2 nicht gleich 0.3?\n\n\n\n\n\nZahlen werden intern als Binärzahlen dargestellt. So wie 1/3 nicht mit einer endlichen Anzahl an Ziffern korrekt dargestellt werden kann müssen Zahlen ggf. gerundet werden, um im Binärsystem dargestellt zu werden.\n\na = 0.1\nb = 0.2\nprint(a + b)\n\n0.30000000000000004",
@@ -140,8 +140,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_calculation.html#aggregatfunktionen",
-    "href": "content/script/array_calculation.html#aggregatfunktionen",
+    "objectID": "skript/array_calculation.html#aggregatfunktionen",
+    "href": "skript/array_calculation.html#aggregatfunktionen",
     "title": "4  Rechnen mit Arrays",
     "section": "4.3 Aggregatfunktionen",
     "text": "4.3 Aggregatfunktionen\nFür verschiedene Auswertungen benötigen wir Funktionen, wie etwa die Summen oder die Mittelwert-Funktion. Starten wir mit einem Beispiel Array a:\n\na = np.array([1, 2, 3, 4, 8])\n\nDie Summer wird über die Funktion np.sum() berechnet.\n\nnp.sum(a)\n\n18\n\n\nNatürlich lassen sich auch der Minimalwert und der Maximalwert eines Arrays ermitteln. Die beiden Funktionen lauten np.min()und np.max().\n\nnp.min(a)\n\n1\n\n\nMöchte man nicht das Maximum selbst, sondern die Position des Maximums bestimmen, wird statt np.max die Funktion np.argmaxverwendet.\nFür statistische Auswertungen werden häufig die Funktion für den Mittelwert np.mean(), die Funktion für den Median np.median()und die Funktion für die Standardabweichung np.std()verwendet.\n\nnp.mean(a)\n\n3.6\n\n\n\nnp.median(a)\n\n3.0\n\n\n\nnp.std(a)\n\n2.4166091947189146",
@@ -150,8 +150,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_slicing.html",
-    "href": "content/script/array_slicing.html",
+    "objectID": "skript/array_slicing.html",
+    "href": "skript/array_slicing.html",
     "title": "5  Slicing",
     "section": "",
     "text": "Abbildung 5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel\n\n\n\nMöchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der Form:\n\nliste = np.array([1, 2, 3, 4, 5, 6])\n\n\n# Auswählen des ersten Elements\nliste[0]\n\n1\n\n\n\n# Auswählen des letzen Elements\nliste[-1]\n\n6\n\n\n\n# Auswählen einer Reihe von Elementen\nliste[1:4]\n\narray([2, 3, 4])\n\n\nFür zwei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer zweiten Zahl die zweite Dimension aus.\n\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\n\n\n# Auswählen einer Elements\nmatrix[1,1]\n\n5\n\n\nFür drei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer weiteren Zahl die dritte Dimension aus. Dabei wird dieses jedoch an die erste Stelle gesetzt.\n\nmatrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])\nprint(matrix_3d)\n\n[[[ 1  2  3]\n  [ 4  5  6]]\n\n [[ 7  8  9]\n  [10 11 12]]]\n\n\n\n# Auswählen eines Elements\nmatrix_3d[1,0,2]\n\n9\n\n\n\n\n\n\n\n\nZwischenübung: Array-Slicing\n\n\n\n\n\nWählen Sie die farblich markierten Bereiche aus dem Array “matrix” mit den eben gelernten Möglichkeiten des Array-Slicing aus.\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nRot: matrix[1,3]\nGrün: matrix[4:5,2:5]\nPink: matrix[:,7]\nOrange: matrix[7,:4]\nBlau: matrix[-1,-1]",
@@ -160,8 +160,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_manipulation.html",
-    "href": "content/script/array_manipulation.html",
+    "objectID": "skript/array_manipulation.html",
+    "href": "skript/array_manipulation.html",
     "title": "6  Array Manipulation",
     "section": "",
     "text": "6.1 Ändern der Form\nDurch verschiedene Funktionen lassen sich die Form und die Einträge der Arrays verändern.\nEine der wichtigsten Array Operationen ist das Transponieren. Dabei werden Reihen in Spalten und Spalten in Reihe umgewandelt.\nmatrix = np.array([[1, 2, 3], [4, 5, 6]])\nprint(matrix)\n\n[[1 2 3]\n [4 5 6]]\nTransponieren wir dieses Array nun erhalten wir:\nprint(np.transpose(matrix))\n\n[[1 4]\n [2 5]\n [3 6]]\nHaben wir ein nun diese Matrix und wollen daraus einen Vektor erstellen so können wir die Funktion np.ravel() benutzen:\nvector = np.ravel(matrix)\nprint(vector)\n\n[1 2 3 4 5 6]\nUm wieder eine zweidimensionale Datenstruktur zu erhalten, benutzen wir die Funktion np.reshape(Ziel, Form)\nprint(np.reshape(matrix, [3, 2]))\n\n[[1 2]\n [3 4]\n [5 6]]\nMöchten wir den Inhalt eines bereits bestehenden Arrays erweitern, verkleinern oder ändern bietet NumPy ebenfalls die passenden Funktionen.\nHaben wir ein leeres Array oder wollen wir ein schon volles Array erweitern benutzen wir die Funktion np.append(). Dabei hängen wir einen Wert an das bereits bestehende Array an.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.append(liste, 7)\nprint(neue_liste)\n\n[1 2 3 4 5 6 7]\nGegebenenfalls ist es nötig einen Wert nicht am Ende, sondern an einer beliebigen Position im Array einzufügen. Das passende Werkzeug ist hier die Funktion np.insert(Array, Position, Einschub). Im folgenden Beispiel wird an der dritten Stelle die Zahl 7 eingesetzt.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.insert(liste, 3, 7)\nprint(neue_liste)\n\n[1 2 3 7 4 5 6]\nWenn sich neue Elemente einfügen lassen, können natürlich auch Elemente gelöscht werden. Hierfür wird die Funktion np.delete(Array , Position) benutzt, die ein Array und die Position der zu löschenden Funktion übergeben bekommt.\nliste = np.array([1, 2, 3, 4, 5, 6])\n\nneue_liste = np.delete(liste, 3)\nprint(neue_liste)\n\n[1 2 3 5 6]\nZuletzt wollen wir uns noch die Verbindung zweier Arrays anschauen. Im folgenden Beispiel wird dabei das Array b an das Array a mithilfe der Funktion np.concatenate((Array a, Array b))angehängt.\na = np.array([1, 2, 3, 4, 5, 6])\nb = np.array([7, 8, 9, 10])\n\nneue_liste = np.concatenate((a, b))\nprint(neue_liste)\n\n[ 1  2  3  4  5  6  7  8  9 10]",
@@ -170,8 +170,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_manipulation.html#sortieren-von-arrays",
-    "href": "content/script/array_manipulation.html#sortieren-von-arrays",
+    "objectID": "skript/array_manipulation.html#sortieren-von-arrays",
+    "href": "skript/array_manipulation.html#sortieren-von-arrays",
     "title": "6  Array Manipulation",
     "section": "6.2 Sortieren von Arrays",
     "text": "6.2 Sortieren von Arrays\nNumPy bietet auch die Möglichkeit, Arrays zu sortieren. Im folgenden Beispiel starten wir mit einem unsortierten Array. Mit der Funktion np.sort() erhalten wir ein sortiertes Array.\n\nimport numpy as np\nunsortiert = np.array([4, 2, 1, 6, 3, 5])\n\nsortiert = np.sort(unsortiert)\n\nprint(sortiert)\n\n[1 2 3 4 5 6]",
@@ -180,8 +180,8 @@
     ]
   },
   {
-    "objectID": "content/script/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
-    "href": "content/script/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
+    "objectID": "skript/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
+    "href": "skript/array_manipulation.html#unterlisten-mit-einzigartigen-werten",
     "title": "6  Array Manipulation",
     "section": "6.3 Unterlisten mit einzigartigen Werten",
     "text": "6.3 Unterlisten mit einzigartigen Werten\nArbeitet man mit Daten bei denen zum Beispiel Projekte Personalnummern zugeordnet werden hat man Daten mit einer endlichen Anzahl an Personalnummern, die jedoch mehrfach vorkommen können wenn diese an mehr als einem Projekt gleichzeitig arbeiten.\nMöchte man nun eine Liste die jede Nummer nur einmal enthält, kann die Funtkion np.unique verwendet werden.\n\nimport numpy as np\nliste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])\n\neinzigartige_werte = np.unique(liste_mit_dopplungen)\n\nprint(einzigartige_werte)\n\n[1 3 4 6 7]\n\n\nSetzt man dann noch die Option return_counts=True kann in einer zweiten Variable gespeichert werden, wie oft jeder Wert vorkommt.\n\nimport numpy as np\nliste_mit_dopplungen = np.array([4, 1, 1, 6, 3, 4, 7, 3, 3])\n\neinzigartige_werte, anzahl = np.unique(liste_mit_dopplungen, return_counts=True)\n\nprint(anzahl)\n\n[2 3 2 1 1]",
@@ -190,38 +190,38 @@
     ]
   },
   {
-    "objectID": "content/script/array_read_n_write.html",
-    "href": "content/script/array_read_n_write.html",
+    "objectID": "skript/array_read_n_write.html",
+    "href": "skript/array_read_n_write.html",
     "title": "7  Lesen und Schreiben von Dateien",
     "section": "",
-    "text": "7.1 Lesen von Dateien\nZum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated values), kann die np.loadtxt()-Funktion verwendet werden. Diese bekommt als Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.\nIm folgenden Beispiel wird die Datei TC01.csv eingelesen und deren Inhalt graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.\ndateiname = 'TC01.csv'\ndaten = np.loadtxt(dateiname)\nprint(\"Daten:\", daten)\nprint(\"Form:\", daten.shape)\n\nDaten: [20.1 20.1 20.1 ... 24.3 24.2 24.2]\nForm: (1513,)\nplt.plot(daten)\nplt.xlabel('Datenindex')\nplt.ylabel('Temperatur in °C');",
+    "text": "7.1 Lesen von Dateien\nZum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated values), kann die np.loadtxt()-Funktion verwendet werden. Diese bekommt als Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.\nIm folgenden Beispiel wird die Datei TC01.csv eingelesen und deren Inhalt graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.\ndateiname = '01-daten/TC01.csv'\ndaten = np.loadtxt(dateiname)\nprint(\"Daten:\", daten)\nprint(\"Form:\", daten.shape)\n\nDaten: [20.1 20.1 20.1 ... 24.3 24.2 24.2]\nForm: (1513,)\nplt.plot(daten)\nplt.xlabel('Datenindex')\nplt.ylabel('Temperatur in °C');",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lesen und Schreiben von Dateien</span>"
     ]
   },
   {
-    "objectID": "content/script/array_read_n_write.html#schreiben-von-dateien",
-    "href": "content/script/array_read_n_write.html#schreiben-von-dateien",
+    "objectID": "skript/array_read_n_write.html#schreiben-von-dateien",
+    "href": "skript/array_read_n_write.html#schreiben-von-dateien",
     "title": "7  Lesen und Schreiben von Dateien",
     "section": "7.2 Schreiben von Dateien",
-    "text": "7.2 Schreiben von Dateien\nZum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion np.savetxt() verwendet werden. Dieser müssen mindestens die zu schreibenden Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche Formatierungs- bzw. Strukturierungsoptionen möglich.\nFolgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (header-Argument) am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem fmt-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, welche bei den formatierten Zeichenketten vorgestellt wurde.\n\nwertebereich = np.max(daten) - np.min(daten)\ndaten_skaliert = ( daten - np.min(daten) ) / wertebereich\ndaten_skaliert = daten_skaliert[::10]\n\n\nplt.xlabel('Datenindex')\nplt.ylabel('Skalierte Temperatur');\n\n\n\n\n\n\n\n\nBeim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des Zeilenumbruchzeichens \\n definiert. Die Ausgabe der Gleitkommazahlen wird mit %5.2f formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen entspricht.\n\n# Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der \n# schmalen Darstellung im Skript\nkommentar = f'Daten aus {dateiname} skaliert auf den Beriech' + \\\n             '0 bis 1\\noriginales Min / Max:' + \\\n            f'{np.min(daten)}/{np.max(daten)}'\nneu_dateiname = 'TC01_skaliert.csv'\n\nnp.savetxt(neu_dateiname, daten_skaliert, \n           header=kommentar, fmt='%5.2f')\n\nZum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.\n\n# Einlesen der ersten Zeilen der neu erstellten Datei\ndatei = open(neu_dateiname, 'r')\nfor i in range(10):\n    print( datei.readline() , end='')\ndatei.close()\n\n# Daten aus TC01.csv skaliert auf den Beriech0 bis 1\n# originales Min / Max:20.1/31.1\n 0.00\n 0.00\n 0.00\n 0.01\n 0.01\n 0.01\n 0.01\n 0.01",
+    "text": "7.2 Schreiben von Dateien\nZum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion np.savetxt() verwendet werden. Dieser müssen mindestens die zu schreibenden Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche Formatierungs- bzw. Strukturierungsoptionen möglich.\nFolgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (header-Argument) am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem fmt-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, welche bei den formatierten Zeichenketten vorgestellt wurde.\n\nwertebereich = np.max(daten) - np.min(daten)\ndaten_skaliert = ( daten - np.min(daten) ) / wertebereich\ndaten_skaliert = daten_skaliert[::10]\n\n\nplt.xlabel('Datenindex')\nplt.ylabel('Skalierte Temperatur');\n\n\n\n\n\n\n\n\nBeim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des Zeilenumbruchzeichens \\n definiert. Die Ausgabe der Gleitkommazahlen wird mit %5.2f formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen entspricht.\n\n# Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der \n# schmalen Darstellung im Skript\nkommentar = f'Daten aus {dateiname} skaliert auf den Beriech' + \\\n             '0 bis 1\\noriginales Min / Max:' + \\\n            f'{np.min(daten)}/{np.max(daten)}'\nneu_dateiname = '01-daten/TC01_skaliert.csv'\n\nnp.savetxt(neu_dateiname, daten_skaliert, \n           header=kommentar, fmt='%5.2f')\n\nZum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.\n\n# Einlesen der ersten Zeilen der neu erstellten Datei\ndatei = open(neu_dateiname, 'r')\nfor i in range(10):\n    print( datei.readline() , end='')\ndatei.close()\n\n# Daten aus 01-daten/TC01.csv skaliert auf den Beriech0 bis 1\n# originales Min / Max:20.1/31.1\n 0.00\n 0.00\n 0.00\n 0.01\n 0.01\n 0.01\n 0.01\n 0.01",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Lesen und Schreiben von Dateien</span>"
     ]
   },
   {
-    "objectID": "content/script/array_images.html",
-    "href": "content/script/array_images.html",
+    "objectID": "skript/array_images.html",
+    "href": "skript/array_images.html",
     "title": "8  Arbeiten mit Bildern",
     "section": "",
-    "text": "Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) werden dann alle gewünschten Farben zusammengestellt.\n\n\n\n\n\n\nAbbildung 8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.\n\n\n\nAufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem Link zu finden.\nImportieren wir dieses Bild nun mit der Funktion imread()aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.\n\nimport matplotlib.pyplot as plt\n\ndata = plt.imread(\"fig/mona_lisa.jpg\")\nprint(\"Form:\", data.shape)\n\nForm: (1024, 677, 3)\n\n\nSchauen wir uns einmal mit der print()-Funktion einen Ausschnitt dieser Daten an.\n\nprint(data)\n\n[[[ 68  62  40]\n  [ 88  82  56]\n  [ 92  87  57]\n  ...\n  [ 51  98  44]\n  [ 65 112  60]\n  [ 66 112  65]]\n\n [[ 65  59  35]\n  [ 68  63  34]\n  [ 83  78  46]\n  ...\n  [ 66 103  51]\n  [ 66 103  52]\n  [ 66 102  56]]\n\n [[ 97  90  62]\n  [ 87  80  51]\n  [ 78  72  38]\n  ...\n  [ 79 106  55]\n  [ 62  88  40]\n  [ 64  87  41]]\n\n ...\n\n [[ 25  14  18]\n  [ 21  10  14]\n  [ 20   9  13]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 23  12  16]\n  [ 23  12  16]\n  [ 21  10  14]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 22  11  15]\n  [ 26  15  19]\n  [ 24  13  17]\n  ...\n  [ 11   5   9]\n  [ 10   4   8]\n  [  9   3   7]]]\n\n\nMit der Funktion plt.imshow kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.\n\nplt.imshow(data)\n\n\n\n\n\n\n\n\nNatürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten.\n\n# Als Farbskale wird die Rotskala \n# verwendet 'Reds'\nplt.imshow( data[:,:,0], cmap='Reds' )\nplt.colorbar()\nplt.show()\n\n\n\n\n\n\n\n\nDa die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.\n\nbereich = np.array(data[450:500, 550:600,0], dtype=float)\nplt.imshow( bereich, cmap=\"Greys\" )\nplt.colorbar()",
+    "text": "Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) werden dann alle gewünschten Farben zusammengestellt.\n\n\n\n\n\n\nAbbildung 8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.\n\n\n\nAufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem Link zu finden.\nImportieren wir dieses Bild nun mit der Funktion imread()aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.\n\nimport matplotlib.pyplot as plt\n\ndata = plt.imread(\"00-bilder/mona_lisa.jpg\")\nprint(\"Form:\", data.shape)\n\nForm: (1024, 677, 3)\n\n\nSchauen wir uns einmal mit der print()-Funktion einen Ausschnitt dieser Daten an.\n\nprint(data)\n\n[[[ 68  62  38]\n  [ 88  82  56]\n  [ 92  87  55]\n  ...\n  [ 54  97  44]\n  [ 68 110  60]\n  [ 69 111  63]]\n\n [[ 65  59  33]\n  [ 68  63  34]\n  [ 83  78  46]\n  ...\n  [ 66 103  51]\n  [ 66 103  52]\n  [ 66 102  56]]\n\n [[ 97  90  62]\n  [ 87  80  51]\n  [ 78  72  38]\n  ...\n  [ 79 106  53]\n  [ 62  89  38]\n  [ 62  88  41]]\n\n ...\n\n [[ 25  14  18]\n  [ 21  10  14]\n  [ 20   9  13]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 23  12  16]\n  [ 23  12  16]\n  [ 21  10  14]\n  ...\n  [ 11   5   9]\n  [ 11   5   9]\n  [ 10   4   8]]\n\n [[ 22  11  15]\n  [ 26  15  19]\n  [ 24  13  17]\n  ...\n  [ 11   5   9]\n  [ 10   4   8]\n  [  9   3   7]]]\n\n\nMit der Funktion plt.imshow kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.\n\nplt.imshow(data)\n\n\n\n\n\n\n\n\nNatürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten.\n\n# Als Farbskale wird die Rotskala \n# verwendet 'Reds'\nplt.imshow( data[:,:,0], cmap='Reds' )\nplt.colorbar()\nplt.show()\n\n\n\n\n\n\n\n\nDa die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.\n\nbereich = np.array(data[450:500, 550:600,0], dtype=float)\nplt.imshow( bereich, cmap=\"Greys\" )\nplt.colorbar()",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Arbeiten mit Bildern</span>"
     ]
   },
   {
-    "objectID": "content/uebungen/uebung.html",
-    "href": "content/uebungen/uebung.html",
+    "objectID": "uebungen/uebung.html",
+    "href": "uebungen/uebung.html",
     "title": "9  Übung",
     "section": "",
     "text": "9.1 Aufgabe 1 Filmdatenbank\nIn der ersten Aufgabe wollen wir fiktive Daten für Filmbewertungen untersuchen. Das Datenset ist dabei vereinfacht und beinhaltet folgende Spalten:\nHier ist das Datenset:\nimport numpy as np\n\nbewertungen = np.array([\n    [1, 101, 4.5],\n    [1, 102, 3.0],\n    [2, 101, 2.5],\n    [2, 103, 4.0],\n    [3, 101, 5.0],\n    [3, 104, 3.5],\n    [3, 105, 4.0]\n])",
@@ -230,8 +230,8 @@
     ]
   },
   {
-    "objectID": "content/uebungen/uebung.html#aufgabe-1-filmdatenbank",
-    "href": "content/uebungen/uebung.html#aufgabe-1-filmdatenbank",
+    "objectID": "uebungen/uebung.html#aufgabe-1-filmdatenbank",
+    "href": "uebungen/uebung.html#aufgabe-1-filmdatenbank",
     "title": "9  Übung",
     "section": "",
     "text": "Film ID\nBenutzer ID\nBewertung\n\n\n\n\n\n\n\n\n\na) Bestimmen Sie die jemals niedrigste und höchste Bewertung, die je gegeben wurde\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nniedrigste_bewertung = np.min(bewertungen[:,2])\n\nprint(\"Die niedrigste jemals gegebene Bertung ist:\", niedrigste_bewertung)\n\nhoechste_bewertung = np.max(bewertungen[:,2])\n\nprint(\"Die hoechste jemals gegebene Bertung ist:\", hoechste_bewertung)\n\nDie niedrigste jemals gegebene Bertung ist: 2.5\nDie hoechste jemals gegebene Bertung ist: 5.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nb) Nennen Sie alle Bewertungen für Film 1\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen_film_1 = bewertungen[np.where(bewertungen[:,0]==1)]\n\nprint(\"Bewertungen für Film 1:\\n\", bewertungen_film_1)\n\nBewertungen für Film 1:\n [[  1.  101.    4.5]\n [  1.  102.    3. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nc) Nennen Sie alle Bewertungen von Person 101\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen_101 = bewertungen[np.where(bewertungen[:,1]==101)]\n\nprint(\"Bewertungen von Person 101:\\n\", bewertungen_101)\n\nBewertungen von Person 101:\n [[  1.  101.    4.5]\n [  2.  101.    2.5]\n [  3.  101.    5. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nd) Berechnen Sie die mittlere Bewertung für jeden Film und geben Sie diese nacheinander aus\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nfor ID in [1, 2, 3]:\n\n    mittelwert = np.mean(bewertungen[np.where(bewertungen[:,0]==ID),2])\n\n    print(\"Die Mittlere Bewertung für Film\", ID, \"beträgt:\", mittelwert) \n\nDie Mittlere Bewertung für Film 1 beträgt: 3.75\nDie Mittlere Bewertung für Film 2 beträgt: 3.25\nDie Mittlere Bewertung für Film 3 beträgt: 4.166666666666667\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ne) Finden SIe den Film mit der höchsten Bewertung\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nindex_hoechste_bewertung = np.argmax(bewertungen[:,2])\n\nprint(bewertungen[index_hoechste_bewertung,:])\n\n[  3. 101.   5.]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nf) Finden Sie die Person mit den meisten Bewertungen\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\neinzigartige_person, anzahl = np.unique(bewertungen[:, 1],return_counts=True)\n\nmeist_aktiver_person = einzigartige_person[np.argmax(anzahl)]\n\nprint(\"Personen mit den meisten Bewertungen:\", meist_aktiver_person)\n\nPersonen mit den meisten Bewertungen: 101.0\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ng) Nennen Sie alle Filme mit einer Wertung von 4 oder besser.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nindex_bewertung_besser_vier = bewertungen[:,2] &gt;= 4\n\nprint(\"Filme mit einer Wertung von 4 oder besser:\")\n\nprint(bewertungen[index_bewertung_besser_vier,:])\n\nFilme mit einer Wertung von 4 oder besser:\n[[  1.  101.    4.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  105.    4. ]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nh) Film Nr. 4 ist erschienen. Der Film wurde von Person 102 mit einer Note von 3.5 bewertet. Fügen Sie diesen zur Datenbank hinzu.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nneue_bewertung = np.array([4, 102, 3.5])\n\nbewertungen = np.append(bewertungen, [neue_bewertung], axis=0)\n\nprint(bewertungen)\n\n[[  1.  101.    4.5]\n [  1.  102.    3. ]\n [  2.  101.    2.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  104.    3.5]\n [  3.  105.    4. ]\n [  4.  102.    3.5]]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ni) Person 102 hat sich Film Nr. 1 nochmal angesehen und hat das Ende jetzt doch verstanden. Dementsprechend soll die Berwertung jetzt auf 5.0 geändert werden.\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nbewertungen[(bewertungen[:, 0] == 1) & \n            (bewertungen[:, 1] == 102), 2] = 5.0\n\nprint(\"Aktualisieren der Bewertung:\\n\", bewertungen)\n\nAktualisieren der Bewertung:\n [[  1.  101.    4.5]\n [  1.  102.    5. ]\n [  2.  101.    2.5]\n [  2.  103.    4. ]\n [  3.  101.    5. ]\n [  3.  104.    3.5]\n [  3.  105.    4. ]\n [  4.  102.    3.5]]",
@@ -240,8 +240,8 @@
     ]
   },
   {
-    "objectID": "content/uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
-    "href": "content/uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
+    "objectID": "uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
+    "href": "uebungen/uebung.html#aufgabe-2---kryptographie---caesar-chiffre",
     "title": "9  Übung",
     "section": "9.2 Aufgabe 2 - Kryptographie - Caesar-Chiffre",
     "text": "9.2 Aufgabe 2 - Kryptographie - Caesar-Chiffre\nIn dieser Aufgabe wollen wir Text sowohl ver- als auch entschlüsseln.\nJedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet.\n\nAscii-Tabelle\n\n\nBuchstabe\nASCII Code\nBuchstabe\nASCII Code\n\n\n\n\na\n97\nn\n110\n\n\nb\n98\no\n111\n\n\nc\n99\np\n112\n\n\nd\n100\nq\n113\n\n\ne\n101\nr\n114\n\n\nf\n102\ns\n115\n\n\ng\n103\nt\n116\n\n\nh\n104\nu\n117\n\n\ni\n105\nv\n118\n\n\nj\n106\nw\n119\n\n\nk\n107\nx\n120\n\n\nl\n108\ny\n121\n\n\nm\n109\nz\n122\n\n\n\nDer Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken wir uns auf Texte mit kleinen Buchstaben.\nIhre Aufgabe ist nun die Zahlenwerte zu verändern.\nZunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der Verschlüsselungswert “1” wird aus einem A ein B, einem M, ein N. Ist der Wert “4” wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt bei einer Verschiebung von 1 wird aus einem Z ein A.\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return np.array([ord(c)])\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\n\n\n\n\n\n\n1. Überlegen Sie sich zunächst wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\\[ \\textrm{ASCII}_{\\textrm{verschoben}} = (\\textrm{ASCII} - 97 + \\textrm{Versatz}) \\textrm{ mod } 26 + 97\\]\n\n\n\n\n\n\n\n\n\n\n\n\n2. Schreiben Sie Code der mit einer Schleife alle Zeichen umwandelt.\n\n\n\n\n\nZunächst sollen alle Zeichen in Ascii Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten schleife wieder alle Werte in Buchstaben übersetzt.\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\nklartext = \"abrakadabra\"\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nverschluesselter_text= []\n\n\n\nfor buchstabe in klartext:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\n\nfor zahl in umgewandelter_text:    \n    verschluesselt = (zahl - 97 + versatz) % 26 + 97\n    verschluesselte_zahl.append(verschluesselt)\nprint(verschluesselte_zahl)\n\n\nfor zahl in verschluesselte_zahl:    \n    verschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(verschluesselter_text)\n\n[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]\n[100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]\n['d', 'e', 'u', 'd', 'n', 'd', 'g', 'd', 'e', 'u', 'd']\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3. Ersetzen Sie die Schleife, indem Sie die Rechenoperation mit einem NumPy-Array durchführen\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\nklartext = \"abrakadabra\"\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nverschluesselter_text= []\n\n\n\nfor buchstabe in klartext:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\numgewandelter_text = np.array(umgewandelter_text)\nverschluesselte_zahl = (umgewandelter_text - 97 + versatz) % 26 + 97\nprint(verschluesselte_zahl)\n\nfor zahl in verschluesselte_zahl:    \n    verschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(verschluesselter_text)\n\n[97, 98, 114, 97, 107, 97, 100, 97, 98, 114, 97]\n[100 101 117 100 110 100 103 100 101 117 100]\n['d', 'e', 'u', 'd', 'n', 'd', 'g', 'd', 'e', 'u', 'd']\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4. Schreiben sie den Code so um, dass der verschlüsselte Text entschlüsselt wird.\n\n\n\n\n\n\n\n\n\n\n\nLösung\n\n\n\n\n\n\nimport numpy as np\n\n# Funktion, die einen Buchstaben in ihren ASCII-Wert umwandelt\ndef buchstabe_zu_ascii(c):\n    return ord(c)\n\n# Funktion, die einen ASCII-Wert in den passenden Buchstaben umwandelt\ndef ascii_zu_buchstabe(a):\n    return chr(a)\n\n\nversatz = 3\n\numgewandelter_text = []\nverschluesselte_zahl = []\nentschluesselter_text= []\n\n\n\nfor buchstabe in verschluesselter_text:\n    umgewandelter_text.append(buchstabe_zu_ascii(buchstabe))\nprint(umgewandelter_text)\n\numgewandelter_text = np.array(umgewandelter_text)\nverschluesselte_zahl = (umgewandelter_text - 97 - versatz) % 26 + 97\nprint(verschluesselte_zahl)\n\nfor zahl in verschluesselte_zahl:    \n    entschluesselter_text.append(ascii_zu_buchstabe(zahl))\nprint(entschluesselter_text)\n\n[100, 101, 117, 100, 110, 100, 103, 100, 101, 117, 100]\n[ 97  98 114  97 107  97 100  97  98 114  97]\n['a', 'b', 'r', 'a', 'k', 'a', 'd', 'a', 'b', 'r', 'a']",
