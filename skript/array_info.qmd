@@ -1,4 +1,4 @@
-# Größe und Struktur
+# Größe, Struktur und Typ
 
 ```{python}
 #| echo: false
@@ -45,5 +45,37 @@ Funktion `np.size()` benutzen.
 
 ```{python}
 np.size(matrix)
+```
+
+NumPy Arrays können verschiedene Datentypen beinhalten. Im folgenden haben wir 
+drei verschiedene Arrays mit einem jeweils anderen Datentypen.
+
+```{python}
+typ_a = np.array([1, 2, 3, 4, 5, 6])
+typ_b = np.array([0.1, 0.2, 0.3, 0.4, 0.5, 0.6])
+typ_c = np.array(["Montag", "Dienstag", "Mittwoch"])
+```
+
+Mit der Methode `np.dtype` können wir den Datentypen von Arrays ausgeben lassen. 
+Meist wird dabei der Typ plus eine Zahl ausgegeben, welche die zum Speichern 
+benötigte Bytezahl angibt. Das Array *typ_a* beinhaltet den Datentypen int64, 
+also ganze Zahlen.
+
+```{python}
+print(typ_a.dtype)
+```
+
+Das Array *typ_b* beinhaltet den Datentypen float64, wobei float für 
+Gleitkommazahlen steht.
+
+```{python}
+print(typ_b.dtype)
+```
+
+Das Array *typ_c* beinhaltet den Datentypen U8, wobei das U für Unicode steht. 
+Hier wird als Unicodetext gespeichert.
+
+```{python}
+print(typ_c.dtype)
 ```
 

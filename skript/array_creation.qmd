@@ -60,27 +60,13 @@ eine drei-dimensionale Matrix erstellt.
 matrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 ```
 
-Manchmal werden Arrays auch nach und nach befüllt. Auch hierfür bietet NumPy 
-passende Funktionen. 
-
-Mit `np.empty()` erzeugt man ein leeres Array, wobei die Dateneintrage ungesetzt 
-bleiben. Der Funktion wird die Form im Format `[Reihen,Spalten]` übergeben. Man 
-beachte die zufälligen Werte, die an diesen Stellen im Speicher liegen können.
-```{python}
-np.empty([2,3])
-```
-
-::: {.callout-warning #wrn-test}
-Benutzt man die Funktion empty werden die Einträge im Array nicht initialisiert. 
-Es können damit zufällige Werte im Array vorkommen. Daher empfiehlt es sich eher 
-Arrays mit festen Werten zu initialisieren.
-:::
-
-Alternativ können Arrays auch mit festgesetzten Werten initialisiert werden. 
-Dafür kann entweder die Funktion `np.zeros()`verwendet werden die alle Werte 
-auf 0 setzt, oder aber `np.ones()`welche alle Werte mit 1 initialisiert. Möchte 
-man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl 
-`np.full()` benutzen.
+Es gilt als "good practice" Arrays immer zu initialisieren. Dafür bietet NumPy 
+drei Funktionen um vorinitialisierte Arrays zu erzeugen. Alternativ können 
+Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder 
+die Funktion `np.zeros()`verwendet werden die alle Werte auf 0 setzt, oder aber 
+`np.ones()`welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im 
+Format `[Reihen,Spalten]` übergeben. Möchte man alle Einträge auf einen 
+spezifischen Wert setzen, kann man den Befehl `np.full()` benutzen.
 
 ```{python}
 np.zeros([2,3])
