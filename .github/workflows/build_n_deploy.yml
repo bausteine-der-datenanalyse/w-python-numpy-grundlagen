@@ -29,6 +29,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: pip install jupyter
 
       # Setup Quarto with fixed version
       - name: Setup Quarto
@@ -36,6 +37,7 @@ jobs:
         with:
           tinytex: true
           version: 1.4.553
+          
 
       # Render HTML target to GH pages, use all issue-*.qmd files
       - name: Publish to GitHub Pages (and render) 
