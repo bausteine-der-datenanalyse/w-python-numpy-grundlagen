@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../skript/array_creation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Erstellen von numpy arrays</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Erstellen von NumPy arrays</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -246,7 +246,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 <p>Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg">Link</a> zu finden.</p>
 <p>Importieren wir dieses Bild nun mit der Funktion <code>imread()</code>aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.</p>
-<div id="bc982b68" class="cell" data-execution_count="2">
+<div id="f927f9a8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> plt.imread(<span class="st">"00-bilder/mona_lisa.jpg"</span>)</span>
@@ -256,7 +256,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Schauen wir uns einmal mit der <code>print()</code>-Funktion einen Ausschnitt dieser Daten an.</p>
-<div id="108907e9" class="cell" data-execution_count="3">
+<div id="85a0d85e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[[ 68  62  38]
@@ -311,7 +311,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Mit der Funktion <code>plt.imshow</code> kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.</p>
-<div id="f4139423" class="cell" data-execution_count="4">
+<div id="6e1b4e7b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -322,7 +322,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten.</p>
-<div id="d8b2bb1d" class="cell" data-execution_count="5">
+<div id="6b1da02e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Als Farbskale wird die Rotskala </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># verwendet 'Reds'</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.imshow( data[:,:,<span class="dv">0</span>], cmap<span class="op">=</span><span class="st">'Reds'</span> )</span>
@@ -337,7 +337,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Da die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.</p>
-<div id="fa5a9302" class="cell" data-execution_count="6">
+<div id="6dc8830b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bereich <span class="op">=</span> np.array(data[<span class="dv">450</span>:<span class="dv">500</span>, <span class="dv">550</span>:<span class="dv">600</span>,<span class="dv">0</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.imshow( bereich, cmap<span class="op">=</span><span class="st">"Greys"</span> )</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.colorbar()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -346,6 +346,37 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 <figure class="figure">
 <p><img src="array_images_files/figure-html/cell-7-output-1.png" width="494" height="412" class="figure-img"></p>
 </figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Zwischenübung: Bilder bearbeiten
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Lösung
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
