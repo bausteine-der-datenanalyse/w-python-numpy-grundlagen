@@ -61,3 +61,18 @@ bereich = np.array(data[450:500, 550:600,0], dtype=float)
 plt.imshow( bereich, cmap="Greys" )
 plt.colorbar()
 ```
+
+
+::: {.callout-tip collapse="true"}
+
+## Zwischenübung: Bilder bearbeiten
+
+
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+:::
+
+:::

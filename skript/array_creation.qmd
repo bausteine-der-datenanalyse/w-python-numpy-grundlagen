@@ -1,4 +1,4 @@
-# Erstellen von numpy arrays
+# Erstellen von NumPy arrays
 
 ```{python}
 #| echo: false

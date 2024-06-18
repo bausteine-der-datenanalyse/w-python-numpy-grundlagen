@@ -92,3 +92,15 @@ häufig antreffen.
 | Textzeichen           | `U`        | ["montag", "dienstag"]     |
 
 : Typische Datentypen in NumPy {#tbl-datatypes .striped .hover}
+
+::: {.callout-tip collapse="true"}
+
+## Zwischenübung: Arrayinformationen auslesen
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+:::
+
+:::

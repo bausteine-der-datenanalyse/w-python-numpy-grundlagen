@@ -86,3 +86,16 @@ for i in range(10):
     print( datei.readline() , end='')
 datei.close()
 ```
+
+
+::: {.callout-tip collapse="true"}
+
+## Zwischenübung: Arraydaten lesen und schreiben
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+:::
+
+:::
