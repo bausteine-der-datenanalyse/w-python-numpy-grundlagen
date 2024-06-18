@@ -234,25 +234,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Wenn man sich nicht mehr sicher ist, welche Struktur oder Form ein Array hat oder oder diese Größen zum Beispiel für Schleifen nutzen möchte, bietet NumPy folgende Funktionen für das Auslesen dieser Größen an.</p>
-<div id="e4d5138e" class="cell" data-execution_count="2">
+<div id="9854fdf8" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>np.shape()</code> gibt die Längen der einzelnen Dimension in Form einer Liste zurück.</p>
-<div id="f07b42d9" class="cell" data-execution_count="3">
+<div id="ca41d388" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.shape(matrix)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>(2, 3)</code></pre>
 </div>
 </div>
 <p>Die native Python Funktion <code>len()</code> gibt dagegen nur die Länge der ersten Dimension, also die Anzahl der Elemente in den äußeren Klammern wieder.</p>
-<div id="be0d4049" class="cell" data-execution_count="4">
+<div id="2d53ba1c" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(matrix)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>2</code></pre>
 </div>
 </div>
 <p>Die Funktion <code>np.ndym()</code>gibt im Gegensatz zu <code>np.shape()</code> nur die Anzahl der Dimensionen zurück.</p>
-<div id="9f876b49" class="cell" data-execution_count="5">
+<div id="4d8b3a48" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.ndim(matrix)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>2</code></pre>
@@ -271,7 +271,7 @@ Die Ausgabe von <code>np.ndim()</code> kann mit <code>np.size()</code>und einer 
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>np.ndim()</code> gibt die Länge der Liste von <code>np.shape()</code> aus</p>
-<div id="e8f37d79" class="cell" data-execution_count="6">
+<div id="827493c1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(np.shape(matrix))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>2</code></pre>
@@ -281,42 +281,47 @@ Die Ausgabe von <code>np.ndim()</code> kann mit <code>np.size()</code>und einer 
 </div>
 </div>
 <p>Möchte man die Anzahl aller Elemente in einem Array ausgeben kann man die Funktion <code>np.size()</code> benutzen.</p>
-<div id="d0cc546c" class="cell" data-execution_count="7">
+<div id="f76b0055" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>np.size(matrix)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>6</code></pre>
 </div>
 </div>
 <p>NumPy Arrays können verschiedene Datentypen beinhalten. Im folgenden haben wir drei verschiedene Arrays mit einem jeweils anderen Datentypen.</p>
-<div id="f3ed5e0c" class="cell" data-execution_count="8">
+<div id="32634a5b" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>typ_a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>typ_b <span class="op">=</span> np.array([<span class="fl">0.1</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>, <span class="fl">0.4</span>, <span class="fl">0.5</span>])</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>typ_c <span class="op">=</span> np.array([<span class="st">"Montag"</span>, <span class="st">"Dienstag"</span>, <span class="st">"Mittwoch"</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Mit der Methode <code>np.dtype</code> können wir den Datentypen von Arrays ausgeben lassen. Meist wird dabei der Typ plus eine Zahl ausgegeben, welche die zum Speichern benötigte Bytezahl angibt. Das Array <em>typ_a</em> beinhaltet den Datentypen int64, also ganze Zahlen.</p>
-<div id="31c462c0" class="cell" data-execution_count="9">
+<div id="efa22786" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(typ_a.dtype)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>int64</code></pre>
 </div>
 </div>
 <p>Das Array <em>typ_b</em> beinhaltet den Datentypen float64, wobei float für Gleitkommazahlen steht.</p>
-<div id="06086c69" class="cell" data-execution_count="10">
+<div id="b5d29935" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(typ_b.dtype)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>float64</code></pre>
 </div>
 </div>
 <p>Das Array <em>typ_c</em> beinhaltet den Datentypen U8, wobei das U für Unicode steht. Hier wird als Unicodetext gespeichert.</p>
-<div id="14911ea7" class="cell" data-execution_count="11">
+<div id="abbf63be" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(typ_c.dtype)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;U8</code></pre>
 </div>
 </div>
 <p>Im folgenden finden Sie eine Tabelle mit den typischen Datentypen, die sie häufig antreffen.</p>
+<div id="tbl-datatypes" class="striped hover quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-datatypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;3.1: Typische Datentypen in NumPy
+</figcaption>
+<div aria-describedby="tbl-datatypes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table-striped table-hover table">
-<caption>Typische Datentypen in NumPy</caption>
 <thead>
 <tr class="header">
 <th>Datentyp</th>
@@ -357,6 +362,9 @@ Die Ausgabe von <code>np.ndim()</code> kann mit <code>np.size()</code>und einer 
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
+</div>
 
 
 

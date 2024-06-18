@@ -91,4 +91,4 @@ häufig antreffen.
 | komplexe zahlen       | `complex`  | [-1 + 9j, 2-77j, 72 + 11j] |
 | Textzeichen           | `U`        | ["montag", "dienstag"]     |
 
-: Typische Datentypen in NumPy {.striped .hover}
+: Typische Datentypen in NumPy {#tbl-datatypes .striped .hover}

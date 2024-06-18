@@ -210,7 +210,7 @@ Jedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet
 | l         | 108        | y        | 121        |
 | m         | 109        | z        | 122        |
 
-: Ascii-Tabelle {.striped .hover}
+: Ascii-Tabelle {#tbl-ascii .striped .hover}
 
 Der Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von 
 Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken 
