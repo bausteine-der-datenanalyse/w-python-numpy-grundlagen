@@ -79,3 +79,16 @@ Hier wird als Unicodetext gespeichert.
 print(typ_c.dtype)
 ```
 
+Im folgenden finden Sie eine Tabelle mit den typischen Datentypen, die sie 
+häufig antreffen.
+
+| Datentyp              | Numpy Name | Beispiele                  |
+|-----------------------|------------|----------------------------|
+| Wahrheitswert         | `bool`     | [True, False, True]        |
+| Ganze Zahl            | `int`      | [-2, 5, -6, 7, 3]          |
+| positive Ganze Zahlen | `uint`     | [1, 2, 3, 4, 5]            |
+| Kommazahlen           | `float`    | [1.3, 7.4, 3.5, .5.5]      |
+| komplexe zahlen       | `complex`  | [-1 + 9j, 2-77j, 72 + 11j] |
+| Textzeichen           | `U`        | ["montag", "dienstag"]     |
+
+: Typische Datentypen in NumPy {.striped .hover}
