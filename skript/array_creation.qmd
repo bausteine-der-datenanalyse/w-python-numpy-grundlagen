@@ -108,7 +108,7 @@ np.arange(0,10,2)
 
 ::: {.callout-tip collapse="true"}
 
-## Übung: Array Erstellung
+## Zwischenübung: Array Erstellung
 
 Erstellen Sie jeweils ein NumPy-Array, mit dem folgenden Inhalt:
 

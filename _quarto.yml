@@ -25,6 +25,7 @@ book:
     - skript/array_read_n_write.qmd
     - skript/array_images.qmd
     - uebungen/uebung.qmd
+  
 
 bibliography: skript/references.bib
 
@@ -32,6 +33,7 @@ format:
   html:
     theme: [cosmo, theme.scss]
     lang: de
+    tbl-cap-location: bottom
   pdf:
     documentclass: scrreprt
     lang: de

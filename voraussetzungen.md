@@ -1,2 +1,3 @@
 - Grundlagen Python
 - Einbinden von zusätzlichen Paketen
+- Plotten mit Matplotlib

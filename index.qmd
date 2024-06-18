@@ -19,8 +19,8 @@ alle Logos und anders gekennzeichneten Inhalte. 2024
 {{< include voraussetzungen.md >}}
 
 ## Verwendete Pakete und Datensätze
-- numpy
-- matplotlib
+- NumPy
+- Matplotlib
 
 ## Bearbeitungszeit
 Geschätzte Bearbeitungszeit: 42 Stunden
