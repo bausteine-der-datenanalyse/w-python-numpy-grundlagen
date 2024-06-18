@@ -414,16 +414,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.72448596"
-     inkscape:cx="631.48221"
-     inkscape:cy="389.93164"
+     inkscape:cx="1298.1618"
+     inkscape:cy="306.42416"
      inkscape:document-units="mm"
-     inkscape:current-layer="g5929"
+     inkscape:current-layer="g5814"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1440"
-     inkscape:window-height="900"
+     inkscape:window-height="847"
      inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:snap-bbox="true"
      inkscape:showpageshadow="2"
@@ -481,9 +481,9 @@
          transform="translate(-8.8314288,4.120477)"><tspan
            x="11.707031"
            y="101.65742"
-           id="tspan23"><tspan
+           id="tspan2"><tspan
              style="font-size:7.05556px"
-             id="tspan22">0. Achse </tspan></tspan></text>
+             id="tspan1">0. Achse </tspan></tspan></text>
       <path
          style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
          d="M 3.7375608,96.375695 H 25.447817"
@@ -495,9 +495,9 @@
          transform="translate(-5.7798169,-52.801093)"><tspan
            x="11.707031"
            y="101.65742"
-           id="tspan25"><tspan
+           id="tspan4"><tspan
              style="font-size:7.05556px"
-             id="tspan24">Liste[3] </tspan></tspan></text>
+             id="tspan3">Liste[3] </tspan></tspan></text>
       <g
          id="g5929">
         <path
@@ -531,11 +531,11 @@
            transform="translate(129.27848,-49.132646)"><tspan
              x="20.223087"
              y="92.001953"
-             id="tspan28"><tspan
+             id="tspan7"><tspan
                style="text-orientation:sideways"
-               id="tspan26">0. Achse</tspan><tspan
+               id="tspan5">0. Achse</tspan><tspan
                style="text-orientation:upright"
-               id="tspan27"> </tspan></tspan></text>
+               id="tspan6"> </tspan></tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9)"
            d="m 157.78914,42.923699 v 21.7104"
@@ -547,9 +547,9 @@
            transform="translate(158.04317,3.4656665)"><tspan
              x="11.707031"
              y="101.65742"
-             id="tspan30"><tspan
+             id="tspan9"><tspan
                style="font-size:7.05556px"
-               id="tspan29">1. Achse </tspan></tspan></text>
+               id="tspan8">1. Achse </tspan></tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-8)"
            d="m 170.4251,96.375695 h 21.71028"
@@ -561,9 +561,9 @@
            transform="translate(171.30124,-71.554012)"><tspan
              x="11.707031"
              y="101.65742"
-             id="tspan32"><tspan
+             id="tspan11"><tspan
                style="font-size:7.05556px"
-               id="tspan31">Liste[0,1] </tspan></tspan></text>
+               id="tspan10">Liste[0,1] </tspan></tspan></text>
         <text
            xml:space="preserve"
            style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
@@ -813,14 +813,14 @@
            xml:space="preserve"
            id="text2107-3-3"
            style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2109-5-50);display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           transform="rotate(-133.49174,201.15782,14.946147)"><tspan
+           transform="rotate(-133.49174,200.95659,16.356026)"><tspan
              x="18.01825"
              y="92.001953"
-             id="tspan35"><tspan
+             id="tspan14"><tspan
                style="font-size:7.05556px;writing-mode:tb-rl;text-orientation:sideways"
-               id="tspan33">0. Achse</tspan><tspan
+               id="tspan12">0. Achse</tspan><tspan
                style="font-size:7.05556px;writing-mode:tb-rl;text-orientation:upright"
-               id="tspan34"> </tspan></tspan></text>
+               id="tspan13"> </tspan></tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9-6)"
            d="M 375.92358,87.12598 391.67389,72.183799"
@@ -873,17 +873,17 @@
            xml:space="preserve"
            id="text2107-3-0"
            style="font-style:normal;font-weight:normal;font-size:7.05556px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2109-5-9);display:inline;fill:#000000;fill-opacity:1;stroke:none"
-           transform="translate(254.25329,-49.756898)"><tspan
+           transform="translate(254.48107,-50.610723)"><tspan
              x="20.223087"
              y="92.001953"
-             id="tspan38"><tspan
+             id="tspan17"><tspan
                style="writing-mode:tb-rl;text-orientation:sideways"
-               id="tspan36">1. Achse</tspan><tspan
+               id="tspan15">1. Achse</tspan><tspan
                style="writing-mode:tb-rl;text-orientation:upright"
-               id="tspan37"> </tspan></tspan></text>
+               id="tspan16"> </tspan></tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-9-67)"
-           d="m 282.76395,42.299447 v 21.7104"
+           d="m 284.26026,43.091303 v 21.7104"
            id="path2113-0-4" />
         <text
            xml:space="preserve"
@@ -914,9 +914,9 @@
            transform="translate(282.75549,3.5441723)"><tspan
              x="11.707031"
              y="101.65742"
-             id="tspan40"><tspan
+             id="tspan19"><tspan
                style="font-size:7.05556px"
-               id="tspan39">2. Achse </tspan></tspan></text>
+               id="tspan18">2. Achse </tspan></tspan></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-8-0)"
            d="M 295.13742,96.4542 H 316.8477"
@@ -961,9 +961,9 @@
            transform="translate(312.76684,-86.370666)"><tspan
              x="11.707031"
              y="101.65742"
-             id="tspan42"><tspan
+             id="tspan21"><tspan
                style="font-size:7.05556px"
-               id="tspan41">Liste[2,0,2] </tspan></tspan></text>
+               id="tspan20">Liste[2,0,2] </tspan></tspan></text>
         <path
            style="fill:#0030e1;fill-opacity:1;stroke:#0029e1;stroke-width:0.811;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:3;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend-8-8-2)"
            d="M 305.84046,40.736582 318.40227,29.430036"
