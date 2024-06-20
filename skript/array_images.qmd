@@ -15,7 +15,6 @@ Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den
 Werkzeugen von NumPy leicht bearbeiten. 
 Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem [Link](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg) zu finden.
 
-
 Importieren wir dieses Bild nun mit der Funktion `imread()`aus dem 
 matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array 
 handelt. 

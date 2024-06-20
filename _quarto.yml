@@ -16,7 +16,7 @@ book:
   downloads: [pdf]
   chapters: 
     - index.qmd
-    - skript/einleitung.qmd
+    - skript/introduction.qmd
     - skript/array_creation.qmd
     - skript/array_info.qmd
     - skript/array_calculation.qmd
@@ -24,8 +24,9 @@ book:
     - skript/array_manipulation.qmd
     - skript/array_read_n_write.qmd
     - skript/array_images.qmd
+    - skript/assessment.qmd
+    
     - uebungen/uebung.qmd
-  
 
 bibliography: skript/references.bib
 
@@ -40,4 +41,3 @@ format:
 
 execute:
   freeze: auto
-
