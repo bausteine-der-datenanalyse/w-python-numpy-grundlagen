@@ -1,2 +1,27 @@
 # Lernzielkontrolle
 
+Herzlich willkommen zur Lernzielkontrolle!
+
+Diese Selbstlernkontrolle dient dazu, Ihr Verständnis der bisher behandelten 
+Themen zu überprüfen und Ihnen die Möglichkeit zu geben, Ihren Lernfortschritt 
+eigenständig zu bewerten. Sie ist so konzipiert, dass Sie Ihre Stärken und 
+Schwächen erkennen und gezielt an den Bereichen arbeiten können, die noch 
+verbessert werden müssen.
+
+Bitte nehmen Sie sich ausreichend Zeit für die Bearbeitung der Fragen und gehen 
+Sie diese in Ruhe durch. Seien Sie ehrlich zu sich selbst und versuchen Sie, 
+die Aufgaben ohne Hilfsmittel zu lösen, um ein realistisches Bild Ihres 
+aktuellen Wissensstands zu erhalten. Sollten Sie bei einer Frage Schwierigkeiten 
+haben, ist dies ein Hinweis darauf, dass Sie in diesem Bereich noch weiter üben 
+sollten.
+
+Viel Erfolg bei der Bearbeitung und beim weiteren Lernen!
+
+## Aufgabe 1
+
+Erstellen Sie mit Hilfe von NumPy die folgenden Arrays:
+
+1. Ein eindimensionales Array, das die Zahlen von 0 bis 9 enthält.
+2. Ein zweidimensionales Array der Form 3×33×3, das nur aus Einsen besteht.
+3. Ein eindimensionales Array, das die Zahlen von 10 bis 50 (einschließlich) in 
+Schritten von 5 enthält.
