@@ -7,7 +7,8 @@
 
 Bausteine Computergestützter Datenanalyse. "Numpy Grundlagen" von Marc Fehr ist 
 lizensiert unter [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de). 
-Das Werk ist abrufbar unter \<*Platzhalter*\>. Ausgenommen von der Lizenz sind 
+Das Werk ist abrufbar unter <https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen>. 
+Ausgenommen von der Lizenz sind 
 alle Logos und anders gekennzeichneten Inhalte. 2024
 
 :::
