@@ -23,7 +23,7 @@ alle Logos und anders gekennzeichneten Inhalte. 2024
 - Matplotlib
 
 ## Bearbeitungszeit
-Geschätzte Bearbeitungszeit: 42 Stunden
+Geschätzte Bearbeitungszeit: -
 
 ## Lernziele
 
