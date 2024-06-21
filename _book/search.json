@@ -44,7 +44,7 @@
     "href": "index.html#lernziele",
     "title": "w-python-numpy-grundlagen",
     "section": "Lernziele",
-    "text": "Lernziele\n\nEinleitung: was ist NumPy, Vor- und Nachteile\nNutzen des NumPy-Moduls\nErstellen von NumPy-Arrays\nSlicing\nReferenzen\nLesen und schreiben von Dateien\nBilder",
+    "text": "Lernziele\n\nEinleitung: was ist NumPy, Vor- und Nachteile\nNutzen des NumPy-Moduls\nErstellen von NumPy-Arrays\nSlicing\nLesen und schreiben von Dateien\nArbeiten mit Bildern",
     "crumbs": [
       "Preamble"
     ]

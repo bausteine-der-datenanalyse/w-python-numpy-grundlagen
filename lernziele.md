@@ -2,6 +2,5 @@
 - Nutzen des NumPy-Moduls
 - Erstellen von NumPy-Arrays
 - Slicing
-- Referenzen
 - Lesen und schreiben von Dateien
-- Bilder
+- Arbeiten mit Bildern
