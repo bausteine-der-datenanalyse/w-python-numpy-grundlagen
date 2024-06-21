@@ -5,7 +5,7 @@
 import numpy as np
 ```
 
-![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](/skript/00-bilder/slicing.svg){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
+![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](/skript/00-bilder/slicing.png){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
 
 Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der 
 Form:

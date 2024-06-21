@@ -92,6 +92,8 @@ datei.close()
 
 ## Zwischenübung: Arraydaten lesen und schreiben
 
+
+
 ::: {.callout-caution icon="false" collapse="true"}
 
 ## Lösung

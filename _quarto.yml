@@ -38,6 +38,7 @@ format:
   pdf:
     documentclass: scrreprt
     lang: de
+    toc-depth: 1
 
 execute:
   freeze: auto
