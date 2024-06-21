@@ -56,6 +56,7 @@ daten_skaliert = daten_skaliert[::10]
 ```
 
 ```{python}
+plt.plot(daten_skaliert)
 plt.xlabel('Datenindex')
 plt.ylabel('Skalierte Temperatur');
 ```

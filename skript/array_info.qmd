@@ -20,6 +20,9 @@ np.shape(matrix)
 
 Die native Python Funktion `len()` gibt dagegen nur die Länge der ersten 
 Dimension, also die Anzahl der Elemente in den äußeren Klammern wieder. 
+Im obrigen Beispiel würde `len()` also die beiden Listen `[1, 2, 3]` und 
+`[4, 5, 6]` sehen.
+
 ```{python}
 len(matrix)
 ```

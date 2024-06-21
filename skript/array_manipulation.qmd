@@ -136,7 +136,6 @@ einzigartige_werte, anzahl = np.unique(liste_mit_dopplungen, return_counts=True)
 print(anzahl)
 ```
 
-
 ::: {.callout-tip collapse="true"}
 
 ## Zwischenübung: Arraymanipulation
