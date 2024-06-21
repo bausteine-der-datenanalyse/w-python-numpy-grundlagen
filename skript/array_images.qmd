@@ -66,11 +66,34 @@ plt.colorbar()
 
 ## Zwischenübung: Bilder bearbeiten
 
+Lesen Sie folgendes Bild vom Haspel Campus in Wuppertal ein: 
+[Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg)
 
+Extrahieren Sie den blauen Anteil und lassen Sie sich die Zeile in der Mitte des 
+Bildes ausgeben, so wie einen beliebigen Bildauschnitt.
 
 ::: {.callout-caution icon="false" collapse="true"}
 
 ## Lösung
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+
+data = plt.imread('01-daten/campus_haspel.jpeg')
+
+form =  data.shape
+print( "Form:", data.shape )
+
+blau =  data[:,:,2]
+plt.imshow(blau, cmap='Blues')
+
+zeile =  data[int(form[0]/2),:,2]
+print(zeile)
+
+ausschnitt =  data[10:50,10:50,:]
+plt.imshow(ausschnitt)
+```
 
 :::
 

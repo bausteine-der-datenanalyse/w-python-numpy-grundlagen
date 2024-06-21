@@ -88,7 +88,7 @@ datei.close()
 ```
 
 
-::: {.callout-tip collapse="true"}
+<!-- ::: {.callout-tip collapse="true"}
 
 ## Zwischenübung: Arraydaten lesen und schreiben
 
@@ -98,4 +98,4 @@ datei.close()
 
 :::
 
-:::
+::: -->

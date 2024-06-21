@@ -25,10 +25,10 @@ print(np.transpose(matrix))
 ```
 
 Haben wir ein nun diese Matrix und wollen daraus einen Vektor erstellen so 
-können wir die Funktion `np.ravel()` benutzen:
+können wir die Funktion `np.flatten()` benutzen:
 
 ```{python}
-vector = np.ravel(matrix)
+vector = matrix.flatten
 print(vector)
 ```
 
@@ -141,9 +141,48 @@ print(anzahl)
 
 ## Zwischenübung: Arraymanipulation
 
+Gegeben ist das folgende zweidimensionale Array matrix:
+
+```{python}
+matrix = np.array([
+    [4, 7, 2, 8],
+    [1, 5, 3, 6],
+    [9, 2, 4, 7]
+])
+```
+
+1. Ändern Sie die Form des Arrays matrix in ein eindimensionales Array.
+2. Sortieren Sie das eindimensionale Array in aufsteigender Reihenfolge.
+3. Ändern Sie die Form des sortierten Arrays in ein zweidimensionales Array 
+mit 2 Zeilen und 6 Spalten.
+4. Bestimmen Sie die eindeutigen Elemente im ursprünglichen Array matrix und 
+geben Sie diese aus.
+
+
 ::: {.callout-caution icon="false" collapse="true"}
 
 ## Lösung
+
+```{python}
+matrix = np.array([
+    [4, 7, 2, 8],
+    [1, 5, 3, 6],
+    [9, 2, 4, 7]
+])
+
+# 1. Ändern der Form in ein eindimensionales Array
+flat_array = matrix.flatten()
+
+# 2. Sortieren des eindimensionalen Arrays in aufsteigender Reihenfolge
+sorted_array = np.sort(flat_array)
+
+# 3. Ändern der Form des sortierten Arrays in ein 2x6-Array
+reshaped_array = sorted_array.reshape(2, 6)
+
+# 4. Bestimmen der eindeutigen Elemente im ursprünglichen Array
+unique_elements_original = np.unique(matrix)
+
+```
 
 :::
 

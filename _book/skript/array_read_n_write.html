@@ -251,11 +251,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="7.1" class="anchored" data-anchor-id="lesen-von-dateien"><span class="header-section-number">7.1</span> Lesen von Dateien</h2>
 <p>Zum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated values), kann die <code>np.loadtxt()</code>-Funktion verwendet werden. Diese bekommt als Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.</p>
 <p>Im folgenden Beispiel wird die Datei <a href="https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv">TC01.csv</a> eingelesen und deren Inhalt graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.</p>
-<div id="1e9cb59a" class="cell" data-execution_count="2">
+<div id="18570217" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dateiname <span class="op">=</span> <span class="st">'01-daten/TC01.csv'</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>daten <span class="op">=</span> np.loadtxt(dateiname)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="428d3659" class="cell" data-execution_count="3">
+<div id="ea2ec8b9" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Daten:"</span>, daten)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Form:"</span>, daten.shape)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -263,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Form: (1513,)</code></pre>
 </div>
 </div>
-<div id="de557d90" class="cell" data-execution_count="4">
+<div id="9e7d3e6a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.plot(daten)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Datenindex'</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Temperatur in °C'</span>)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -280,12 +280,12 @@ Form: (1513,)</code></pre>
 <h2 data-number="7.2" class="anchored" data-anchor-id="schreiben-von-dateien"><span class="header-section-number">7.2</span> Schreiben von Dateien</h2>
 <p>Zum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion <code>np.savetxt()</code> verwendet werden. Dieser müssen mindestens die zu schreibenden Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche Formatierungs- bzw. Strukturierungsoptionen möglich.</p>
 <p>Folgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (<code>header</code>-Argument) am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem <code>fmt</code>-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, welche bei den formatierten Zeichenketten vorgestellt wurde.</p>
-<div id="ee2d89e7" class="cell" data-execution_count="5">
+<div id="b48f143e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>wertebereich <span class="op">=</span> np.<span class="bu">max</span>(daten) <span class="op">-</span> np.<span class="bu">min</span>(daten)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>daten_skaliert <span class="op">=</span> ( daten <span class="op">-</span> np.<span class="bu">min</span>(daten) ) <span class="op">/</span> wertebereich</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>daten_skaliert <span class="op">=</span> daten_skaliert[::<span class="dv">10</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="579379d4" class="cell" data-execution_count="6">
+<div id="132d0db6" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Datenindex'</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Skalierte Temperatur'</span>)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -297,7 +297,7 @@ Form: (1513,)</code></pre>
 </div>
 </div>
 <p>Beim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des Zeilenumbruchzeichens <code>\n</code> definiert. Die Ausgabe der Gleitkommazahlen wird mit <code>%5.2f</code> formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen entspricht.</p>
-<div id="487f68ac" class="cell" data-execution_count="7">
+<div id="2025baf7" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># schmalen Darstellung im Skript</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>kommentar <span class="op">=</span> <span class="ss">f'Daten aus </span><span class="sc">{</span>dateiname<span class="sc">}</span><span class="ss"> skaliert auf den Beriech'</span> <span class="op">+</span> <span class="op">\</span></span>
@@ -309,7 +309,7 @@ Form: (1513,)</code></pre>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>           header<span class="op">=</span>kommentar, fmt<span class="op">=</span><span class="st">'</span><span class="sc">%5.2f</span><span class="st">'</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Zum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.</p>
-<div id="b563d667" class="cell" data-execution_count="8">
+<div id="8f3853be" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Einlesen der ersten Zeilen der neu erstellten Datei</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>datei <span class="op">=</span> <span class="bu">open</span>(neu_dateiname, <span class="st">'r'</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>
@@ -328,37 +328,17 @@ Form: (1513,)</code></pre>
  0.01</code></pre>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Zwischenübung: Arraydaten lesen und schreiben
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Lösung
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<!-- ::: {.callout-tip collapse="true"}
 
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+## Zwischenübung: Arraydaten lesen und schreiben
+
+::: {.callout-caution icon="false" collapse="true"}
+
+## Lösung
+
+:::
+
+::: -->
 
 
 </section>

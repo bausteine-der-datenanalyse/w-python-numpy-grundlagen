@@ -97,6 +97,8 @@ häufig antreffen.
 
 ## Zwischenübung: Arrayinformationen auslesen
 
+Diese Seite muss auf Grund des neuen NumPy Updates überarbeitet werden
+
 ::: {.callout-caution icon="false" collapse="true"}
 
 ## Lösung

@@ -252,7 +252,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 <p>Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg">Link</a> zu finden.</p>
 <p>Importieren wir dieses Bild nun mit der Funktion <code>imread()</code>aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.</p>
-<div id="f7403ec1" class="cell" data-execution_count="2">
+<div id="a8171620" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> plt.imread(<span class="st">"00-bilder/mona_lisa.jpg"</span>)</span>
@@ -262,7 +262,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Schauen wir uns einmal mit der <code>print()</code>-Funktion einen Ausschnitt dieser Daten an.</p>
-<div id="8998ad7f" class="cell" data-execution_count="3">
+<div id="f74a8264" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[[ 68  62  38]
@@ -317,7 +317,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Mit der Funktion <code>plt.imshow</code> kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.</p>
-<div id="fbc9469d" class="cell" data-execution_count="4">
+<div id="3672b814" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -328,7 +328,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten.</p>
-<div id="006a1a28" class="cell" data-execution_count="5">
+<div id="7eb16918" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Als Farbskale wird die Rotskala </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># verwendet 'Reds'</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.imshow( data[:,:,<span class="dv">0</span>], cmap<span class="op">=</span><span class="st">'Reds'</span> )</span>
@@ -343,7 +343,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Da die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.</p>
-<div id="388fb14d" class="cell" data-execution_count="6">
+<div id="c854d8bf" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bereich <span class="op">=</span> np.array(data[<span class="dv">450</span>:<span class="dv">500</span>, <span class="dv">550</span>:<span class="dv">600</span>,<span class="dv">0</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.imshow( bereich, cmap<span class="op">=</span><span class="st">"Greys"</span> )</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.colorbar()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -367,6 +367,8 @@ Zwischenübung: Bilder bearbeiten
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>Lesen Sie folgendes Bild vom Haspel Campus in Wuppertal ein: <a href="https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg">Bild</a></p>
+<p>Extrahieren Sie den blauen Anteil und lassen Sie sich die Zeile in der Mitte des Bildes ausgeben, so wie einen beliebigen Bildauschnitt.</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -379,7 +381,35 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-
+<div id="a130651a" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> plt.imread(<span class="st">'01-daten/campus_haspel.jpeg'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>form <span class="op">=</span>  data.shape</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>( <span class="st">"Form:"</span>, data.shape )</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>blau <span class="op">=</span>  data[:,:,<span class="dv">2</span>]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.imshow(blau, cmap<span class="op">=</span><span class="st">'Blues'</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>zeile <span class="op">=</span>  data[<span class="bu">int</span>(form[<span class="dv">0</span>]<span class="op">/</span><span class="dv">2</span>),:,<span class="dv">2</span>]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zeile)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>ausschnitt <span class="op">=</span>  data[<span class="dv">10</span>:<span class="dv">50</span>,<span class="dv">10</span>:<span class="dv">50</span>,:]</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>plt.imshow(ausschnitt)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Form: (3024, 4032, 3)
+[221 220 220 ...  28  28  28]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="array_images_files/figure-html/cell-8-output-2.png" width="415" height="412" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
