@@ -63,7 +63,7 @@ Wählen Sie die farblich markierten Bereiche aus dem Array "matrix" mit den eben
 gelernten Möglichkeiten des Array-Slicing aus.
 
 ![](/skript/00-bilder/exercise_slicing.svg)
-``{python}
+```{python}
 matrix = np.array([
     [2, 11, 18, 47, 33, 48, 9, 31, 8, 41],
     [55, 1, 8, 3, 91, 56, 17, 54, 23, 12],
