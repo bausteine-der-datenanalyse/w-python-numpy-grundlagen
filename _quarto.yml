@@ -27,6 +27,7 @@ book:
     - skript/assessment.qmd
     
     - uebungen/uebung.qmd
+    - klausurfragen/klausurfragen.qmd
 
 bibliography: skript/references.bib
 
