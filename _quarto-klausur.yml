@@ -1,0 +1,6 @@
+project:  
+  output-dir: _klausur
+book:
+  chapters: 
+    - index.qmd
+    - klausurfragen/klausurfragen.qmd

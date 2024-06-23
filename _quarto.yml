@@ -14,20 +14,6 @@ book:
   date: today
   language: de-DE
   downloads: [pdf]
-  chapters: 
-    - index.qmd
-    - skript/introduction.qmd
-    - skript/array_creation.qmd
-    - skript/array_info.qmd
-    - skript/array_calculation.qmd
-    - skript/array_slicing.qmd
-    - skript/array_manipulation.qmd
-    - skript/array_read_n_write.qmd
-    - skript/array_images.qmd
-    - skript/assessment.qmd
-    
-    - uebungen/uebung.qmd
-    - klausurfragen/klausurfragen.qmd
 
 bibliography: skript/references.bib
 
@@ -43,3 +29,9 @@ format:
 
 execute:
   freeze: auto
+
+profile:
+  default: full
+  group: 
+    - [full, klausur]
+
