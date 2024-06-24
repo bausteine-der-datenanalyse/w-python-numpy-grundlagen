@@ -284,7 +284,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="aufgabe-4" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-4">Aufgabe 4</h2>
-<p>Frage zu Datentypen - Änderungen mit NumPy 2.0 abwarten</p>
+<p>Welchen Datentyp besitzt folgendes Array? Mit welcher Funktion kann ich den Datentypen eines Arrays auslesen?</p>
+<div id="69233705" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="aufgabe-5" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-5">Aufgabe 5</h2>
@@ -306,7 +309,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="aufgabe-7" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-7">Aufgabe 7</h2>
-<p>matrix = np.array([ [ 1, 2, 3, 4, 5], [ 6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]])</p>
+<div id="8698f4db" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>],</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>, <span class="dv">10</span>],</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">11</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>],</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">19</span>, <span class="dv">20</span>],</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">21</span>, <span class="dv">22</span>, <span class="dv">23</span>, <span class="dv">24</span>, <span class="dv">25</span>]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol type="1">
 <li>Extrahieren Sie die erste Zeile.</li>
 <li>Extrahieren Sie die letzte Spalte.</li>
@@ -315,7 +326,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="aufgabe-8" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-8">Aufgabe 8</h2>
-<p>array = np.arange(1, 21)</p>
+<div id="1a5b9077" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">21</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol type="1">
 <li>Ändern Sie die Form des Arrays in eine zweidimensionale Matrix der Form 4×54×5.</li>
 <li>Ändern Sie die Form des Arrays in eine zweidimensionale Matrix der Form 5×45×4.</li>
@@ -345,24 +358,24 @@ Lösung
 <div class="callout-body-container callout-body">
 <section id="aufgabe-1-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-1-1">Aufgabe 1</h3>
-<div id="c058fe62" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="d327736d" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="aufgabe-2-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-2-1">Aufgabe 2</h3>
-<div id="14edb2d9" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. </span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">10</span>))</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. </span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.ones((<span class="dv">3</span>, <span class="dv">3</span>)))</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. </span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">10</span>, <span class="dv">51</span>, <span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7b1dbace" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">10</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. </span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.ones((<span class="dv">3</span>, <span class="dv">3</span>)))</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. </span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">10</span>, <span class="dv">51</span>, <span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[0 1 2 3 4 5 6 7 8 9]
 [[1. 1. 1.]
@@ -378,10 +391,53 @@ Lösung
 </section>
 <section id="aufgabe-4-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-4-1">Aufgabe 4</h3>
-<p>???</p>
+<p>Da es sich hier um Gleitkommazahlen handelt, ist der Datentyp <code>float.64</code>.</p>
+<div id="76e6a13f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vector.dtype)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>float64</code></pre>
+</div>
+</div>
 </section>
 <section id="aufgabe-5-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-5-1">Aufgabe 5</h3>
+<div id="773e30a2" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">4</span>])</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">9</span>])</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> a <span class="op">+</span> b</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Die Summe beider Vektoren ergibt: "</span>, ergebnis) </span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2.</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> a <span class="op">*</span> b</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Das Produkt beider Vektoren ergibt: "</span>, ergebnis) </span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 3.</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> a <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Die Summe von a und 3 ergibt: "</span>, ergebnis) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Die Summe beider Vektoren ergibt:  [11  6  5 12 13]
+Das Produkt beider Vektoren ergibt:  [30  5  6 36 36]
+Die Summe von a und 3 ergibt:  [8 4 6 9 7]</code></pre>
+</div>
+</div>
+</section>
+<section id="aufgabe-6-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="aufgabe-6-1">Aufgabe 6</h3>
+</section>
+<section id="aufgabe-7-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="aufgabe-7-1">Aufgabe 7</h3>
+</section>
+<section id="aufgabe-8-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="aufgabe-8-1">Aufgabe 8</h3>
+</section>
+<section id="aufgabe-9-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="aufgabe-9-1">Aufgabe 9</h3>
+</section>
+<section id="aufgabe-10-1" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="aufgabe-10-1">Aufgabe 10</h3>
 </section>
 </div>
 </div>
