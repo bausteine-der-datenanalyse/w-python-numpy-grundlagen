@@ -14,6 +14,8 @@ book:
   date: today
   language: de-DE
   downloads: [pdf]
+  repo-url: "https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen"
+  repo-actions: [source]
 
 bibliography: skript/references.bib
 
