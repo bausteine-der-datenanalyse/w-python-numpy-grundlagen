@@ -13,6 +13,11 @@ eigenständig zu bewerten. Sie ist so konzipiert, dass Sie Ihre Stärken und
 Schwächen erkennen und gezielt an den Bereichen arbeiten können, die noch 
 verbessert werden müssen.
 
+Es stehen hier zwei Möglichkeiten zur Verfügung ihr Wissen zu prüfen. Sie 
+können das Quiz benutzen, welches Sie automatisch durch die verschiedenen 
+Themen führt. ALternativ finden Sie darunter normale Frage wie Sie bisher im 
+Skript verwendet wurden.
+
 Bitte nehmen Sie sich ausreichend Zeit für die Bearbeitung der Fragen und gehen 
 Sie diese in Ruhe durch. Seien Sie ehrlich zu sich selbst und versuchen Sie, 
 die Aufgaben ohne Hilfsmittel zu lösen, um ein realistisches Bild Ihres 
@@ -21,6 +26,10 @@ haben, ist dies ein Hinweis darauf, dass Sie in diesem Bereich noch weiter üben
 sollten.
 
 Viel Erfolg bei der Bearbeitung und beim weiteren Lernen!
+
+```{=html}
+{{< include 01-daten/lernzielkontrolle.html >}}
+``` 
 
 ## Aufgabe 1 {.unnumbered}
 
