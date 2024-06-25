@@ -39,10 +39,20 @@ jobs:
           version: 1.4.553
           
 
-      # Render HTML target to GH pages, use all issue-*.qmd files
+      # Render full profile
       - name: Publish to GitHub Pages (and render) 
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          QUARTO_PROFILE: full
+
+      # Render Klausur profile
+      - name: Publish to GitHub Pages (and render) 
+        uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
+          QUARTO_PROFILE: full
