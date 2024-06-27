@@ -1,5 +1,5 @@
 project:  
-  output-dir: _book
+  output-dir: output/book
 book:
   chapters: 
     - index.qmd
