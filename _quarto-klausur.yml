@@ -1,5 +1,5 @@
 project:  
-  output-dir: output/klausur
+  output-dir: output/klausur/
 book:
   chapters: 
     - index.qmd
