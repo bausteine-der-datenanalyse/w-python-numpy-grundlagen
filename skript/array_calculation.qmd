@@ -30,6 +30,16 @@ np.add(a,b)
 a + b
 ```
 
+Ohne NumPy würde die Operation folgendermaßen aussehen:
+
+```{python}
+ergebnis = np.ones(5)
+for i in range(len(a)):
+    ergebnis[i] = a[i] + b[i]
+
+print(ergebnis)
+```
+
 Für die anderen Rechenarten existieren auch Funktionen: `np.subtract()`, 
 `np.multiply()` und `np.divide()`. 
 
