@@ -41,18 +41,14 @@ jobs:
 
       # Render full profile
       - name: Publish to GitHub Pages (and render) 
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
+        uses: quarto-dev/quarto-actions/renderh@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
           QUARTO_PROFILE: full
 
       # Render Klausur profile
       - name: Publish to GitHub Pages (and render) 
-        uses: quarto-dev/quarto-actions/publish@v2
-        with:
-          target: gh-pages
+        uses: quarto-dev/quarto-actions/render@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
           QUARTO_PROFILE: klausur
