@@ -1,0 +1,334 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Größe, Struktur und Typ\n"
+      ],
+      "id": "6b061496"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| echo: false\n",
+        "import numpy as np"
+      ],
+      "id": "8c8e0051",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Wenn man sich nicht mehr sicher ist, welche Struktur oder Form ein Array hat oder \n",
+        "oder diese Größen zum Beispiel für Schleifen nutzen möchte, bietet NumPy \n",
+        "folgende Funktionen für das Auslesen dieser Größen an.\n"
+      ],
+      "id": "0f519449"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "matrix = np.array([[1, 2, 3], [4, 5, 6]])"
+      ],
+      "id": "77e05d9a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "`np.shape()` gibt die Längen der einzelnen Dimension in Form einer Liste zurück. \n"
+      ],
+      "id": "b9be8076"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "np.shape(matrix)"
+      ],
+      "id": "7b820069",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Die native Python Funktion `len()` gibt dagegen nur die Länge der ersten \n",
+        "Dimension, also die Anzahl der Elemente in den äußeren Klammern wieder. \n",
+        "Im obrigen Beispiel würde `len()` also die beiden Listen `[1, 2, 3]` und \n",
+        "`[4, 5, 6]` sehen.\n"
+      ],
+      "id": "3621038a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "len(matrix)"
+      ],
+      "id": "7181fc41",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Die Funktion `np.ndym()`gibt im Gegensatz zu `np.shape()` nur die Anzahl der \n",
+        "Dimensionen zurück. \n"
+      ],
+      "id": "2e2b8209"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "np.ndim(matrix)"
+      ],
+      "id": "30e16f19",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "::: {.callout-tip collapse=\"true\"}\n",
+        "## Die Ausgabe von `np.ndim()` kann mit `np.shape()`und einer nativen Python Funktion erreicht werden. Wie?\n",
+        "\n",
+        "`np.ndim()` gibt die Länge der Liste von `np.shape()` aus\n"
+      ],
+      "id": "ca2289e8"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "len(np.shape(matrix))"
+      ],
+      "id": "5a71f120",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        "Möchte man die Anzahl aller Elemente in einem Array ausgeben kann man die \n",
+        "Funktion `np.size()` benutzen.\n"
+      ],
+      "id": "61f5ee9e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "np.size(matrix)"
+      ],
+      "id": "6f7d861f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "NumPy Arrays können verschiedene Datentypen beinhalten. Im folgenden haben wir \n",
+        "drei verschiedene Arrays mit einem jeweils anderen Datentyp.\n"
+      ],
+      "id": "78385b66"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "typ_a = np.array([1, 2, 3, 4, 5])\n",
+        "typ_b = np.array([0.1, 0.2, 0.3, 0.4, 0.5])\n",
+        "typ_c = np.array([\"Montag\", \"Dienstag\", \"Mittwoch\"])"
+      ],
+      "id": "7cf83151",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Mit der Methode `np.dtype` können wir den Datentyp von Arrays ausgeben lassen. \n",
+        "Meist wird dabei der Typ plus eine Zahl ausgegeben, welche die zum Speichern \n",
+        "benötigte Bytezahl angibt. Das Array *typ_a* beinhaltet den Datentyp int64, \n",
+        "also ganze Zahlen.\n"
+      ],
+      "id": "8eca24c6"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(typ_a.dtype)"
+      ],
+      "id": "781ff2b7",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Das Array *typ_b* beinhaltet den Datentyp float64, wobei float für \n",
+        "Gleitkommazahlen steht.\n"
+      ],
+      "id": "d1829499"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(typ_b.dtype)"
+      ],
+      "id": "ec7f92a3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Das Array *typ_c* beinhaltet den Datentyp U8, wobei das U für Unicode steht. \n",
+        "Hier wird als Unicodetext gespeichert.\n"
+      ],
+      "id": "018b026c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "print(typ_c.dtype)"
+      ],
+      "id": "a4abb1cf",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Im folgenden finden Sie eine Tabelle mit den typischen Datentypen, die sie \n",
+        "häufig antreffen.\n",
+        "\n",
+        "| Datentyp              | Numpy Name | Beispiele                  |\n",
+        "|-----------------------|------------|----------------------------|\n",
+        "| Wahrheitswert         | `bool`     | [True, False, True]        |\n",
+        "| Ganze Zahl            | `int`      | [-2, 5, -6, 7, 3]          |\n",
+        "| positive Ganze Zahlen | `uint`     | [1, 2, 3, 4, 5]            |\n",
+        "| Kommazahlen           | `float`    | [1.3, 7.4, 3.5, 5.5]      |\n",
+        "| komplexe zahlen       | `complex`  | [-1 + 9j, 2-77j, 72 + 11j] |\n",
+        "| Textzeichen           | `U`        | [\"montag\", \"dienstag\"]     |\n",
+        "\n",
+        ": Typische Datentypen in NumPy {#tbl-datatypes .striped .hover}\n",
+        "\n",
+        "::: {.callout-tip collapse=\"true\"}\n",
+        "\n",
+        "## Zwischenübung: Arrayinformationen auslesen\n",
+        "\n",
+        "Gegeben sei folgende Matrix: \n"
+      ],
+      "id": "3376a38a"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "matrix = np.array([[[ 0,  1,  2,  3],\n",
+        "                 [ 4,  5,  6,  7],\n",
+        "                 [ 8,  9, 10, 11]],\n",
+        "\n",
+        "                [[12, 13, 14, 15],\n",
+        "                 [16, 17, 18, 19],\n",
+        "                 [20, 21, 22, 23]],\n",
+        "\n",
+        "                [[24, 25, 26, 27],\n",
+        "                 [28, 29, 30, 31],\n",
+        "                 [32, 33, 34, 35]]])"
+      ],
+      "id": "c736d559",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Bestimmen Sie durch anschauen die Anzahl an Dimensionen und die Länge jeder \n",
+        "Dimension. Von welchem Typ ist der Inhalt dieser Matrix?\n",
+        "\n",
+        "Überprüfen Sie daraufhin Ihre Ergebnisse in dem Sie die passenden NumPy-Funktionen\n",
+        "anwenden.\n",
+        "\n",
+        "::: {.callout-caution icon=\"false\" collapse=\"true\"}\n",
+        "\n",
+        "## Lösung\n"
+      ],
+      "id": "22cb6c56"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "matrix = np.array([[[ 0,  1,  2,  3],\n",
+        "                 [ 4,  5,  6,  7],\n",
+        "                 [ 8,  9, 10, 11]],\n",
+        "\n",
+        "                [[12, 13, 14, 15],\n",
+        "                 [16, 17, 18, 19],\n",
+        "                 [20, 21, 22, 23]],\n",
+        "\n",
+        "                [[24, 25, 26, 27],\n",
+        "                 [28, 29, 30, 31],\n",
+        "                 [32, 33, 34, 35]]])\n",
+        "\n",
+        "anzahl_dimensionen = np.ndim(matrix)\n",
+        "\n",
+        "print(\"Anzahl unterschiedlicher Dimensionen: \", anzahl_dimensionen)\n",
+        "\n",
+        "laenge_dimensionen = np.shape(matrix)\n",
+        "\n",
+        "print(\"Länge der einzelnen DImensionen: \", laenge_dimensionen)\n",
+        "\n",
+        "print(matrix.dtype)"
+      ],
+      "id": "3e882479",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        ":::\n",
+        "\n",
+        ":::"
+      ],
+      "id": "fcb090c2"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

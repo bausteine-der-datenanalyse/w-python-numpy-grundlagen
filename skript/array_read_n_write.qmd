@@ -79,8 +79,8 @@ entspricht.
 ```{python}
 # Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der 
 # schmalen Darstellung im Skript
-kommentar = f'Daten aus {dateiname} skaliert auf den Beriech' + \
-             '0 bis 1\noriginales Min / Max:' + \
+kommentar = f'Daten aus {dateiname} skaliert auf den Bereich ' + \
+             '0 bis 1 \noriginales Min / Max:' + \
             f'{np.min(daten)}/{np.max(daten)}'
 neu_dateiname = '01-daten/TC01_skaliert.csv'
 

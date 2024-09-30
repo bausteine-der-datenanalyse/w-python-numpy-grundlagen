@@ -16,7 +16,7 @@ Verwendung der Formel:
 $$
 \left[M(x) = \frac{w \cdot x \cdot (L - x)}{2}\right]
 $$
-wobei $w$$ die verteilte Last (in N/m), $x$ die Position entlang des Trägers 
+wobei $w$ die verteilte Last (in N/m), $x$ die Position entlang des Trägers 
 (in m) und $L$ die Länge des Trägers (in m) ist.
 
 3. Berechnen Sie die maximale Biegespannung σmaxσmax​ an jedem Punkt entlang des 

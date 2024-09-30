@@ -35,7 +35,7 @@ np.ndim(matrix)
 ```
 
 ::: {.callout-tip collapse="true"}
-## Die Ausgabe von `np.ndim()` kann mit `np.size()`und einer nativen Python Funktion erreicht werden. Wie?
+## Die Ausgabe von `np.ndim()` kann mit `np.shape()`und einer nativen Python Funktion erreicht werden. Wie?
 
 `np.ndim()` gibt die Länge der Liste von `np.shape()` aus
 ```{python}
@@ -51,7 +51,7 @@ np.size(matrix)
 ```
 
 NumPy Arrays können verschiedene Datentypen beinhalten. Im folgenden haben wir 
-drei verschiedene Arrays mit einem jeweils anderen Datentypen.
+drei verschiedene Arrays mit einem jeweils anderen Datentyp.
 
 ```{python}
 typ_a = np.array([1, 2, 3, 4, 5])
@@ -59,23 +59,23 @@ typ_b = np.array([0.1, 0.2, 0.3, 0.4, 0.5])
 typ_c = np.array(["Montag", "Dienstag", "Mittwoch"])
 ```
 
-Mit der Methode `np.dtype` können wir den Datentypen von Arrays ausgeben lassen. 
+Mit der Methode `np.dtype` können wir den Datentyp von Arrays ausgeben lassen. 
 Meist wird dabei der Typ plus eine Zahl ausgegeben, welche die zum Speichern 
-benötigte Bytezahl angibt. Das Array *typ_a* beinhaltet den Datentypen int64, 
+benötigte Bytezahl angibt. Das Array *typ_a* beinhaltet den Datentyp int64, 
 also ganze Zahlen.
 
 ```{python}
 print(typ_a.dtype)
 ```
 
-Das Array *typ_b* beinhaltet den Datentypen float64, wobei float für 
+Das Array *typ_b* beinhaltet den Datentyp float64, wobei float für 
 Gleitkommazahlen steht.
 
 ```{python}
 print(typ_b.dtype)
 ```
 
-Das Array *typ_c* beinhaltet den Datentypen U8, wobei das U für Unicode steht. 
+Das Array *typ_c* beinhaltet den Datentyp U8, wobei das U für Unicode steht. 
 Hier wird als Unicodetext gespeichert.
 
 ```{python}
@@ -90,7 +90,7 @@ häufig antreffen.
 | Wahrheitswert         | `bool`     | [True, False, True]        |
 | Ganze Zahl            | `int`      | [-2, 5, -6, 7, 3]          |
 | positive Ganze Zahlen | `uint`     | [1, 2, 3, 4, 5]            |
-| Kommazahlen           | `float`    | [1.3, 7.4, 3.5, .5.5]      |
+| Kommazahlen           | `float`    | [1.3, 7.4, 3.5, 5.5]      |
 | komplexe zahlen       | `complex`  | [-1 + 9j, 2-77j, 72 + 11j] |
 | Textzeichen           | `U`        | ["montag", "dienstag"]     |
 
@@ -141,7 +141,11 @@ matrix = np.array([[[ 0,  1,  2,  3],
 
 anzahl_dimensionen = np.ndim(matrix)
 
+print("Anzahl unterschiedlicher Dimensionen: ", anzahl_dimensionen)
+
 laenge_dimensionen = np.shape(matrix)
+
+print("Länge der einzelnen DImensionen: ", laenge_dimensionen)
 
 print(matrix.dtype)
 ```
