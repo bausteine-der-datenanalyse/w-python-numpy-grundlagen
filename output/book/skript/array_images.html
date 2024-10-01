@@ -288,7 +288,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 <p>Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den Werkzeugen von NumPy leicht bearbeiten. Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg">Link</a> zu finden.</p>
 <p>Importieren wir dieses Bild nun mit der Funktion <code>imread()</code>aus dem matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array handelt.</p>
-<div id="3e01f5b1" class="cell" data-execution_count="2">
+<div id="da78bd89" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> plt.imread(<span class="st">"00-bilder/mona_lisa.jpg"</span>)</span>
@@ -298,7 +298,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Schauen wir uns einmal mit der <code>print()</code>-Funktion einen Ausschnitt dieser Daten an.</p>
-<div id="ceaa0d62" class="cell" data-execution_count="3">
+<div id="9a22f32f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[[ 68  62  38]
@@ -353,7 +353,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Mit der Funktion <code>plt.imshow</code> kann das Bild in Echtfarben dargestellt werden. Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert verwendet worden.</p>
-<div id="f0aa800f" class="cell" data-execution_count="4">
+<div id="5aeb4b6f" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(data)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -364,7 +364,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. Dazu wird der letzte Index festgehalten. Hier betrachten wir nur den reten Anteil des Bildes. Stellen wir ein einfaches Array dar, werden die Daten in schwarz-weiß ausgegeben. Mit Hilfe der Option <code>cmap='Reds'</code> können wir die Farbskala anpassen.</p>
-<div id="672eebdd" class="cell" data-execution_count="5">
+<div id="93ccfc9f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Als Farbskale wird die Rotskala </span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># verwendet 'Reds'</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.imshow( data[:,:,<span class="dv">0</span>], cmap<span class="op">=</span><span class="st">'Reds'</span> )</span>
@@ -379,7 +379,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 </div>
 </div>
 <p>Da die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt einen Ausschnitt im Rotkanal des Bildes.</p>
-<div id="898728f7" class="cell" data-execution_count="6">
+<div id="6ae3af9f" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>bereich <span class="op">=</span> np.array(data[<span class="dv">450</span>:<span class="dv">500</span>, <span class="dv">550</span>:<span class="dv">600</span>,<span class="dv">0</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.imshow( bereich, cmap<span class="op">=</span><span class="st">"Greys"</span> )</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.colorbar()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -394,7 +394,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 <p>Betrachten wir nun eine komplexere Operation an Bilddaten, den <a href="https://de.wikipedia.org/wiki/Laplace-Operator">Laplace-Operator</a>. Er kann genutzt werden um Ränder von Objekten zu identifizieren. Dazu wird für jeden Bildpunkt <span class="math inline">\(B_{i,j}\)</span> – außer an den Rändern –&nbsp;folgender Wert <span class="math inline">\(\phi_{i, j}\)</span> berechnet:</p>
 <p><span class="math display">\[ \phi_{i, j} = \left|B_{i-1, j} + B_{i, j-1} - 4\cdot B_{i, j} + B_{i+1, j} + B_{i, j+1}\right| \]</span></p>
 <p>Folgende Funktion implementiert diese Operation. Darüber hinaus werden alle Werte von <span class="math inline">\(\phi\)</span> unterhalb eines Schwellwerts auf Null und oberhalb auf 255 gesetzt.</p>
-<div id="d8e8a482" class="cell" data-execution_count="7">
+<div id="fb4c1725" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> img_lap(data, schwellwert<span class="op">=</span><span class="dv">25</span>):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Erstellung einer Kopie der Daten, nun jedoch als</span></span>
@@ -415,7 +415,7 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 <span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> lap</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Betrachten wir ein Bild vom Haspel Campus in Wuppertal ein: <a href="https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg">Bild</a>. Die Anwendung des Laplace-Operators auf den oberen Bildausschnitt ergibt folgende Ausgabe:</p>
-<div id="f3b2bf3b" class="cell" data-execution_count="8">
+<div id="ff2075cc" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> plt.imread(<span class="st">'01-daten/campus_haspel.jpeg'</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>bereich <span class="op">=</span> np.array(data[<span class="dv">1320</span>:<span class="dv">1620</span>, <span class="dv">400</span>:<span class="dv">700</span>, <span class="dv">1</span>], dtype<span class="op">=</span><span class="bu">float</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -455,15 +455,17 @@ Abbildung&nbsp;8.1: Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Je
 <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>zusammengesetzt <span class="op">=</span> np.dstack((rot, gruen_neu, blau)).astype(<span class="st">'uint8'</span>)</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>ax.imshow(data, cmap<span class="op">=</span><span class="st">"Greys_r"</span>)</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>ax.imshow(zusammengesetzt)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="5b85e0e5" class="cell quarto-layout-panel" data-layout-ncol="2" data-execution_count="9">
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>ax.imshow(data, cmap<span class="op">=</span><span class="st">"Greys_r"</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>ax.imshow(zusammengesetzt)<span class="op">;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="2591cf16" class="cell quarto-layout-panel" data-execution_count="9" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="array_images_files/figure-html/cell-10-output-1.png" class="img-fluid" width="598"></p>
+<p><img src="array_images_files/figure-html/cell-10-output-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 </div>
@@ -493,7 +495,7 @@ Lösung
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="58b1adcf" class="cell" data-execution_count="10">
+<div id="84895fba" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
