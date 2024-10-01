@@ -41,7 +41,9 @@ plt.imshow(data)
 ```
 
 Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. 
-Dazu wird der letzte Index festgehalten.
+Dazu wird der letzte Index festgehalten. Hier betrachten wir nur den reten Anteil
+des Bildes. Stellen wir ein einfaches Array dar, werden die Daten in schwarz-weiß
+ausgegeben. Mit Hilfe der Option `cmap='Reds'` können wir die Farbskala anpassen.
 
 ```{python}
 # Als Farbskale wird die Rotskala 
@@ -61,6 +63,89 @@ plt.imshow( bereich, cmap="Greys" )
 plt.colorbar()
 ```
 
+Betrachten wir nun eine komplexere Operation an Bilddaten, den 
+[Laplace-Operator](https://de.wikipedia.org/wiki/Laplace-Operator). Er kann 
+genutzt werden um Ränder von Objekten zu identifizieren. Dazu wird für jeden 
+Bildpunkt $B_{i,j}$ – außer an den Rändern – folgender Wert $\phi_{i, j}$ 
+berechnet:
+
+$$ \phi_{i, j} = \left|B_{i-1, j} + B_{i, j-1} - 4\cdot B_{i, j} + B_{i+1, j} + B_{i, j+1}\right| $$
+
+Folgende Funktion implementiert diese Operation. Darüber hinaus werden alle Werte 
+von $\phi$ unterhalb eines Schwellwerts auf Null und oberhalb auf 255 gesetzt.
+
+```{python}
+def img_lap(data, schwellwert=25):
+    
+    # Erstellung einer Kopie der Daten, nun jedoch als
+    # Array mit Gleitkommazahlen
+    bereich = np.array(data, dtype=float)
+    
+    # Aufteilung der obigen Gleichung in zwei Teile
+    lapx = bereich[2:, :] - 2*bereich[1:-1, :] + bereich[:-2, :]
+    lapy = bereich[:, 2:] - 2*bereich[:, 1:-1] + bereich[:, :-2]
+    
+    # Zusammenführung der Teile und Bildung des Betrags
+    lap = np.abs(lapx[:,1:-1] + lapy[1:-1, :])
+    
+    # Schwellwertanalyse
+    lap[lap > schwellwert] = 255
+    lap[lap < schwellwert] = 0
+    
+    return lap
+```
+
+
+Betrachten wir ein Bild vom Haspel Campus in Wuppertal ein: 
+[Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg).
+Die Anwendung des Laplace-Operators auf den oberen Bildausschnitt ergibt folgende 
+Ausgabe: 
+
+```{python}
+data = plt.imread('01-daten/campus_haspel.jpeg')
+bereich = np.array(data[1320:1620, 400:700, 1], dtype=float)
+
+lap = img_lap(bereich)
+
+ax = plt.subplot(1, 3, 1)
+ax.imshow(data, cmap="Greys_r")
+
+ax = plt.subplot(1, 3, 2)
+ax.imshow(bereich, cmap="Greys_r");
+
+ax = plt.subplot(1, 3, 3)
+ax.imshow(lap, cmap="Greys");
+```
+
+Wir können damit ganz klar die Formen des Fensters erkennen.
+
+Wollen wir zum Beispiel eine Farbkomponente bearbeiten und dann das Bild wieder 
+zusammensetzen, benötigen wir die Funktion `np.dstack((rot, grün, blau)).astype('uint8')`, 
+wobei `rot`, `grün`und `blau` die jeweiligen 2D-Arrays sind. Versuchen wir nun 
+die grüne Farbe aus dem Baum links zu entfernen. 
+
+Wichtig ist, dass die Daten nach dem Zusammensetzen im Format `uint8` vorliegen, deswegen die Methode `.astype('uint8')`.
+
+```{python}
+data = plt.imread('01-daten/campus_haspel.jpeg')
+
+# Speichern der einzelnen Farben in Arrays
+rot = np.array(data[:, :, 0], dtype=float)
+gruen = np.array(data[:, :, 1], dtype=float)
+blau = np.array(data[:, :, 2], dtype=float)
+
+# Setzen wir den Bereich des linken Baumes im Array auf 0
+gruen_neu = gruen.copy()
+gruen_neu[800:2000, 700:1700] = 0
+
+zusammengesetzt = np.dstack((rot, gruen_neu, blau)).astype('uint8')
+
+ax = plt.subplot(1, 2, 1)
+ax.imshow(data, cmap="Greys_r")
+
+ax = plt.subplot(1, 2, 2)
+ax.imshow(zusammengesetzt);
+```
 
 ::: {.callout-tip collapse="true"}
 
