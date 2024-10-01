@@ -129,7 +129,6 @@ die grüne Farbe aus dem Baum links zu entfernen.
 Wichtig ist, dass die Daten nach dem Zusammensetzen im Format `uint8` vorliegen, deswegen die Methode `.astype('uint8')`.
 
 ```{python}
-#| layout-ncol: 2
 data = plt.imread('01-daten/campus_haspel.jpeg')
 
 # Speichern der einzelnen Farben in Arrays
@@ -143,13 +142,13 @@ gruen_neu[800:2000, 700:1700] = 0
 
 zusammengesetzt = np.dstack((rot, gruen_neu, blau)).astype('uint8')
 
-plt.figure(figsize=(8, 4))
+plt.figure(figsize=(8, 5))
 
 ax = plt.subplot(1, 2, 1)
 ax.imshow(data, cmap="Greys_r")
 
 ax = plt.subplot(1, 2, 2)
-ax.imshow(zusammengesetzt);
+ax.imshow(zusammengesetzt)
 ```
 
 ::: {.callout-tip collapse="true"}
