@@ -107,6 +107,8 @@ bereich = np.array(data[1320:1620, 400:700, 1], dtype=float)
 
 lap = img_lap(bereich)
 
+plt.figure(figsize=(9, 3))
+
 ax = plt.subplot(1, 3, 1)
 ax.imshow(data, cmap="Greys_r")
 
@@ -127,6 +129,7 @@ die grüne Farbe aus dem Baum links zu entfernen.
 Wichtig ist, dass die Daten nach dem Zusammensetzen im Format `uint8` vorliegen, deswegen die Methode `.astype('uint8')`.
 
 ```{python}
+#| layout-ncol: 2
 data = plt.imread('01-daten/campus_haspel.jpeg')
 
 # Speichern der einzelnen Farben in Arrays
@@ -139,6 +142,8 @@ gruen_neu = gruen.copy()
 gruen_neu[800:2000, 700:1700] = 0
 
 zusammengesetzt = np.dstack((rot, gruen_neu, blau)).astype('uint8')
+
+plt.figure(figsize=(8, 4))
 
 ax = plt.subplot(1, 2, 1)
 ax.imshow(data, cmap="Greys_r")
