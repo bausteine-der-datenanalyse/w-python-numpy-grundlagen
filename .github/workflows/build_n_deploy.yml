@@ -45,8 +45,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
           QUARTO_PROFILE: full
-        with:
-          path: output/book/
+        #with:
+        #  path: output/book/
 
       # Render Klausur profile
       - name: Publish to GitHub Pages (and render) 
@@ -54,5 +54,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
           QUARTO_PROFILE: klausur
-        with:
-          path: output/klausur/
+        #with:
+        #  path: output/klausur/
