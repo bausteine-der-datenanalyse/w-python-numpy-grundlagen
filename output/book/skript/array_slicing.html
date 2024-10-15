@@ -257,24 +257,24 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 </figure>
 </div>
 <p>Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der Form:</p>
-<div id="623753cc" class="cell" data-execution_count="2">
+<div id="0e2c1a2b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9ab6dfa6" class="cell" data-execution_count="3">
+<div id="6d5011c5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen des ersten Elements</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>1</code></pre>
+<pre><code>np.int64(1)</code></pre>
 </div>
 </div>
-<div id="ca8a2d27" class="cell" data-execution_count="4">
+<div id="9fef5683" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen des letzen Elements</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>6</code></pre>
+<pre><code>np.int64(6)</code></pre>
 </div>
 </div>
-<div id="1938e0a6" class="cell" data-execution_count="5">
+<div id="e593f5ce" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen einer Reihe von Elementen</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">1</span>:<span class="dv">4</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -282,18 +282,18 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 </div>
 </div>
 <p>Für zwei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer zweiten Zahl die zweite Dimension aus.</p>
-<div id="f63d57fc" class="cell" data-execution_count="6">
+<div id="b07bc1c7" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c7424bba" class="cell" data-execution_count="7">
+<div id="8e2dfaae" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen einer Elements</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>matrix[<span class="dv">1</span>,<span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>5</code></pre>
+<pre><code>np.int64(5)</code></pre>
 </div>
 </div>
 <p>Für drei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer weiteren Zahl die dritte Dimension aus. Dabei wird dieses jedoch an die erste Stelle gesetzt.</p>
-<div id="baa45f63" class="cell" data-execution_count="8">
+<div id="c2f45238" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>matrix_3d <span class="op">=</span> np.array([[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]], [[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>], [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_3d)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -304,11 +304,11 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
   [10 11 12]]]</code></pre>
 </div>
 </div>
-<div id="29e2d7e6" class="cell" data-execution_count="9">
+<div id="8f374764" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen eines Elements</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>matrix_3d[<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>9</code></pre>
+<pre><code>np.int64(9)</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -325,7 +325,7 @@ Zwischenübung: Array-Slicing
 <div class="callout-body-container callout-body">
 <p>Wählen Sie die farblich markierten Bereiche aus dem Array “matrix” mit den eben gelernten Möglichkeiten des Array-Slicing aus.</p>
 <p><img src="../skript/00-bilder/exercise_slicing.svg" class="img-fluid"></p>
-<div id="b537b44f" class="cell" data-execution_count="10">
+<div id="7bd863cf" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">18</span>, <span class="dv">47</span>, <span class="dv">33</span>, <span class="dv">48</span>, <span class="dv">9</span>, <span class="dv">31</span>, <span class="dv">8</span>, <span class="dv">41</span>],</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">55</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">91</span>, <span class="dv">56</span>, <span class="dv">17</span>, <span class="dv">54</span>, <span class="dv">23</span>, <span class="dv">12</span>],</span>
@@ -353,9 +353,9 @@ Lösung
 <div class="callout-body-container callout-body">
 <ul>
 <li>Rot: matrix[1,3]</li>
-<li>Grün: matrix[4:5,2:5]</li>
+<li>Grün: matrix[4:6,2:6]</li>
 <li>Pink: matrix[:,7]</li>
-<li>Orange: matrix[7,:4]</li>
+<li>Orange: matrix[7,:5]</li>
 <li>Blau: matrix[-1,-1]</li>
 </ul>
 </div>
