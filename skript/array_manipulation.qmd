@@ -28,7 +28,7 @@ Haben wir ein nun diese Matrix und wollen daraus einen Vektor erstellen so
 können wir die Funktion `np.flatten()` benutzen:
 
 ```{python}
-vector = matrix.flatten
+vector = matrix.flatten()
 print(vector)
 ```
 
