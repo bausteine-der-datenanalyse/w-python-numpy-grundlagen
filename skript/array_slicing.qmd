@@ -5,6 +5,8 @@
 import numpy as np
 ```
 
+## Normales Slicing mit Zahlenwerten
+
 ![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](/skript/00-bilder/slicing.png){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
 
 Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der 
@@ -54,6 +56,44 @@ print(matrix_3d)
 # Auswählen eines Elements
 matrix_3d[1,0,2]
 ```
+
+## Slicing mit logischen Werten (Boolesche Masken)
+
+Beim logischen Slicing wird eine boolesche Maske verwendet, um bestimmte Elemente 
+eines Arrays auszuwählen. Die Maske ist ein Array gleicher Länge wie das Original, 
+das aus `True` oder `False` Werten besteht. 
+
+```{python}
+# Erstellen wir ein Beispiel Array
+a = np.array([1, 2, 3, 4, 5, 6])
+
+# Erstellen der Maske
+maske = a > 3
+
+print(maske)
+```
+
+Wir erhalten also ein Array mit boolschen Werten. Verwenden wir diese Maske nun
+zum slicen, erhalten wir alle Werte an den Stellen, an denen die Maske den Wert 
+`True` besitzt.
+
+```{python}
+# Anwenden der Maske
+print(a[maske])
+```
+
+::: {.callout-warning}
+
+Das Verwenden von booleschen Arrays ist nur im numpy-Modul möglich. Es ist nicht
+Möglich dieses Vorgehen auf native Python Listen anzuwenden. Hier muss durch die 
+Liste iterriert werden.
+
+```{python}
+a = [1, 2, 3, 4, 5, 6]
+ergebniss = [x for x in a if x > 3]
+print(ergebniss) 
+```
+:::
 
 ::: {.callout-tip collapse="true"}
 
