@@ -3,7 +3,7 @@
 :::: {.border #Lizenz}
 
 ::: {layout="[20, 80]" layout-valign="center"}
-![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png) 
+![](https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png){fig-alt="Symbol des Lizenzhinweises Creative Commons BY"} 
 
 Bausteine Computergestützter Datenanalyse. "Numpy Grundlagen" von Lukas Arnold, 
 Simone Arnold, Florian Bagemihl, Matthias Baitsch, Marc Fehr, Maik Poetzsch und 
