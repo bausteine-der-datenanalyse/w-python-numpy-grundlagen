@@ -24,7 +24,7 @@
     "href": "index.html#verwendete-pakete-und-datensätze",
     "title": "w-python-numpy-grundlagen",
     "section": "Verwendete Pakete und Datensätze",
-    "text": "Verwendete Pakete und Datensätze\n\nNumPy\nMatplotlib",
+    "text": "Verwendete Pakete und Datensätze\n\nPakete\n\nNumPy\nMatplotlib\n\n\n\nDatensätze\n\nTC01.csv\nBild: Mona Lisa\nBild: Campus",
     "crumbs": [
       "Preamble"
     ]
