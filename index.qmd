@@ -38,8 +38,15 @@ BibTeX-Vorlage
 {{< include voraussetzungen.md >}}
 
 ## Verwendete Pakete und Datensätze
+
+### Pakete
 - NumPy
 - Matplotlib
+
+### Datensätze
+- [TC01.csv](https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv)
+- [Bild: Mona Lisa](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg)
+- [Bild: Campus](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg)
 
 ## Bearbeitungszeit
 Geschätzte Bearbeitungszeit: 2h
