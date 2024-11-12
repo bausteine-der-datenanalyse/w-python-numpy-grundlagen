@@ -16,6 +16,10 @@ book:
   downloads: [pdf]
   repo-url: "https://github.com/bausteine-der-datenanalyse/w-python-numpy-grundlagen"
   repo-actions: [source]
+  favicon: "skript/00-bilder/favicon_bcd.svg"
+  sidebar:
+    title: "Wekrzeugbaustein Grundlagen NumPy"
+    logo: "skript/00-bilder/logo_bcd_new.svg"
 
 bibliography: skript/references.bib
 
