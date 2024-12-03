@@ -25,12 +25,12 @@ nativen Python Listen kann man dort aber nur einen Datentyp pro Liste speichern.
 NumPy implementiert eine effizientere Speicherung von Listen im Speicher. 
 Nativ speichert Python Listeninhalte aufgeteilt, wo gerade Platz ist.
 
-![Speicherung von Daten in nativem Python](/skript/00-bilder/data_memory_list.svg){#fig-python_memory fig-alt="Sequentielle Daten werden an zufälligen Orten im Speicher gespeichert"}
+![Speicherung von Daten in nativem Python](skript/00-bilder/data_memory_list.svg){#fig-python_memory fig-alt="Sequentielle Daten werden an zufälligen Orten im Speicher gespeichert"}
 
 Dagegen werden NumPy Arrays und Matritzen zusammenhängend gespeichert, was einen
 effizienteren Datenaufruf ermöglicht. 
 
-![Speicherung von Daten bei Numpy](/skript/00-bilder/data_memory_numpy.svg){#fig-numpy_memory fig-alt="Sequentielle Daten werden an einem Ort im Speicher sequentiell gespeichert"}
+![Speicherung von Daten bei Numpy](../skript/00-bilder/data_memory_numpy.svg){#fig-numpy_memory fig-alt="Sequentielle Daten werden an einem Ort im Speicher sequentiell gespeichert"}
 
 Dies bedeutet aber auch, dass es eine Erweiterung der Liste deutlich schneller 
 ist als eine Erweiterung von Arrays oder Matrizen. Bei Listen kann jeder 
