@@ -9,7 +9,7 @@ Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei
 Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) 
 werden dann alle gewünschten Farben zusammengestellt. 
 
-![Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.](/skript/00-bilder/pixel_mona_lisa_split.svg){#fig-pixel_colors fig-alt="Schaubild, was zeigt, dass ein hochaufgelöstes Bild der Mona Lisa aus einzelnen Pixeln besteht, welche wiederum aus den drei Farben blau, rot und grün zusammengesetzt sind"}
+![Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.](../skript/00-bilder/pixel_mona_lisa_split.svg){#fig-pixel_colors fig-alt="Schaubild, was zeigt, dass ein hochaufgelöstes Bild der Mona Lisa aus einzelnen Pixeln besteht, welche wiederum aus den drei Farben blau, rot und grün zusammengesetzt sind"}
 
 Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den 
 Werkzeugen von NumPy leicht bearbeiten. 

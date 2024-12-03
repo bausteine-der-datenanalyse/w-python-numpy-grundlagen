@@ -7,7 +7,7 @@ import numpy as np
 
 ## Normales Slicing mit Zahlenwerten
 
-![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](/skript/00-bilder/slicing.png){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
+![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](../skript/00-bilder/slicing.png){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
 
 Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der 
 Form:
@@ -102,7 +102,7 @@ print(ergebniss)
 Wählen Sie die farblich markierten Bereiche aus dem Array "matrix" mit den eben 
 gelernten Möglichkeiten des Array-Slicing aus.
 
-![](/skript/00-bilder/exercise_slicing.svg)
+![](../skript/00-bilder/exercise_slicing.svg)
 ```{python}
 matrix = np.array([
     [2, 11, 18, 47, 33, 48, 9, 31, 8, 41],
