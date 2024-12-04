@@ -27,7 +27,7 @@ Im obrigen Beispiel würde `len()` also die beiden Listen `[1, 2, 3]` und
 len(matrix)
 ```
 
-Die Funktion `np.ndym()`gibt im Gegensatz zu `np.shape()` nur die Anzahl der 
+Die Funktion `np.ndym()` gibt im Gegensatz zu `np.shape()` nur die Anzahl der 
 Dimensionen zurück. 
 
 ```{python}

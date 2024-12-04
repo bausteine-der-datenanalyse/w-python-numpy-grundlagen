@@ -170,7 +170,7 @@ np.std(a)
 
 ::: {.callout-tip collapse="true"}
 
-## Zwischenübung: Arrayinformationen auslesen
+## Zwischenübung: Rechnen mit Arrays
 
 Gegeben sind zwei eindimensionale Arrays a und b:
 
