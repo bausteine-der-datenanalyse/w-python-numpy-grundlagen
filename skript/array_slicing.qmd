@@ -11,6 +11,9 @@ import numpy as np
 
 Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der 
 Form:
+1. [a] wobei ein einzelner Wert an Position a ausgegeben wird
+2. [a:b] wobei alle Werte von Position a bis Position b-1 ausgegeben werden
+3. [a:b:c] wobei die Werte von Position a bis Position b-1 mit einer Schrittweite von c ausgegeben werden
 
 ```{python}
 liste = np.array([1, 2, 3, 4, 5, 6])
