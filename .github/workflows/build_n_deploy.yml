@@ -1,4 +1,4 @@
-name: Deploy via Reusable Workflow
+name: Build and deploy
 
 on:
   push:
