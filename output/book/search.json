@@ -124,7 +124,7 @@
     "href": "skript/array_calculation.html#arithmetische-funktionen",
     "title": "4  Rechnen mit Arrays",
     "section": "",
-    "text": "np.exp(a)\nnp.sqrt(a)\nnp.power(a, 3)\nnp.sin(a)\nnp.cos(a)\nnp.tan(a)\nnp.log(a)\na.dot(b)\n\n\n\n\n\n\n\nArbeiten mit Winkelfunktionen\n\n\n\nWie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen (sin, cos, …) die Fehlerquelle, dass man nicht mit Radian-Werten, sondern mit Grad-Werten arbeitet. Die Winkelfunktionen in numpy erwarten jedoch Radian-Werte.\nFür eine einfache Umrechnung bietet NumPy die Funktionen np.grad2rad()und np.rad2grad().",
+    "text": "np.exp(a)\nnp.sqrt(a)\nnp.power(a, 3)\nnp.sin(a)\nnp.cos(a)\nnp.tan(a)\nnp.log(a)\na.dot(b)\n\n\n\n\n\n\n\nArbeiten mit Winkelfunktionen\n\n\n\nWie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen (sin, cos, …) die Fehlerquelle, dass man nicht mit Radian-Werten, sondern mit Grad-Werten arbeitet. Die Winkelfunktionen in numpy erwarten jedoch Radian-Werte.\nFür eine einfache Umrechnung bietet NumPy die Funktionen np.deh2rad()und np.rad2deg().",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Rechnen mit Arrays</span>"
     ]

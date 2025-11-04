@@ -261,26 +261,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="arithmetische-funktionen" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="arithmetische-funktionen"><span class="header-section-number">4.1</span> Arithmetische Funktionen</h2>
 <p>Ein großer Vorteil an NumPy ist das Rechnen mit Arrays. Ohne NumPy müsste man entweder eine <code>Schleife</code> oder aber <code>List comprehension</code> benutzen, um mit sämtlichen Werten in der Liste zu rechnen. In NumPy fällt diese Unannehmlichkeit weg.</p>
-<div id="c4180f04" class="cell" data-execution_count="2">
+<div id="8f8dca7d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">5</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Normale mathematische Operationen, wie die Addition, lassen sich auf zwei Arten ausdrücken. Entweder über die <code>np.add()</code> Funktion oder aber simpel über das <code>+</code> Zeichen.</p>
-<div id="6b38626b" class="cell" data-execution_count="3">
+<div id="3a41b119" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np.add(a,b)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>array([10, 10, 10, 10, 10])</code></pre>
 </div>
 </div>
-<div id="65ecca2a" class="cell" data-execution_count="4">
+<div id="3a5416c9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">+</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>array([10, 10, 10, 10, 10])</code></pre>
 </div>
 </div>
 <p>Ohne NumPy würde die Operation folgendermaßen aussehen:</p>
-<div id="007b6d2e" class="cell" data-execution_count="5">
+<div id="0f7ca457" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ergebnis <span class="op">=</span> np.ones(<span class="dv">5</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(a)):</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    ergebnis[i] <span class="op">=</span> a[i] <span class="op">+</span> b[i]</span>
@@ -313,34 +313,34 @@ Arbeiten mit Winkelfunktionen
 </div>
 <div class="callout-body-container callout-body">
 <p>Wie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen (sin, cos, …) die Fehlerquelle, dass man nicht mit Radian-Werten, sondern mit Grad-Werten arbeitet. Die Winkelfunktionen in numpy erwarten jedoch Radian-Werte.</p>
-<p>Für eine einfache Umrechnung bietet NumPy die Funktionen <code>np.grad2rad()</code>und <code>np.rad2grad()</code>.</p>
+<p>Für eine einfache Umrechnung bietet NumPy die Funktionen <code>np.deh2rad()</code>und <code>np.rad2deg()</code>.</p>
 </div>
 </div>
 </section>
 <section id="vergleiche" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="vergleiche"><span class="header-section-number">4.2</span> Vergleiche</h2>
 <p>NumPy-Arrays lassen sich auch miteinander vergleichen. Betrachten wir die folgenden zwei Arrays:</p>
-<div id="e66ad1e2" class="cell" data-execution_count="6">
+<div id="a9b3cb87" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Möchten wir feststellen, ob diese zwei Arrays identisch sind, können wir den <code>==</code>-Komparator benutzen. Dieser vergleicht die Arrays elementweise.</p>
-<div id="a95368a1" class="cell" data-execution_count="7">
+<div id="62646831" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">==</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>array([False,  True, False,  True,  True])</code></pre>
 </div>
 </div>
 <p>Es ist außerdem möglich Arrays mit den <code>&gt;</code>- und <code>&lt;</code>-Operatoren zu vergleichen:</p>
-<div id="a10a7e96" class="cell" data-execution_count="8">
+<div id="94e486a0" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">&lt;</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>array([ True, False,  True, False, False])</code></pre>
 </div>
 </div>
 <p>Möchte man Arrays mit Gleitkommazahlen vergleichen, ist es oftmals nötig, eine gewisse Toleranz zu benutzen, da bei Rechenoperationen minimale Rundungsfehler entstehen können.</p>
-<div id="9c0ecb7f" class="cell" data-execution_count="9">
+<div id="e0ebca5e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array(<span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array(<span class="fl">0.3</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>a <span class="op">==</span> b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -349,7 +349,7 @@ Arbeiten mit Winkelfunktionen
 </div>
 </div>
 <p>Für diesen Fall gibt es eine Vergleichsfunktion <code>np.isclose(a,b,atol)</code>, wobei <code>atol</code> für die absolute Toleranz steht. Im folgenden Beispiel wird eine absolute Toleranz von 0,001 verwendet.</p>
-<div id="76095773" class="cell" data-execution_count="10">
+<div id="d4009754" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array(<span class="fl">0.1</span> <span class="op">+</span> <span class="fl">0.2</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array(<span class="fl">0.3</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.isclose(a, b, atol<span class="op">=</span><span class="fl">0.001</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -370,7 +370,7 @@ Warum ist 0.1 + 0.2 nicht gleich 0.3?
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Zahlen werden intern als Binärzahlen dargestellt. So wie 1/3 nicht mit einer endlichen Anzahl an Ziffern korrekt dargestellt werden kann müssen Zahlen ggf. gerundet werden, um im Binärsystem dargestellt zu werden.</p>
-<div id="80f91b50" class="cell" data-execution_count="11">
+<div id="fe23bd12" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">0.1</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">0.2</span></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a <span class="op">+</span> b)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -385,18 +385,18 @@ Warum ist 0.1 + 0.2 nicht gleich 0.3?
 <section id="aggregatfunktionen" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="aggregatfunktionen"><span class="header-section-number">4.3</span> Aggregatfunktionen</h2>
 <p>Für verschiedene Auswertungen benötigen wir Funktionen, wie etwa die Summen oder die Mittelwert-Funktion. Starten wir mit einem Beispiel Array a:</p>
-<div id="588c8c48" class="cell" data-execution_count="12">
+<div id="521c5a69" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">8</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die Summer wird über die Funktion <code>np.sum()</code> berechnet.</p>
-<div id="14bd5069" class="cell" data-execution_count="13">
+<div id="c15b4245" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">sum</span>(a)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>np.int64(18)</code></pre>
 </div>
 </div>
 <p>Natürlich lassen sich auch der Minimalwert und der Maximalwert eines Arrays ermitteln. Die beiden Funktionen lauten <code>np.min()</code>und <code>np.max()</code>.</p>
-<div id="a7ed9d84" class="cell" data-execution_count="14">
+<div id="4a1db43e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">min</span>(a)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>np.int64(1)</code></pre>
@@ -404,19 +404,19 @@ Warum ist 0.1 + 0.2 nicht gleich 0.3?
 </div>
 <p>Möchte man nicht das Maximum selbst, sondern die Position des Maximums bestimmen, wird statt <code>np.max</code> die Funktion <code>np.argmax</code>verwendet.</p>
 <p>Für statistische Auswertungen werden häufig die Funktion für den Mittelwert <code>np.mean()</code>, die Funktion für den Median <code>np.median()</code>und die Funktion für die Standardabweichung <code>np.std()</code>verwendet.</p>
-<div id="6a402264" class="cell" data-execution_count="15">
+<div id="4dd7af4d" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>np.mean(a)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <pre><code>np.float64(3.6)</code></pre>
 </div>
 </div>
-<div id="8ba49a5a" class="cell" data-execution_count="16">
+<div id="61dceacf" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>np.median(a)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>np.float64(3.0)</code></pre>
 </div>
 </div>
-<div id="9118562f" class="cell" data-execution_count="17">
+<div id="a0197450" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>np.std(a)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="17">
 <pre><code>np.float64(2.4166091947189146)</code></pre>
@@ -453,7 +453,7 @@ Lösung
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="819df2a4" class="cell" data-execution_count="18">
+<div id="8594c6c9" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>, <span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>, <span class="dv">100</span>])</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">95</span>])</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
