@@ -86,6 +86,19 @@ zum slicen, erhalten wir alle Werte an den Stellen, an denen die Maske den Wert
 print(a[maske])
 ```
 
+Mehrere Masken können mit dem Operator `*` zu einem logischen UND verknüpft werden.
+
+```{python}
+# 2 Masken
+gerade_zahlen = a % 2 == 0
+kleiner_3 = a < 3
+print(gerade_zahlen, kleiner_3, sep = '\n')
+
+# logisches UND beider Masken
+print(a[kleiner_3 * gerade_zahlen])
+
+```
+
 ::: {.callout-warning}
 
 Das Verwenden von booleschen Arrays ist nur im numpy-Modul möglich. Es ist nicht
