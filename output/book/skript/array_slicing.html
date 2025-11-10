@@ -275,24 +275,24 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 <li>[a:b] wobei alle Werte von Position a bis Position b-1 ausgegeben werden</li>
 <li>[a:b:c] wobei die Werte von Position a bis Position b-1 mit einer Schrittweite von c ausgegeben werden</li>
 </ol>
-<div id="a775ecf0" class="cell" data-execution_count="2">
+<div id="7be47cd0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c01bba1c" class="cell" data-execution_count="3">
+<div id="072c4767" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen des ersten Elements</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">0</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>np.int64(1)</code></pre>
 </div>
 </div>
-<div id="65f13c18" class="cell" data-execution_count="4">
+<div id="69c162e6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen des letzen Elements</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>np.int64(6)</code></pre>
 </div>
 </div>
-<div id="336aa75a" class="cell" data-execution_count="5">
+<div id="316dabbe" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen einer Reihe von Elementen</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>liste[<span class="dv">1</span>:<span class="dv">4</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
@@ -300,10 +300,10 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 </div>
 </div>
 <p>Für zwei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer zweiten Zahl die zweite Dimension aus.</p>
-<div id="77e0b677" class="cell" data-execution_count="6">
+<div id="43405da1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f1a99f53" class="cell" data-execution_count="7">
+<div id="a0d2d8b1" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen einer Elements</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>matrix[<span class="dv">1</span>,<span class="dv">1</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
@@ -311,7 +311,7 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 </div>
 </div>
 <p>Für drei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer weiteren Zahl die dritte Dimension aus. Dabei wird dieses jedoch an die erste Stelle gesetzt.</p>
-<div id="3e2992b0" class="cell" data-execution_count="8">
+<div id="70dff6ec" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>matrix_3d <span class="op">=</span> np.array([[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]], [[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>], [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(matrix_3d)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -322,7 +322,7 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
   [10 11 12]]]</code></pre>
 </div>
 </div>
-<div id="8612b465" class="cell" data-execution_count="9">
+<div id="493a7ac6" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Auswählen eines Elements</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>matrix_3d[<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">2</span>]</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
@@ -333,7 +333,7 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 <section id="slicing-mit-logischen-werten-boolesche-masken" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="slicing-mit-logischen-werten-boolesche-masken"><span class="header-section-number">5.2</span> Slicing mit logischen Werten (Boolesche Masken)</h2>
 <p>Beim logischen Slicing wird eine boolesche Maske verwendet, um bestimmte Elemente eines Arrays auszuwählen. Die Maske ist ein Array gleicher Länge wie das Original, das aus <code>True</code> oder <code>False</code> Werten besteht.</p>
-<div id="0c63816a" class="cell" data-execution_count="10">
+<div id="e402bbb3" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellen wir ein Beispiel Array</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -346,11 +346,26 @@ Abbildung&nbsp;5.1: Ansprechen der einzelnen Achsen für den ein-, zwei- und dre
 </div>
 </div>
 <p>Wir erhalten also ein Array mit boolschen Werten. Verwenden wir diese Maske nun zum slicen, erhalten wir alle Werte an den Stellen, an denen die Maske den Wert <code>True</code> besitzt.</p>
-<div id="62c135e2" class="cell" data-execution_count="11">
+<div id="cc60ff95" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Anwenden der Maske</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a[maske])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[4 5 6]</code></pre>
+</div>
+</div>
+<p>Mehrere Masken können mit dem Operator <code>*</code> zu einem logischen UND verknüpft werden.</p>
+<div id="3e75030b" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 Masken</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>gerade_zahlen <span class="op">=</span> a <span class="op">%</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>kleiner_3 <span class="op">=</span> a <span class="op">&lt;</span> <span class="dv">3</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gerade_zahlen, kleiner_3, sep <span class="op">=</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="co"># logisches UND beider Masken</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a[kleiner_3 <span class="op">*</span> gerade_zahlen])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[False  True False  True False  True]
+[ True  True False False False False]
+[2]</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -364,10 +379,10 @@ Warnung
 </div>
 <div class="callout-body-container callout-body">
 <p>Das Verwenden von booleschen Arrays ist nur im numpy-Modul möglich. Es ist nicht Möglich dieses Vorgehen auf native Python Listen anzuwenden. Hier muss durch die Liste iterriert werden.</p>
-<div id="c6a1f8f9" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>ergebniss <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> a <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">3</span>]</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebniss) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="bf35d2df" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ergebniss <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> a <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">3</span>]</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(ergebniss) </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[4, 5, 6]</code></pre>
 </div>
@@ -388,19 +403,19 @@ Zwischenübung: Array-Slicing
 <div class="callout-body-container callout-body">
 <p>Wählen Sie die farblich markierten Bereiche aus dem Array “matrix” mit den eben gelernten Möglichkeiten des Array-Slicing aus.</p>
 <p><img src="../skript/00-bilder/exercise_slicing.svg" class="img-fluid"></p>
-<div id="53a9c9d6" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">18</span>, <span class="dv">47</span>, <span class="dv">33</span>, <span class="dv">48</span>, <span class="dv">9</span>, <span class="dv">31</span>, <span class="dv">8</span>, <span class="dv">41</span>],</span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">55</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">91</span>, <span class="dv">56</span>, <span class="dv">17</span>, <span class="dv">54</span>, <span class="dv">23</span>, <span class="dv">12</span>],</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">19</span>, <span class="dv">99</span>, <span class="dv">56</span>, <span class="dv">72</span>, <span class="dv">6</span>, <span class="dv">13</span>, <span class="dv">34</span>, <span class="dv">16</span>, <span class="dv">77</span>, <span class="dv">56</span>],</span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">37</span>, <span class="dv">75</span>, <span class="dv">67</span>, <span class="dv">5</span>, <span class="dv">46</span>, <span class="dv">98</span>, <span class="dv">57</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">7</span>],</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>, <span class="dv">57</span>, <span class="dv">32</span>, <span class="dv">78</span>, <span class="dv">56</span>, <span class="dv">12</span>, <span class="dv">43</span>, <span class="dv">61</span>, <span class="dv">3</span>, <span class="dv">88</span>],</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">96</span>, <span class="dv">16</span>, <span class="dv">92</span>, <span class="dv">18</span>, <span class="dv">50</span>, <span class="dv">90</span>, <span class="dv">35</span>, <span class="dv">15</span>, <span class="dv">36</span>, <span class="dv">97</span>],</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">75</span>, <span class="dv">4</span>, <span class="dv">38</span>, <span class="dv">53</span>, <span class="dv">1</span>, <span class="dv">79</span>, <span class="dv">56</span>, <span class="dv">73</span>, <span class="dv">45</span>, <span class="dv">56</span>],</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">15</span>, <span class="dv">76</span>, <span class="dv">11</span>, <span class="dv">93</span>, <span class="dv">87</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">58</span>, <span class="dv">86</span>, <span class="dv">94</span>],</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">51</span>, <span class="dv">14</span>, <span class="dv">60</span>, <span class="dv">57</span>, <span class="dv">74</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">71</span>, <span class="dv">88</span>, <span class="dv">52</span>],</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">49</span>, <span class="dv">6</span>, <span class="dv">43</span>, <span class="dv">39</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">95</span>, <span class="dv">6</span>, <span class="dv">44</span>, <span class="dv">75</span>]</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fce2296c" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">2</span>, <span class="dv">11</span>, <span class="dv">18</span>, <span class="dv">47</span>, <span class="dv">33</span>, <span class="dv">48</span>, <span class="dv">9</span>, <span class="dv">31</span>, <span class="dv">8</span>, <span class="dv">41</span>],</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">55</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">3</span>, <span class="dv">91</span>, <span class="dv">56</span>, <span class="dv">17</span>, <span class="dv">54</span>, <span class="dv">23</span>, <span class="dv">12</span>],</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">19</span>, <span class="dv">99</span>, <span class="dv">56</span>, <span class="dv">72</span>, <span class="dv">6</span>, <span class="dv">13</span>, <span class="dv">34</span>, <span class="dv">16</span>, <span class="dv">77</span>, <span class="dv">56</span>],</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">37</span>, <span class="dv">75</span>, <span class="dv">67</span>, <span class="dv">5</span>, <span class="dv">46</span>, <span class="dv">98</span>, <span class="dv">57</span>, <span class="dv">19</span>, <span class="dv">14</span>, <span class="dv">7</span>],</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">4</span>, <span class="dv">57</span>, <span class="dv">32</span>, <span class="dv">78</span>, <span class="dv">56</span>, <span class="dv">12</span>, <span class="dv">43</span>, <span class="dv">61</span>, <span class="dv">3</span>, <span class="dv">88</span>],</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">96</span>, <span class="dv">16</span>, <span class="dv">92</span>, <span class="dv">18</span>, <span class="dv">50</span>, <span class="dv">90</span>, <span class="dv">35</span>, <span class="dv">15</span>, <span class="dv">36</span>, <span class="dv">97</span>],</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">75</span>, <span class="dv">4</span>, <span class="dv">38</span>, <span class="dv">53</span>, <span class="dv">1</span>, <span class="dv">79</span>, <span class="dv">56</span>, <span class="dv">73</span>, <span class="dv">45</span>, <span class="dv">56</span>],</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">15</span>, <span class="dv">76</span>, <span class="dv">11</span>, <span class="dv">93</span>, <span class="dv">87</span>, <span class="dv">8</span>, <span class="dv">2</span>, <span class="dv">58</span>, <span class="dv">86</span>, <span class="dv">94</span>],</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">51</span>, <span class="dv">14</span>, <span class="dv">60</span>, <span class="dv">57</span>, <span class="dv">74</span>, <span class="dv">42</span>, <span class="dv">59</span>, <span class="dv">71</span>, <span class="dv">88</span>, <span class="dv">52</span>],</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    [<span class="dv">49</span>, <span class="dv">6</span>, <span class="dv">43</span>, <span class="dv">39</span>, <span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">95</span>, <span class="dv">6</span>, <span class="dv">44</span>, <span class="dv">75</span>]</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
