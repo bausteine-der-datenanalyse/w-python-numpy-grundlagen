@@ -252,20 +252,27 @@ window.Quarto = {
 
 <section id="aufgabe-1" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-1">Aufgabe 1</h2>
-<p>Ein rechteckiger Träger aus Beton wird entlang seiner Länge mit einer gleichmäßig verteilten Last belastet. Die Spannungsverteilung entlang der Länge des Trägers soll analysiert werden. Der Träger hat eine Länge von 10 Metern und eine Breite von 0.3 Metern. Die Höhe des Trägers beträgt 0.5 Meter. Die gleichmäßig verteilte Last beträgt 5000 N/m.</p>
+<p>Ein rechteckiger Träger aus Beton wird entlang seiner Länge mit einer gleichmäßig verteilten Last belastet. Die Spannungsverteilung entlang der Länge des Trägers soll analysiert werden. Der Träger hat eine Länge von 10 Metern und eine Breite von 0,3 Metern. Die Höhe des Trägers beträgt 0,5 Meter. Die gleichmäßig verteilte Last beträgt 5000 N/m.</p>
 <ol type="1">
 <li><p>Erstellen Sie ein NumPy-Array <code>x</code> mit 100 gleichmäßig verteilten Punkten entlang der Länge des Trägers von 0 bis 10 Metern.</p></li>
 <li><p>Berechnen Sie die Biegemomente <span class="math inline">\(M(x)\)</span> entlang der Länge des Trägers unter Verwendung der Formel: <span class="math display">\[
 \left[M(x) = \frac{w \cdot x \cdot (L - x)}{2}\right]
-\]</span> wobei <span class="math inline">\(w\)</span> die verteilte Last (in N/m), <span class="math inline">\(x\)</span> die Position entlang des Trägers (in m) und <span class="math inline">\(L\)</span> die Länge des Trägers (in m) ist.</p></li>
-<li><p>Berechnen Sie die maximale Biegespannung σmaxσmax​ an jedem Punkt entlang des Trägers unter Verwendung der Formel: <span class="math display">\[
+\]</span></p></li>
+</ol>
+<p>wobei <span class="math inline">\(w\)</span> die verteilte Last (in N/m), <span class="math inline">\(x\)</span> die Position entlang des Trägers (in m) und <span class="math inline">\(L\)</span> die Länge des Trägers (in m) ist.</p>
+<ol start="3" type="1">
+<li>Berechnen Sie die maximale Biegespannung <span class="math inline">\(σ_{max}\)</span>​ an jedem Punkt entlang des Trägers unter Verwendung der Formel: <span class="math display">\[
 \left[\sigma_{\text{max}}(x) = \frac{M(x) \cdot c}{I}\right]
-\]</span> wobei cc der Abstand von der neutralen Faser zur äußersten Faser des Trägers ist (in m) und <span class="math inline">\(I\)</span> das Flächenträgheitsmoment ist. Das Flächenträgheitsmoment eines rechteckigen Querschnitts ist: <span class="math display">\[
+\]</span></li>
+</ol>
+<p>wobei <span class="math inline">\(c\)</span> der Abstand von der neutralen Faser zur äußersten Faser des Trägers (in m) und <span class="math inline">\(I\)</span> das Flächenträgheitsmoment ist. Das Flächenträgheitsmoment eines rechteckigen Querschnitts ist: <span class="math display">\[
 \left[
 I = \frac{b \cdot h^3}{12}
 \right]
-\]</span> wobei <span class="math inline">\(b\)</span> die Breite (in m) und <span class="math inline">\(h\)</span> die Höhe des Trägers (in m) ist.</p></li>
-<li><p>Bestimmen SIe die maximale Biegespannung</p></li>
+\]</span></p>
+<p>wobei <span class="math inline">\(b\)</span> die Breite (in m) und <span class="math inline">\(h\)</span> die Höhe des Trägers (in m) ist.</p>
+<ol start="4" type="1">
+<li><p>Bestimmen Sie die maximale Biegespannung</p></li>
 <li><p>Plotten Sie die Spannungsverteilung <span class="math inline">\(\sigma_{max}​(x)\)</span> entlang der Länge des Trägers.</p></li>
 </ol>
 
