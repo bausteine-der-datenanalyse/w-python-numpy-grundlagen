@@ -283,7 +283,7 @@ window.Quarto = {
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="3" data-layout-halign="center">
+<div class="quarto-layout-panel" data-layout-halign="center" data-layout-ncol="3">
 <div class="quarto-layout-row quarto-layout-valign-center">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <p><span class="math display">\[
@@ -304,7 +304,7 @@ window.Quarto = {
 </div>
 </div>
 <p>nativ in Python so erstellen:</p>
-<div id="c99b196e" class="cell" data-execution_count="2">
+<div id="1925c767" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]]</span>
@@ -316,8 +316,8 @@ window.Quarto = {
 [[1, 2, 3], [4, 5, 6]]</code></pre>
 </div>
 </div>
-<p>Möchte man jetzt NumPy Arrays verwenden benutzt man den Befehl <code>np.array()</code>.</p>
-<div id="65474a92" class="cell" data-execution_count="3">
+<p>Möchte man jetzt NumPy-Arrays verwenden, benutzt man den Befehl <code>np.array()</code>.</p>
+<div id="c663f4a3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>liste <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]])</span>
@@ -330,27 +330,27 @@ window.Quarto = {
  [4 5 6]]</code></pre>
 </div>
 </div>
-<p>Betrachtet man die Ausgaben der <code>print()</code> Befehle fallen zwei Sachen auf. Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend ausgegeben.</p>
-<p>Es gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird eine drei-dimensionale Matrix erstellt.</p>
-<div id="55f8cc89" class="cell" data-execution_count="4">
+<p>Betrachtet man die Ausgaben der <code>print()</code> Befehle, fallen zwei Sachen auf: Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend ausgegeben.</p>
+<p>Es gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird eine dreidimensionale Matrix erstellt.</p>
+<div id="d603b40e" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>matrix_3d <span class="op">=</span> np.array([[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]], [[<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>], [<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>]]])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Es gilt als “good practice” Arrays immer zu initialisieren. Dafür bietet NumPy drei Funktionen um vorinitialisierte Arrays zu erzeugen. Alternativ können Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder die Funktion <code>np.zeros()</code>verwendet werden die alle Werte auf 0 setzt, oder aber <code>np.ones()</code>welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im Format <code>[Reihen,Spalten]</code> übergeben. Möchte man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl <code>np.full()</code> benutzen.</p>
-<div id="68a95c91" class="cell" data-execution_count="5">
+<p>Es gilt als “good practice”, Arrays immer zu initialisieren. Dafür bietet NumPy drei Funktionen, um vorinitialisierte Arrays zu erzeugen. Alternativ können Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder die Funktion <code>np.zeros()</code>verwendet werden, die alle Werte auf 0 setzt, oder aber <code>np.ones()</code>, welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im Format <code>[Reihen,Spalten]</code> übergeben. Möchte man alle Einträge auf einen spezifischen Wert setzen, kann man den Befehl <code>np.full()</code> benutzen.</p>
+<div id="fe32699b" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np.zeros([<span class="dv">2</span>,<span class="dv">3</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>array([[0., 0., 0.],
        [0., 0., 0.]])</code></pre>
 </div>
 </div>
-<div id="c20d00e5" class="cell" data-execution_count="6">
+<div id="5dd4e32b" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np.ones([<span class="dv">2</span>,<span class="dv">3</span>])</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>array([[1., 1., 1.],
        [1., 1., 1.]])</code></pre>
 </div>
 </div>
-<div id="5c110304" class="cell" data-execution_count="7">
+<div id="184ed639" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>np.full([<span class="dv">2</span>,<span class="dv">3</span>],<span class="dv">7</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>array([[7, 7, 7],
@@ -363,14 +363,14 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Wie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?
+Wie könnte man Arrays, die mit einer Zahl x gefüllt sind, auch erstellen?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Der Trick beseht hierbei ein Array mit <code>np.ones()</code> zu initialisiere und dieses Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist <code>x = 5</code></p>
-<div id="c7d3b46a" class="cell" data-execution_count="8">
+<p>Der Trick besteht hierbei darin, ein Array mit <code>np.ones()</code> zu initialisieren und dieses Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist <code>x = 5</code>.</p>
+<div id="a4347132" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>np.ones([<span class="dv">2</span>,<span class="dv">3</span>]) <span class="op">*</span> <span class="dv">5</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>array([[5., 5., 5.],
@@ -380,14 +380,14 @@ Wie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?
 </div>
 </div>
 </div>
-<p>Möchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei Möglichkeiten. Mit den Befehlen <code>np.linspace(Start,Stop,#Anzahl Werte)</code> und <code>np.arrange(Start,Stop,Abstand zwischen Werten)</code> können solche Arrays erstellt werden.</p>
-<div id="a8ebd7f4" class="cell" data-execution_count="9">
+<p>Möchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei Möglichkeiten. Mit den Befehlen <code>np.linspace(Start,Stopp,#Anzahl Werte)</code> und <code>np.arrange(Start,Stopp,Abstand zwischen Werten)</code> können solche Arrays erstellt werden.</p>
+<div id="85177ec0" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>np.linspace(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">11</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>array([0. , 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1. ])</code></pre>
 </div>
 </div>
-<div id="1c10b927" class="cell" data-execution_count="10">
+<div id="3118d38e" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>array([0, 2, 4, 6, 8])</code></pre>
@@ -426,35 +426,35 @@ Lösung
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="c77d76c8" class="cell" data-execution_count="11">
+<div id="438cc1b4" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. </span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.array([<span class="dv">1</span>, <span class="dv">7</span>, <span class="dv">42</span>, <span class="dv">99</span>]))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[ 1  7 42 99]</code></pre>
 </div>
 </div>
-<div id="356963fa" class="cell" data-execution_count="12">
+<div id="96f9307a" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. </span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.full(<span class="dv">10</span>,<span class="dv">5</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[5 5 5 5 5 5 5 5 5 5]</code></pre>
 </div>
 </div>
-<div id="c01178df" class="cell" data-execution_count="13">
+<div id="dd82bc62" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. </span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">35</span>, <span class="dv">51</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50]</code></pre>
 </div>
 </div>
-<div id="6c5748c3" class="cell" data-execution_count="14">
+<div id="458d369e" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. </span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.arange(<span class="dv">20</span>, <span class="dv">41</span>, <span class="dv">2</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[20 22 24 26 28 30 32 34 36 38 40]</code></pre>
 </div>
 </div>
-<div id="0fb22f8a" class="cell" data-execution_count="15">
+<div id="9549b1f4" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. </span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.full([<span class="dv">4</span>,<span class="dv">5</span>],<span class="dv">4</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -464,7 +464,7 @@ Lösung
  [4 4 4 4 4]]</code></pre>
 </div>
 </div>
-<div id="4f996c58" class="cell" data-execution_count="16">
+<div id="bfee153b" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 6. </span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.linspace(<span class="dv">22</span>, <span class="dv">40</span>, <span class="dv">10</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
