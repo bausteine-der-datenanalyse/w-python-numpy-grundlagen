@@ -6,13 +6,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-Das Modul numpy stellt Funktionen zum Lesen und Schreiben von strukturierten 
+Das Modul NumPy stellt Funktionen zum Lesen und Schreiben von strukturierten 
 Textdateien bereit.
 
 ## Lesen von Dateien
 
-Zum Lesen von strukturierten Textdateien, z.B. im CSV-Format (comma separated 
-values), kann die `np.loadtxt()`-Funktion verwendet werden. Diese bekommt als 
+Zum Lesen von strukturierten Textdateien, z. B. im CSV-Format (comma separated 
+values), kann die Funktion `np.loadtxt()` verwendet werden. Diese bekommt als 
 Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der 
 Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.
 
@@ -36,24 +36,25 @@ plt.xlabel('Datenindex')
 plt.ylabel('Temperatur in °C');
 ```
 
+&nbsp;
+
 Standardmäßig erwartet die `np.loadtxt()`-Funktion Komma separierte Werte. 
 Werden die Daten durch ein anderes Trennzeichen getrennt, kann mit der Option 
 `delimiter = ""` ein anderes Trenzeichen ausgewählt werden. Beispielsweise würde 
 der Funktionsaufruf bei einem Semikolon folgendermaßen aussehen:
-`np.loadtxt(data.txt, delimiter = ";")`
+`np.loadtxt(data.txt, delimiter = ";")`.
 
-Beginnt die Datei mit den Daten mit Zeilen bezüglich zusätzlichen Informationen 
-wie Einheiten oder Experimentdaten, können diese mit der Option
-`skiprows= #Reihen`übersprungen werden.
+Enthalten die ersten Zeilen einer Datei zusätzliche Informationen wie die verwenden Einheiten oder eine Beschreibung des Experiments, können diese Zeilen mit der Option
+`skiprows= #Reihen` übersprungen werden.
 
 ## Schreiben von Dateien
 
-Zum Schreiben von Arrays in Dateien, kann die in numpy verfügbare Funktion 
+Zum Schreiben von Arrays in Dateien, kann die in NumPy verfügbare Funktion 
 `np.savetxt()` verwendet werden. Dieser müssen mindestens die zu schreibenden 
 Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche 
 Formatierungs- bzw. Strukturierungsoptionen möglich.
 
-Folgendes Beispiel skaliert die oben eingelesenen Daten und schreib jeden 
+Folgendes Beispiel skaliert die oben eingelesenen Daten und schreibt jeden 
 zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (`header`-Argument) 
 am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem 
 `fmt`-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, 

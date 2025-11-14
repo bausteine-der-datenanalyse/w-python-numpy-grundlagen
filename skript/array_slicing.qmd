@@ -7,14 +7,14 @@ import numpy as np
 
 ## Normales Slicing mit Zahlenwerten
 
-![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](../skript/00-bilder/slicing.png){#fig-slicing fig-alt="AUswahl der jeweiligen Achsen für NumPy Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke"}
+![Ansprechen der einzelnen Achsen für den ein-, zwei- und dreidimensionallen Fall inkl. jeweiligem Beispiel](../skript/00-bilder/slicing.png){#fig-slicing fig-alt="Auswahl der jeweiligen Achsen für NumPy-Arrays von verschiedener Dimension, dargestellt durch gestapelte Blöcke."}
 
-Möchte man jetzt Daten innerhalb eines Arrays auswählen so geschieht das in der 
+Möchte man Daten innerhalb eines Arrays auswählen, so geschieht das in der 
 Form:
 
-1. [a] wobei ein einzelner Wert an Position a ausgegeben wird
-2. [a:b] wobei alle Werte von Position a bis Position b-1 ausgegeben werden
-3. [a:b:c] wobei die Werte von Position a bis Position b-1 mit einer Schrittweite von c ausgegeben werden
+1. `array[a]` wobei ein einzelner Wert an Position a ausgegeben wird.
+2. `array[a:b]` wobei alle Werte von Position a bis Position b-1 ausgegeben werden.
+3. `array[a:b:c]` wobei die Werte von Position a bis Position b-1 mit einer Schrittweite von c ausgegeben werden.
 
 ```{python}
 liste = np.array([1, 2, 3, 4, 5, 6])
@@ -26,7 +26,7 @@ liste[0]
 ```
 
 ```{python}
-# Auswählen des letzen Elements
+# Auswählen des letzten Elements
 liste[-1]
 ```
 
@@ -35,21 +35,18 @@ liste[-1]
 liste[1:4]
 ```
 
-Für zwei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer 
-zweiten Zahl die zweite Dimension aus.
+Für zweidimensionale Arrays wählt man mit einer zweiten, durch ein Komma von der ersten getrennten Zahl die zweite Dimension aus.
 
 ```{python}
 matrix = np.array([[1, 2, 3], [4, 5, 6]])
 ```
 
 ```{python}
-# Auswählen einer Elements
+# Auswählen eines Elements
 matrix[1,1]
 ```
 
-Für drei-dimensionale Arrays wählt man getrennt durch ein Komma mit einer 
-weiteren Zahl die dritte Dimension aus. Dabei wird dieses jedoch an die erste 
-Stelle gesetzt. 
+Für dreidimensionale Arrays wählt man mit einer weiteren, ebenfalls durch ein Komma getrennten Zahl die dritte Dimension aus. Dabei wird diese jedoch an die erste Stelle gesetzt. 
 
 ```{python}
 matrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
@@ -61,11 +58,11 @@ print(matrix_3d)
 matrix_3d[1,0,2]
 ```
 
-## Slicing mit logischen Werten (Boolesche Masken)
+## Slicing mit logischen Werten (boolesche Masken)
 
 Beim logischen Slicing wird eine boolesche Maske verwendet, um bestimmte Elemente 
 eines Arrays auszuwählen. Die Maske ist ein Array gleicher Länge wie das Original, 
-das aus `True` oder `False` Werten besteht. 
+das aus den Werten `True` oder `False` besteht. 
 
 ```{python}
 # Erstellen wir ein Beispiel Array
@@ -101,15 +98,15 @@ print(a[kleiner_3 * gerade_zahlen])
 
 ::: {.callout-warning}
 
-Das Verwenden von booleschen Arrays ist nur im numpy-Modul möglich. Es ist nicht
-Möglich dieses Vorgehen auf native Python Listen anzuwenden. Hier muss durch die 
-Liste iterriert werden.
+Das Verwenden von booleschen Arrays ist nicht für native Python-Listen möglich.
+Hier muss durch die Liste iterriert werden.
 
 ```{python}
 a = [1, 2, 3, 4, 5, 6]
-ergebniss = [x for x in a if x > 3]
-print(ergebniss) 
+ergebnis = [x for x in a if x > 3]
+print(ergebnis) 
 ```
+
 :::
 
 ::: {.callout-tip collapse="true"}
@@ -119,7 +116,7 @@ print(ergebniss)
 Wählen Sie die farblich markierten Bereiche aus dem Array "matrix" mit den eben 
 gelernten Möglichkeiten des Array-Slicing aus.
 
-![](../skript/00-bilder/exercise_slicing.svg)
+![](../skript/00-bilder/exercise_slicing.svg){fig-alt:"Grafische Darstellung der in der folgenden Code-Zelle erstellten Matrix."}
 ```{python}
 matrix = np.array([
     [2, 11, 18, 47, 33, 48, 9, 31, 8, 41],

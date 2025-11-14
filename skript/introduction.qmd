@@ -9,7 +9,7 @@ NumPy generell sehr schnell ist.
 NumPy bietet ein effizientes Arbeiten mit kleinen und großen Vektoren und 
 Matrizen, die so ansonsten nur umständlich in nativem Python implementiert 
 werden würden. Dabei bietet NumPy auch die Möglichkeit, einfach mit Vektoren und 
-Matrizen zu rechnen, und das auch für sehr große Datenmengen.
+Matrizen zu rechnen und das auch für sehr große Datenmengen.
 
 Diese Einführung wird Ihnen dabei helfen, die Grundlagen von NumPy zu verstehen 
 und zu nutzen.
@@ -27,12 +27,12 @@ Nativ speichert Python Listeninhalte aufgeteilt, wo gerade Platz ist.
 
 ![Speicherung von Daten in nativem Python](../skript/00-bilder/data_memory_list.svg){#fig-python_memory fig-alt="Sequentielle Daten werden an zufälligen Orten im Speicher gespeichert"}
 
-Dagegen werden NumPy Arrays und Matritzen zusammenhängend gespeichert, was einen
+Dagegen werden NumPy-Arrays und Matritzen zusammenhängend gespeichert, was einen
 effizienteren Datenaufruf ermöglicht. 
 
 ![Speicherung von Daten bei Numpy](../skript/00-bilder/data_memory_numpy.svg){#fig-numpy_memory fig-alt="Sequentielle Daten werden an einem Ort im Speicher sequentiell gespeichert"}
 
-Dies bedeutet aber auch, dass es eine Erweiterung der Liste deutlich schneller 
+Dies bedeutet aber auch, dass eine Erweiterung einer Liste deutlich schneller 
 ist als eine Erweiterung von Arrays oder Matrizen. Bei Listen kann jeder 
 freie Platz genutzt werden, während Arrays und Matrizen an einen neuen Ort im 
 Speicher kopiert werden müssen.

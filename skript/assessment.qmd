@@ -13,9 +13,9 @@ eigenständig zu bewerten. Sie ist so konzipiert, dass Sie Ihre Stärken und
 Schwächen erkennen und gezielt an den Bereichen arbeiten können, die noch 
 verbessert werden müssen.
 
-Es stehen hier zwei Möglichkeiten zur Verfügung ihr Wissen zu prüfen. Sie 
+Es stehen hier zwei Möglichkeiten zur Verfügung, Ihr Wissen zu prüfen. Sie 
 können das Quiz benutzen, welches Sie automatisch durch die verschiedenen 
-Themen führt. ALternativ finden Sie darunter normale Frage wie Sie bisher im 
+Themen führt. Alternativ finden Sie darunter normale Fragen, wie Sie bisher im 
 Skript verwendet wurden.
 
 Bitte nehmen Sie sich ausreichend Zeit für die Bearbeitung der Fragen und gehen 
@@ -39,21 +39,21 @@ Wie wird das NumPy-Paket typischerweise eingebunden?
 
 Erstellen Sie mit Hilfe von NumPy die folgenden Arrays:
 
-1. Erstellen sie aus der Liste [1, 2, 3] ein numPy Array
+1. Erstellen sie aus der Liste [1, 2, 3] ein NumPy-Array.
 2. Ein eindimensionales Array, das die Zahlen von 0 bis 9 enthält.
-3. Ein zweidimensionales Array der Form 3×33×3, das nur aus Einsen besteht.
+3. Ein zweidimensionales Array der Form 3×3, das nur aus Einsen besteht.
 4. Ein eindimensionales Array, das die Zahlen von 10 bis 50 (einschließlich) in 
 Schritten von 5 enthält.
 
 ## Aufgabe 3 {.unnumbered}
 
-Was ist der Unterschied zwischenden den Funktionen `np.ndim`, `np.shape` und 
-`np.size`
+Was ist der Unterschied zwischenden den Funktionen `np.ndim()`, `np.shape()` und 
+`np.size()`?
 
 ## Aufgabe 4 {.unnumbered}
 
-Welchen Datentyp besitzt folgendes Array? Mit welcher Funktion kann ich den 
-Datentypen eines Arrays auslesen?
+Welchen Datentyp hat folgendes Array? Mit welcher Funktion kann man den 
+Datentyp eines Arrays auslesen?
 
 ```{python}
 vector = np.array([ 4.8,  8.2, 15.6, 16.6, 23.2, 42.8 ])
@@ -63,18 +63,18 @@ vector = np.array([ 4.8,  8.2, 15.6, 16.6, 23.2, 42.8 ])
 
 Führen Sie mit den folgenden zwei Arrays diese mathematischen Operationen durch:
 
-a = [5, 1, 3, 6, 4] und b = [6, 5, 2, 6, 9]
+a = np.array([5, 1, 3, 6, 4]) und b = np.array([6, 5, 2, 6, 9])
 
-1. Addieren Sie beide Arrays
-2. Berechnen Sie das elementweise Produkt von a und b
-3. Addieren Sie zu jedem Eintrag von a 3 dazu
+1. Addieren Sie beide Arrays.
+2. Berechnen Sie das elementweise Produkt von a und b.
+3. Addieren Sie zu jedem Eintrag von a 3 dazu.
 
 ## Aufgabe 6 {.unnumbered}
 
-a = [9, 2, 3, 1, 3]
+a = np.array([9, 2, 3, 1, 3])
 
-1. Bestimmen Sie Mittelwert und Standardabweichung für das Array a
-2. Bestimmen Sie Minimum und Maximum der Liste
+1. Bestimmen Sie Mittelwert und Standardabweichung für das Array a.
+2. Bestimmen Sie Minimum und Maximum des Arrays.
 
 ## Aufgabe 7 {.unnumbered}
 
@@ -104,7 +104,7 @@ array = np.arange(1, 21)
 3. Ändern Sie die Form des Arrays in eine dreidimensionale Matrix der Form 2×2×5.
 4. Flachen Sie das dreidimensionale Array aus Aufgabe 3 wieder zu einem 
 eindimensionalen Array ab.
-5. Transponieren Sie die 4×54×5-Matrix aus Aufgabe 1.
+5. Transponieren Sie die 4×5-Matrix aus Aufgabe 1.
 
 ## Aufgabe 9 {.unnumbered}
 
@@ -144,13 +144,13 @@ print(np.arange(10, 51, 5))
 
 ### Aufgabe 3 {.unnumbered}
 
-`np.ndim`: Gibt die Anzahl der Dimensionen zurück
-`np.shape`: Gibt die Längen der einzelnen Dimensionen wieder
-`np.size`: Gibt die Anzahl aller Elemente aus
+`np.ndim()`: Gibt die Anzahl der Dimensionen zurück.
+`np.shape()`: Gibt die Längen der einzelnen Dimensionen wieder.
+`np.size()`: Gibt die Anzahl aller Elemente aus.
 
 ### Aufgabe 4 {.unnumbered}
 
-Da es sich hier um Gleitkommazahlen handelt, ist der Datentyp `float.64`.
+Da es sich hier um Gleitkommazahlen handelt, ist der Datentyp `float64`.
 
 ```{python}
 vector = np.array([ 4.8,  8.2, 15.6, 16.6, 23.2, 42.8 ])
@@ -208,12 +208,13 @@ matrix = np.array([
 # 1. Erste Zeile
 print(matrix[0,:])
 
-# 2.
+# 2. Letzte Spalte
 print(matrix[:,-1])
 
-# 3.
+# 3. Ausschnitt
 print(matrix[1:4,0:3])
 ```
+
 ### Aufgabe 8 {.unnumbered}
 ```{python}
 array = np.arange(1, 21)
@@ -248,5 +249,5 @@ Die passenden Funktionen sind `np.loadtxt()` und `np.savetxt()`.
 
 ### Aufgabe 10 {.unnumbered}
 
-Typischerweise sind Bilddaten große Matrizen wobei die Farben in drei unterschieldichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft "Rot", "Grün" und "Blau". Dementsprechen müssen wir wenn wie Daten in der Matrix `data` gespeichert sind mit Slicing eine Dimension auswählen: `data[:,:,0]`, wobei die Zahl 0-2 für die jeweilige Farbe steht.
+Typischerweise sind Bilddaten große Matrizen, wobei die Farben in drei unterschieldichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft "Rot", "Grün" und "Blau". Dementsprechen müssen wir, wenn die Daten in der Matrix `data` gespeichert sind, mit Slicing eine Dimension auswählen: `data[:,:,0]`, wobei die Zahl 0-2 für die jeweilige Farbe steht.
 :::

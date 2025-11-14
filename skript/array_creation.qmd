@@ -36,7 +36,7 @@ print(liste)
 print(matrix)
 ```
 
-Möchte man jetzt NumPy Arrays verwenden benutzt man den Befehl `np.array()`. 
+Möchte man jetzt NumPy-Arrays verwenden, benutzt man den Befehl `np.array()`. 
 
 ```{python}
 
@@ -48,23 +48,23 @@ print(liste)
 print(matrix)
 ```
 
-Betrachtet man die Ausgaben der `print()` Befehle fallen zwei Sachen auf.
+Betrachtet man die Ausgaben der `print()` Befehle, fallen zwei Sachen auf:
 Zum einen fallen die Kommata weg und zum anderen wird die Matrix passend
 ausgegeben.
 
 Es gibt auch die Möglichkeit, höherdimensionale Arrays zu erstellen. Dabei 
 wird eine neue Ebene der Verschachtelung benutzt. Im folgenden Beispiel wird 
-eine drei-dimensionale Matrix erstellt.
+eine dreidimensionale Matrix erstellt.
 
 ```{python}
 matrix_3d = np.array([[[1, 2, 3], [4, 5, 6]], [[7, 8, 9], [10, 11, 12]]])
 ```
 
-Es gilt als "good practice" Arrays immer zu initialisieren. Dafür bietet NumPy 
-drei Funktionen um vorinitialisierte Arrays zu erzeugen. Alternativ können 
+Es gilt als "good practice", Arrays immer zu initialisieren. Dafür bietet NumPy 
+drei Funktionen, um vorinitialisierte Arrays zu erzeugen. Alternativ können 
 Arrays auch mit festgesetzten Werten initialisiert werden. Dafür kann entweder 
-die Funktion `np.zeros()`verwendet werden die alle Werte auf 0 setzt, oder aber 
-`np.ones()`welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im 
+die Funktion `np.zeros()`verwendet werden, die alle Werte auf 0 setzt, oder aber 
+`np.ones()`, welche alle Werte mit 1 initialisiert. Der Funktion wird die Form im 
 Format `[Reihen,Spalten]` übergeben. Möchte man alle Einträge auf einen 
 spezifischen Wert setzen, kann man den Befehl `np.full()` benutzen.
 
@@ -82,20 +82,20 @@ np.full([2,3],7)
 
 ::: {.callout-tip collapse="true"}
 
-## Wie könnte man auch Arrays die mit einer Zahl x gefühlt sind erstellen?
+## Wie könnte man Arrays, die mit einer Zahl x gefüllt sind, auch erstellen?
 
-Der Trick beseht hierbei ein Array mit `np.ones()` zu initialisiere und dieses 
-Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist `x = 5`
+Der Trick besteht hierbei darin, ein Array mit `np.ones()` zu initialisieren und dieses Array dann mit der Zahl x zu multiplizieren. Im folgenden Beispiel ist `x = 5`.
 
 ```{python}
 np.ones([2,3]) * 5
 ```
+
 :::
 
 Möchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit 
 gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei 
-Möglichkeiten. Mit den Befehlen `np.linspace(Start,Stop,#Anzahl Werte)` und 
-`np.arrange(Start,Stop,Abstand zwischen Werten)` können solche Arrays erstellt 
+Möglichkeiten. Mit den Befehlen `np.linspace(Start,Stopp,#Anzahl Werte)` und 
+`np.arrange(Start,Stopp,Abstand zwischen Werten)` können solche Arrays erstellt 
 werden.
 
 ```{python}

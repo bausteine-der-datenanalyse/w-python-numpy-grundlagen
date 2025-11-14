@@ -6,17 +6,16 @@ import numpy as np
 ```
 
 Bilder werden digital als Matrizen gespeichert. Dabei werden pro Pixel drei 
-Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wert 0-255) 
-werden dann alle gewünschten Farben zusammengestellt. 
+Farbwerte (rot, grün, blau) gespeichert. Aus diesen drei Farbwerten (Wertebereich 0-255) werden dann alle gewünschten Farben zusammengestellt. 
 
-![Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthät 3 Farbwerte, einen für die Fabre Grün, einen für Blau und einen für Rot.](../skript/00-bilder/pixel_mona_lisa_split.svg){#fig-pixel_colors fig-alt="Schaubild, was zeigt, dass ein hochaufgelöstes Bild der Mona Lisa aus einzelnen Pixeln besteht, welche wiederum aus den drei Farben blau, rot und grün zusammengesetzt sind"}
+![Ein hochaufgelöstes Bild besteht aus sehr vielen Pixeln. Jedes Pixel enthält 3 Farbwerte, einen für die Farbe Rot, einen für Grün und einen für Blau.](../skript/00-bilder/pixel_mona_lisa_split.svg){#fig-pixel_colors fig-alt="Schaubild, das zeigt, dass ein hochaufgelöstes Bild der Mona Lisa aus einzelnen Pixeln besteht, welche wiederum aus den drei Farben Rot, Grün und Blau zusammengesetzt sind."}
 
 Aufgrund der digitalen Darstellung von Bildern lassen sich diese mit den 
 Werkzeugen von NumPy leicht bearbeiten. 
-Wir verwenden für folgendes Beispiel als Bild die Monas Lisa. Das Bild ist unter folgendem [Link](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg) zu finden.
+Wir verwenden für folgendes Beispiel als Bild die Mona Lisa. Das Bild ist unter folgendem [Link](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Mona_Lisa.jpg/677px-Mona_Lisa.jpg) zu finden.
 
-Importieren wir dieses Bild nun mit der Funktion `imread()`aus dem 
-matplotlib-package, sehen wir das es um ein dreidimensionales numpy Array 
+Importieren wir dieses Bild nun mit der Funktion `imread()` aus dem 
+matplotlib-package, sehen wir, dass es sich um ein dreidimensionales NumPy-Array 
 handelt. 
 ```{python}
 import matplotlib.pyplot as plt
@@ -25,28 +24,26 @@ data = plt.imread("00-bilder/mona_lisa.jpg")
 print("Form:", data.shape)
 ```
 
-Schauen wir uns einmal mit der `print()`-Funktion einen Ausschnitt dieser Daten an.
+Schauen wir uns einmal mit der `print()`-Funktion diese Daten an.
 ```{python}
 print(data)
 ```
 
-Mit der Funktion `plt.imshow` kann das Bild in Echtfarben dargestellt werden. 
-Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index, 
-des Datensatzes als Farbinformationen (rot, grün, blau) interpretiert. Wäre 
-noch eine vierte Ebene dabei, würde sie als individueller Transparenzwert 
-verwendet worden.
+Mit der Funktion `plt.imshow()` kann das Bild in Echtfarben dargestellt werden. 
+Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index 
+des Datensatzes, als Farbinformationen (Rot, Grün, Blau) interpretiert. Wäre 
+noch eine vierte Ebene dabei, würde sie als Transparenzwert verwendet worden.
 
 ```{python}
 plt.imshow(data)
 ```
 
 Natürlich können auch die einzelnen Farbebenen individuell betrachtet werden. 
-Dazu wird der letzte Index festgehalten. Hier betrachten wir nur den reten Anteil
-des Bildes. Stellen wir ein einfaches Array dar, werden die Daten in schwarz-weiß
-ausgegeben. Mit Hilfe der Option `cmap='Reds'` können wir die Farbskala anpassen.
+Dazu wird der letzte Index festgehalten. Hier betrachten wir nur den roten Anteil
+des Bildes. Stellen wir ein einfaches Array dar, werden die Daten mit der Standardfarbpalette 'viridis' ausgegeben. Mit Hilfe der Option `cmap='Reds'` können wir die Farbskala anpassen.
 
 ```{python}
-# Als Farbskale wird die Rotskala 
+# Als Farbskala wird die Rotskala 
 # verwendet 'Reds'
 plt.imshow( data[:,:,0], cmap='Reds' )
 plt.colorbar()
@@ -54,7 +51,7 @@ plt.show()
 ```
 
 Da die Bilddaten als Arrays gespeichert sind, sind viele der möglichen Optionen, 
-z.B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt 
+z. B. zur Teilauswahl oder Operationen, verfügbar. Das untere Beispiel zeigt 
 einen Ausschnitt im Rotkanal des Bildes.
 
 ```{python}
@@ -65,7 +62,7 @@ plt.colorbar()
 
 Betrachten wir nun eine komplexere Operation an Bilddaten, den 
 [Laplace-Operator](https://de.wikipedia.org/wiki/Laplace-Operator). Er kann 
-genutzt werden um Ränder von Objekten zu identifizieren. Dazu wird für jeden 
+genutzt werden, um Ränder von Objekten zu identifizieren. Dazu wird für jeden 
 Bildpunkt $B_{i,j}$ – außer an den Rändern – folgender Wert $\phi_{i, j}$ 
 berechnet:
 
@@ -96,12 +93,12 @@ def img_lap(data, schwellwert=25):
 ```
 
 
-Betrachten wir ein Bild vom Haspel Campus in Wuppertal ein: 
-[Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg).
-Die Anwendung des Laplace-Operators auf den oberen Bildausschnitt ergibt folgende 
+Betrachten wir ein [Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg) vom Haspel Campus in Wuppertal. Die Anwendung des Laplace-Operators auf den oberen Bildausschnitt ergibt folgende 
 Ausgabe: 
 
 ```{python}
+#| fig-alt: "Aus drei Teilgrafiken bestehendes Bild. Links ist ein Gebäude am Haspel Campus  Wuppertal, in der Mitte als Bildausschnitt ein Fenster und rechts die mit dem Laplace-Operator herausgestellte Kontur des Fensters dargestellt."
+ 
 data = plt.imread('01-daten/campus_haspel.jpeg')
 bereich = np.array(data[1320:1620, 400:700, 1], dtype=float)
 
@@ -122,13 +119,13 @@ ax.imshow(lap, cmap="Greys");
 Wir können damit ganz klar die Formen des Fensters erkennen.
 
 Wollen wir zum Beispiel eine Farbkomponente bearbeiten und dann das Bild wieder 
-zusammensetzen, benötigen wir die Funktion `np.dstack((rot, grün, blau)).astype('uint8')`, 
-wobei `rot`, `grün`und `blau` die jeweiligen 2D-Arrays sind. Versuchen wir nun 
-die grüne Farbe aus dem Baum links zu entfernen. 
+zusammensetzen, benötigen wir die Funktion `np.dstack((rot, grün, blau)).astype('uint8')`, wobei `rot`, `grün`und `blau` die jeweiligen 2D-Arrays sind. Versuchen wir nun, die grüne Farbe aus dem Baum links zu entfernen. 
 
 Wichtig ist, dass die Daten nach dem Zusammensetzen im Format `uint8` vorliegen, deswegen die Methode `.astype('uint8')`.
 
 ```{python}
+#| fig-alt: "Links: Gebäude am Haspel Campus  Wuppertal. Rechts: Gebäude am Haspel Campus  Wuppertal mit manipuliertem Baum."
+
 data = plt.imread('01-daten/campus_haspel.jpeg')
 
 # Speichern der einzelnen Farben in Arrays
@@ -156,10 +153,10 @@ ax.imshow(zusammengesetzt)
 ## Zwischenübung: Bilder bearbeiten
 
 Lesen Sie folgendes Bild vom Haspel Campus in Wuppertal ein: 
-[Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg)
+[Bild](https://firedynamics.github.io/LectureComputerScience/_downloads/592f1fc843fc7c01bdcad17bf85ec15c/campus_haspel.jpeg).
 
 Extrahieren Sie den blauen Anteil und lassen Sie sich die Zeile in der Mitte des 
-Bildes ausgeben, so wie einen beliebigen Bildauschnitt.
+Bildes sowie einen beliebigen Bildauschnitt ausgeben.
 
 ::: {.callout-caution icon="false" collapse="true"}
 

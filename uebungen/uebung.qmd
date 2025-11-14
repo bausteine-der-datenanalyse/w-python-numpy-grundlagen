@@ -25,7 +25,7 @@ bewertungen = np.array([
 
 ::: {.callout-tip }
 
-## a) Bestimmen Sie die jemals niedrigste und höchste Bewertung, die je gegeben wurde
+## a) Bestimmen Sie die niedrigste und höchste Bewertung, die jemals gegeben wurde
 
 ::: {.callout-caution icon="false" collapse="true"}
 
@@ -33,11 +33,11 @@ bewertungen = np.array([
 ```{python}
 niedrigste_bewertung = np.min(bewertungen[:,2])
 
-print("Die niedrigste jemals gegebene Bertung ist:", niedrigste_bewertung)
+print("Die niedrigste jemals gegebene Bewertung ist:", niedrigste_bewertung)
 
 hoechste_bewertung = np.max(bewertungen[:,2])
 
-print("Die hoechste jemals gegebene Bertung ist:", hoechste_bewertung)
+print("Die höchste jemals gegebene Bewertung ist:", hoechste_bewertung)
 ```
 :::
 :::
@@ -56,6 +56,7 @@ bewertungen_film_1 = bewertungen[np.where(bewertungen[:,0]==1)]
 
 print("Bewertungen für Film 1:\n", bewertungen_film_1)
 ```
+
 :::
 :::
 
@@ -90,7 +91,7 @@ for ID in [1, 2, 3]:
 
     mittelwert = np.mean(bewertungen[np.where(bewertungen[:,0]==ID),2])
 
-    print("Die Mittlere Bewertung für Film", ID, "beträgt:", mittelwert) 
+    print("Die mittlere Bewertung für Film", ID, "beträgt:", mittelwert) 
 ```
 :::
 :::
@@ -99,7 +100,7 @@ for ID in [1, 2, 3]:
 
 ::: {.callout-tip }
 
-## e) Finden SIe den Film mit der höchsten Bewertung
+## e) Finden Sie den Film mit der höchsten Bewertung
 
 ::: {.callout-caution icon="false" collapse="true"}
 
@@ -124,9 +125,9 @@ print(bewertungen[index_hoechste_bewertung,:])
 ```{python}
 einzigartige_person, anzahl = np.unique(bewertungen[:, 1],return_counts=True)
 
-meist_aktiver_person = einzigartige_person[np.argmax(anzahl)]
+meist_aktive_person = einzigartige_person[np.argmax(anzahl)]
 
-print("Personen mit den meisten Bewertungen:", meist_aktiver_person)
+print("Personen mit den meisten Bewertungen:", meist_aktive_person)
 ```
 :::
 :::
@@ -213,16 +214,12 @@ Jedes Zeichen hat über die sogenannte ASCII-Tabelle einen Zahlenwert zugeordnet
 : Ascii-Tabelle {#tbl-ascii .striped .hover}
 
 Der Einfachheit halber ist im Folgenden schon der Code zur Umwandlung von 
-Buchstaben in Zahlenwerten und wieder zurück aufgeführt. Außerdem beschränken 
+Buchstaben in Zahlenwerte und wieder zurück aufgeführt. Außerdem beschränken 
 wir uns auf Texte mit kleinen Buchstaben.
 
-Ihre Aufgabe ist nun die Zahlenwerte zu verändern.
+Ihre Aufgabe ist nun, die Zahlenwerte zu verändern.
 
-Zunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle 
-Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der 
-Verschlüsselungswert "1" wird aus einem A ein B, einem M, ein N. Ist der Wert 
-"4" wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet 
-zyklisch statt, das heißt bei einer Verschiebung von 1 wird aus einem Z ein A.
+Zunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der Verschlüsselungswert "1" wird aus einem A ein B, einem M, ein N. Ist der Wert "4" wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt, bei einer Verschiebung von 1 wird aus einem Z ein A.
 
 ```{python}
 import numpy as np
@@ -238,7 +235,7 @@ def ascii_zu_buchstabe(a):
 
 ::: {.callout-tip collapse="true"}
 
-## 1. Überlegen Sie sich zunächst wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)
+## 1. Überlegen Sie sich zunächst, wie man diese zyklische Verschiebung mathematisch ausdrücken könnte (Hinweis: Modulo Rechnung)
 
 ::: {.callout-caution icon="false" collapse="true"}
 
@@ -252,9 +249,9 @@ $$ \textrm{ASCII}_{\textrm{verschoben}} = (\textrm{ASCII} - 97 + \textrm{Versatz
 
 ::: {.callout-tip collapse="true"}
 
-## 2. Schreiben Sie Code der mit einer Schleife alle Zeichen umwandelt. 
+## 2. Schreiben Sie Code, der mit einer Schleife alle Zeichen umwandelt. 
 
-Zunächst sollen alle Zeichen in Ascii Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten schleife wieder alle Werte in Buchstaben übersetzt.
+Zunächst sollen alle Zeichen in ASCII-Code umgewandelt werden. Dann wird die Formel auf die Zahlenwerte angewendet und schlussendlich in einer dritten Schleife wieder alle Werte in Buchstaben übersetzt.
 
 ::: {.callout-caution icon="false" collapse="true"}
 
