@@ -4,9 +4,9 @@
     "href": "index.html",
     "title": "w-python-numpy-grundlagen",
     "section": "",
-    "text": "Preamble",
+    "text": "Werkzeugbaustein NumPy",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
@@ -16,7 +16,7 @@
     "section": "Voraussetzungen",
     "text": "Voraussetzungen\n\nGrundlagen Python\nEinbinden von zusätzlichen Paketen\nPlotten mit Matplotlib",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
@@ -26,7 +26,7 @@
     "section": "Verwendete Pakete und Datensätze",
     "text": "Verwendete Pakete und Datensätze\n\nPakete\n\nNumPy\nMatplotlib\n\n\n\nDatensätze\n\nTC01.csv\nBild: Mona Lisa\nBild: Campus",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
@@ -36,7 +36,7 @@
     "section": "Bearbeitungszeit",
     "text": "Bearbeitungszeit\nGeschätzte Bearbeitungszeit: 2h",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
@@ -46,7 +46,7 @@
     "section": "Lernziele",
     "text": "Lernziele\n\nEinleitung: was ist NumPy, Vor- und Nachteile\nNutzen des NumPy-Moduls\nErstellen von NumPy-Arrays\nSlicing\nLesen und schreiben von Dateien\nArbeiten mit Bildern",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
