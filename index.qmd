@@ -1,4 +1,4 @@
-# Werkzeugbaustein NumPy {.unnumbered}
+# Preamble {.unnumbered}
 
 :::: {.border #Lizenz}
 
