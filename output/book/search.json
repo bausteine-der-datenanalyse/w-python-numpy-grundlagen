@@ -2,51 +2,51 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "w-python-numpy-grundlagen",
+    "title": "Bausteine Computergestützter Datenanalyse",
     "section": "",
-    "text": "Preamble",
+    "text": "Werkzeugbaustein NumPy",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
     "objectID": "index.html#voraussetzungen",
     "href": "index.html#voraussetzungen",
-    "title": "w-python-numpy-grundlagen",
+    "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Voraussetzungen",
     "text": "Voraussetzungen\n\nGrundlagen Python\nEinbinden von zusätzlichen Paketen\nPlotten mit Matplotlib",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
     "objectID": "index.html#verwendete-pakete-und-datensätze",
     "href": "index.html#verwendete-pakete-und-datensätze",
-    "title": "w-python-numpy-grundlagen",
+    "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Verwendete Pakete und Datensätze",
     "text": "Verwendete Pakete und Datensätze\n\nPakete\n\nNumPy\nMatplotlib\n\n\n\nDatensätze\n\nTC01.csv\nBild: Mona Lisa\nBild: Campus",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
     "objectID": "index.html#bearbeitungszeit",
     "href": "index.html#bearbeitungszeit",
-    "title": "w-python-numpy-grundlagen",
+    "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Bearbeitungszeit",
     "text": "Bearbeitungszeit\nGeschätzte Bearbeitungszeit: 2h",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
     "objectID": "index.html#lernziele",
     "href": "index.html#lernziele",
-    "title": "w-python-numpy-grundlagen",
+    "title": "Bausteine Computergestützter Datenanalyse",
     "section": "Lernziele",
     "text": "Lernziele\n\nEinleitung: was ist NumPy, Vor- und Nachteile\nNutzen des NumPy-Moduls\nErstellen von NumPy-Arrays\nSlicing\nLesen und schreiben von Dateien\nArbeiten mit Bildern",
     "crumbs": [
-      "Preamble"
+      "Werkzeugbaustein NumPy"
     ]
   },
   {
