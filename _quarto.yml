@@ -18,7 +18,7 @@ book:
   repo-actions: [source]
   favicon: "skript/00-bilder/favicon_bcd_new.svg"
   sidebar:
-    title: "Werkzeugbaustein Grundlagen NumPy"
+    title: "Werkzeugbaustein NumPy"
     logo: "skript/00-bilder/logo_bcd_new.svg"
 
 bibliography: skript/references.bib
