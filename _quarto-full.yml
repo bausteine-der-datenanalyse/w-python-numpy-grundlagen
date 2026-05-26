@@ -12,6 +12,7 @@ book:
     - skript/array_read_n_write.qmd
     - skript/array_images.qmd
     - skript/assessment.qmd
-    
+    - skript/daswichtigste.qmd
+
     - uebungen/uebung.qmd
     - klausurfragen/klausurfragen.qmd
