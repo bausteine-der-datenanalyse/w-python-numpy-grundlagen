@@ -219,7 +219,7 @@ wir uns auf Texte mit kleinen Buchstaben.
 
 Ihre Aufgabe ist nun, die Zahlenwerte zu verändern.
 
-Zunächste wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist Beispielsweise der der Verschlüsselungswert "1" wird aus einem A ein B, einem M, ein N. Ist der Wert "4" wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt, bei einer Verschiebung von 1 wird aus einem Z ein A.
+Zunächst wollen wir eine einfache Caesar-Chiffre anwenden. Dabei werden alle Buchstaben um eine gewisse Anzahl verschoben. Ist beispielsweise der Verschlüsselungswert "1", wird aus einem A ein B, aus einem M ein N. Ist der Wert "4", wird aus einem A ein E und aus einem M ein Q. Die Verschiebung findet zyklisch statt, das heißt, bei einer Verschiebung von 1 wird aus einem Z ein A.
 
 ```{python}
 import numpy as np
