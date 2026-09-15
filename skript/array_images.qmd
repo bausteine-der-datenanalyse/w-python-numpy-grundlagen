@@ -32,7 +32,7 @@ print(data)
 Mit der Funktion `plt.imshow()` kann das Bild in Echtfarben dargestellt werden. 
 Dies funktioniert, da die Funktion die einzelnen Ebenen, hier der letzte Index 
 des Datensatzes, als Farbinformationen (Rot, Grün, Blau) interpretiert. Wäre 
-noch eine vierte Ebene dabei, würde sie als Transparenzwert verwendet worden.
+noch eine vierte Ebene dabei, würde sie als Transparenzwert verwendet werden.
 
 ```{python}
 plt.imshow(data)
