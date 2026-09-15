@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,10 +80,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a936e90c91f47a61ff5a0150d04a60e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3a79c8b4f024afbc6085355c069670f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -274,11 +277,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="7.1" class="anchored" data-anchor-id="lesen-von-dateien"><span class="header-section-number">7.1</span> Lesen von Dateien</h2>
 <p>Zum Lesen von strukturierten Textdateien, z. B. im CSV-Format (comma separated values), kann die Funktion <code>np.loadtxt()</code> verwendet werden. Diese bekommt als Argumente den einzulesenden Dateinamen und weitere Optionen zur Definition der Struktur der Daten. Der Rückgabewert ist ein (mehrdimensionales) Array.</p>
 <p>Im folgenden Beispiel wird die Datei <a href="https://firedynamics.github.io/LectureComputerScience/_downloads/0d1a3bfbc82fa134e08585d6151e9f46/TC01.csv">TC01.csv</a> eingelesen und deren Inhalt graphisch dargestellt. Die erste Zeile der Datei wird dabei ignoriert, da sie als Kommentar – eingeleitet durch das #-Zeichen – interpretiert wird.</p>
-<div id="6ba27477" class="cell" data-execution_count="2">
+<div id="514faae3" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dateiname <span class="op">=</span> <span class="st">'01-daten/TC01.csv'</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>daten <span class="op">=</span> np.loadtxt(dateiname)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="bc09d0b2" class="cell" data-execution_count="3">
+<div id="fa41f27e" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Daten:"</span>, daten)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Form:"</span>, daten.shape)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -286,45 +289,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Form: (1513,)</code></pre>
 </div>
 </div>
-<div id="c887d6f9" class="cell" data-execution_count="4">
+<div id="63b00c24" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.plot(daten)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Datenindex'</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Temperatur in °C'</span>)<span class="op">;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="array_read_n_write_files/figure-html/cell-5-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="array_read_n_write_files/figure-html/cell-5-output-1.png" width="585" height="431" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>&nbsp;</p>
-<p>Standardmäßig erwartet die <code>np.loadtxt()</code>-Funktion Komma separierte Werte. Werden die Daten durch ein anderes Trennzeichen getrennt, kann mit der Option <code>delimiter = ""</code> ein anderes Trenzeichen ausgewählt werden. Beispielsweise würde der Funktionsaufruf bei einem Semikolon folgendermaßen aussehen: <code>np.loadtxt(data.txt, delimiter = ";")</code>.</p>
+<p>Standardmäßig erwartet die <code>np.loadtxt()</code>-Funktion durch Leerzeichen getrennte Werte. Werden die Daten durch ein anderes Trennzeichen getrennt, kann mit der Option <code>delimiter = ""</code> ein anderes Trenzeichen ausgewählt werden. Beispielsweise würde der Funktionsaufruf bei einem Semikolon folgendermaßen aussehen: <code>np.loadtxt(data.txt, delimiter = ";")</code>.</p>
 <p>Enthalten die ersten Zeilen einer Datei zusätzliche Informationen wie die verwenden Einheiten oder eine Beschreibung des Experiments, können diese Zeilen mit der Option <code>skiprows= #Reihen</code> übersprungen werden.</p>
 </section>
 <section id="schreiben-von-dateien" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="schreiben-von-dateien"><span class="header-section-number">7.2</span> Schreiben von Dateien</h2>
 <p>Zum Schreiben von Arrays in Dateien, kann die in NumPy verfügbare Funktion <code>np.savetxt()</code> verwendet werden. Dieser müssen mindestens die zu schreibenden Arrays als auch ein Dateiname übergeben werden. Darüber hinaus sind zahlreiche Formatierungs- bzw. Strukturierungsoptionen möglich.</p>
 <p>Folgendes Beispiel skaliert die oben eingelesenen Daten und schreibt jeden zehnten Wert in eine Datei. Dabei wird auch ein Kommentar (<code>header</code>-Argument) am Anfang der Datei erzeugt. Das Ausgabeformat der Zahlen kann mit dem <code>fmt</code>-Argument angegeben werden. Das Format ähnelt der Darstellungsweise, welche bei den formatierten Zeichenketten vorgestellt wurde.</p>
-<div id="88aaf265" class="cell" data-execution_count="5">
+<div id="44ec4e26" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>wertebereich <span class="op">=</span> np.<span class="bu">max</span>(daten) <span class="op">-</span> np.<span class="bu">min</span>(daten)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>daten_skaliert <span class="op">=</span> ( daten <span class="op">-</span> np.<span class="bu">min</span>(daten) ) <span class="op">/</span> wertebereich</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>daten_skaliert <span class="op">=</span> daten_skaliert[::<span class="dv">10</span>]</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="9a844beb" class="cell" data-execution_count="6">
+<div id="89373a0a" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.plot(daten_skaliert)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Datenindex'</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Skalierte Temperatur'</span>)<span class="op">;</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="array_read_n_write_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="array_read_n_write_files/figure-html/cell-7-output-1.png" width="590" height="431" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Beim Schreiben der Datei wird ein mehrzeiliger Kommentar mithilfe des Zeilenumbruchzeichens <code>\n</code> definiert. Die Ausgabe der Gleitkommazahlen wird mit <code>%5.2f</code> formatiert, was 5 Stellen insgesamt und zwei Nachkommastellen entspricht.</p>
-<div id="c042a1ed" class="cell" data-execution_count="7">
+<div id="7f31e8d9" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Zuweisung ist auf mehrere Zeilen aufgeteilt, aufgrund der </span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># schmalen Darstellung im Skript</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>kommentar <span class="op">=</span> <span class="ss">f'Daten aus </span><span class="sc">{</span>dateiname<span class="sc">}</span><span class="ss"> skaliert auf den Bereich '</span> <span class="op">+</span> <span class="op">\</span></span>
@@ -336,7 +339,7 @@ Form: (1513,)</code></pre>
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>           header<span class="op">=</span>kommentar, fmt<span class="op">=</span><span class="st">'</span><span class="sc">%5.2f</span><span class="st">'</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Zum Veranschaulichen werden die ersten Zeilen der neuen Datei ausgegeben.</p>
-<div id="17b6ce31" class="cell" data-execution_count="8">
+<div id="b3fddd7d" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Einlesen der ersten Zeilen der neu erstellten Datei</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>datei <span class="op">=</span> <span class="bu">open</span>(neu_dateiname, <span class="st">'r'</span>)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>):</span>

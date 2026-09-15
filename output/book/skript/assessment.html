@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de" class="h5p-iframe"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -77,10 +80,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a936e90c91f47a61ff5a0150d04a60e7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3a79c8b4f024afbc6085355c069670f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -364,12 +367,12 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="aufgabe-3" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-3">Aufgabe 3</h2>
-<p>Was ist der Unterschied zwischenden den Funktionen <code>np.ndim()</code>, <code>np.shape()</code> und <code>np.size()</code>?</p>
+<p>Was ist der Unterschied zwischen den Funktionen <code>np.ndim()</code>, <code>np.shape()</code> und <code>np.size()</code>?</p>
 </section>
 <section id="aufgabe-4" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-4">Aufgabe 4</h2>
 <p>Welchen Datentyp hat folgendes Array? Mit welcher Funktion kann man den Datentyp eines Arrays auslesen?</p>
-<div id="601efa74" class="cell" data-execution_count="2">
+<div id="fde281e6" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
@@ -393,7 +396,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="aufgabe-7" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-7">Aufgabe 7</h2>
-<div id="4ba14478" class="cell" data-execution_count="3">
+<div id="2b2adba2" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>],</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>, <span class="dv">10</span>],</span>
@@ -410,7 +413,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="aufgabe-8" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-8">Aufgabe 8</h2>
-<div id="ba10a65f" class="cell" data-execution_count="4">
+<div id="fa09fe1f" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">21</span>)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ol type="1">
@@ -427,7 +430,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="aufgabe-10" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="aufgabe-10">Aufgabe 10</h2>
-<p>Sie möchten aus einem Bild die Bilddaten einer Farkomponente isolieren. Was müssen Sie dafür tun?</p>
+<p>Sie möchten aus einem Bild die Bilddaten einer Farbkomponente isolieren. Was müssen Sie dafür tun?</p>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -442,13 +445,13 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 <div class="callout-body-container callout-body">
 <section id="aufgabe-1-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-1-1">Aufgabe 1</h3>
-<div id="5a10faf9" class="cell" data-execution_count="5">
+<div id="b4bfe6a6" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="aufgabe-2-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-2-1">Aufgabe 2</h3>
-<div id="c010506d" class="cell" data-execution_count="6">
+<div id="fbf2bef1" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -476,7 +479,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 <section id="aufgabe-4-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-4-1">Aufgabe 4</h3>
 <p>Da es sich hier um Gleitkommazahlen handelt, ist der Datentyp <code>float64</code>.</p>
-<div id="09e3ce5c" class="cell" data-execution_count="7">
+<div id="acb2fa82" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>vector <span class="op">=</span> np.array([ <span class="fl">4.8</span>,  <span class="fl">8.2</span>, <span class="fl">15.6</span>, <span class="fl">16.6</span>, <span class="fl">23.2</span>, <span class="fl">42.8</span> ])</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vector.dtype)</span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -486,7 +489,7 @@ H5P.Video=function(d,p){function f(i,e,t={}){var n=this;n.oldTime=t.previousStat
 </section>
 <section id="aufgabe-5-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-5-1">Aufgabe 5</h3>
-<div id="e9f47f90" class="cell" data-execution_count="8">
+<div id="7f8a9c9a" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">5</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">4</span>])</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>, <span class="dv">9</span>])</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -510,7 +513,7 @@ Die Summe von a und 3 ergibt:  [8 4 6 9 7]</code></pre>
 </section>
 <section id="aufgabe-6-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-6-1">Aufgabe 6</h3>
-<div id="8aad6e44" class="cell" data-execution_count="9">
+<div id="923bd7c6" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">3</span>])</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.</span></span>
@@ -536,7 +539,7 @@ Das Maximum beträgt:  9</code></pre>
 </section>
 <section id="aufgabe-7-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-7-1">Aufgabe 7</h3>
-<div id="52574f09" class="cell" data-execution_count="10">
+<div id="3cb3014a" class="cell" data-execution_count="10">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="op">=</span> np.array([</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">1</span>,  <span class="dv">2</span>,  <span class="dv">3</span>,  <span class="dv">4</span>,  <span class="dv">5</span>],</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    [ <span class="dv">6</span>,  <span class="dv">7</span>,  <span class="dv">8</span>,  <span class="dv">9</span>, <span class="dv">10</span>],</span>
@@ -564,7 +567,7 @@ Das Maximum beträgt:  9</code></pre>
 </section>
 <section id="aufgabe-8-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-8-1">Aufgabe 8</h3>
-<div id="7d7e5bdc" class="cell" data-execution_count="11">
+<div id="99f41be3" class="cell" data-execution_count="11">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>array <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">21</span>)</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Ändern der Form in eine 4x5-Matrix</span></span>
@@ -624,7 +627,7 @@ Transponierte 4x5-Matrix:
 </section>
 <section id="aufgabe-10-1" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="aufgabe-10-1">Aufgabe 10</h3>
-<p>Typischerweise sind Bilddaten große Matrizen, wobei die Farben in drei unterschieldichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft “Rot”, “Grün” und “Blau”. Dementsprechen müssen wir, wenn die Daten in der Matrix <code>data</code> gespeichert sind, mit Slicing eine Dimension auswählen: <code>data[:,:,0]</code>, wobei die Zahl 0-2 für die jeweilige Farbe steht.</p>
+<p>Typischerweise sind Bilddaten große Matrizen, wobei die Farben in drei unterschiedlichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft “Rot”, “Grün” und “Blau”. Dementsprechend müssen wir, wenn die Daten in der Matrix <code>data</code> gespeichert sind, mit Slicing eine Dimension auswählen: <code>data[:,:,0]</code>, wobei die Zahl 0-2 für die jeweilige Farbe steht.</p>
 </section>
 </div>
 </div>
