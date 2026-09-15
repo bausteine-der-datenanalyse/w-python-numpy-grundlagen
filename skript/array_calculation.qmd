@@ -62,7 +62,7 @@ Wie auch am Taschenrechner birgt das Arbeiten mit den Winkelfunktionen
 Grad-Werten arbeitet. Die Winkelfunktionen in NumPy erwarten jedoch 
 Radian-Werte. 
 
-Für eine einfache Umrechnung bietet NumPy die Funktionen `np.deh2rad()` und 
+Für eine einfache Umrechnung bietet NumPy die Funktionen `np.deg2rad()` und
 `np.rad2deg()`.
 
 :::
