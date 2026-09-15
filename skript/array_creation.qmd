@@ -95,7 +95,7 @@ np.ones([2,3]) * 5
 Möchte man zum Beispiel für eine Achse in einem Plot einen Vektor mit 
 gleichmäßig verteilten Werten erstellen, bieten sich in NumPy zwei 
 Möglichkeiten. Mit den Befehlen `np.linspace(Start,Stopp,#Anzahl Werte)` und 
-`np.arrange(Start,Stopp,Abstand zwischen Werten)` können solche Arrays erstellt 
+`np.arange(Start,Stopp,Abstand zwischen Werten)` können solche Arrays erstellt
 werden.
 
 ```{python}
@@ -117,7 +117,7 @@ Erstellen Sie jeweils ein NumPy-Array, mit dem folgenden Inhalt:
 3. mit den Zahlen von 35 **bis einschließlich** 50
 4. mit allen geraden Zahlen von 20 **bis einschließlich** 40
 5. eine Matrix mit 5 Spalten und 4 Reihen mit dem Wert 4 an jeder Stelle
-6. mit 10 Werten die gleichmäßig zwischen 22 und einschlieslich 40 verteilt sind
+6. mit 10 Werten die gleichmäßig zwischen 22 und einschließlich 40 verteilt sind
 
 ::: {.callout-caution icon="false" collapse="true"}
 
