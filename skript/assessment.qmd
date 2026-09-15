@@ -47,7 +47,7 @@ Schritten von 5 enthält.
 
 ## Aufgabe 3 {.unnumbered}
 
-Was ist der Unterschied zwischenden den Funktionen `np.ndim()`, `np.shape()` und 
+Was ist der Unterschied zwischen den Funktionen `np.ndim()`, `np.shape()` und
 `np.size()`?
 
 ## Aufgabe 4 {.unnumbered}
@@ -113,7 +113,7 @@ Datei gespeichert werden?
 
 ## Aufgabe 10 {.unnumbered}
 
-Sie möchten aus einem Bild die Bilddaten einer Farkomponente isolieren. Was 
+Sie möchten aus einem Bild die Bilddaten einer Farbkomponente isolieren. Was
 müssen Sie dafür tun?
 
 ::: {.callout-caution icon="false" collapse="true"}
@@ -249,5 +249,5 @@ Die passenden Funktionen sind `np.loadtxt()` und `np.savetxt()`.
 
 ### Aufgabe 10 {.unnumbered}
 
-Typischerweise sind Bilddaten große Matrizen, wobei die Farben in drei unterschieldichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft "Rot", "Grün" und "Blau". Dementsprechen müssen wir, wenn die Daten in der Matrix `data` gespeichert sind, mit Slicing eine Dimension auswählen: `data[:,:,0]`, wobei die Zahl 0-2 für die jeweilige Farbe steht.
+Typischerweise sind Bilddaten große Matrizen, wobei die Farben in drei unterschiedlichen Matrizen gespeichert werden. Dabei ist die Farbreihenfolge oft "Rot", "Grün" und "Blau". Dementsprechend müssen wir, wenn die Daten in der Matrix `data` gespeichert sind, mit Slicing eine Dimension auswählen: `data[:,:,0]`, wobei die Zahl 0-2 für die jeweilige Farbe steht.
 :::
